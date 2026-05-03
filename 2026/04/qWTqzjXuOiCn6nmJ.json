@@ -1,0 +1,860 @@
+{
+  "active": true,
+  "activeVersion": {
+    "updatedAt": "2026-05-02T23:40:14.401Z",
+    "createdAt": "2026-05-02T23:40:14.401Z",
+    "versionId": "b1f388df-e3f6-4e02-a235-1b2605f2e13c",
+    "workflowId": "qWTqzjXuOiCn6nmJ",
+    "nodes": [
+      {
+        "parameters": {
+          "httpMethod": "POST",
+          "path": "github-push",
+          "options": {
+            "rawBody": true
+          }
+        },
+        "id": "3ed71091-8fc7-43b9-b206-3d74326b5246",
+        "name": "Webhook",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          -2880,
+          1664
+        ],
+        "webhookId": "{YOUR_GITHUB_WEBHOOK_ID}",
+        "typeVersion": 2
+      },
+      {
+        "parameters": {
+          "content": "## 🔧 Quick Setup Required!\n\nWelcome! To make this workflow yours, you just need to do two things:\n\n1.  **Connect Your Accounts:** Click on the GitHub and Jira nodes and select your credentials. Also, add the slack and notion credentials to ensure smooth message delivery\n\n2.  **Add Webhooks to the required repositories:** Add the production webhook link to the concerned repositories\n \n\n\nThat's it! You're ready to automate.",
+          "height": 280,
+          "width": 680,
+          "color": 4
+        },
+        "id": "30bf7f6d-0438-48d5-8e41-02ccbacc29a2",
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2080,
+          1120
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "content": "### Step 1: Webhook Activated! 🪝\n\nThis is the entry point of the workflow.\n\nIt acts as a **listener for GitHub push events**, tapping into your repositories to catch every new commit.\n\nHere’s what it does:\n\n- 📦 Listens for `push` requests on specific branches.\n- 🚦 Triggers the workflow only when new commits hit the repo.\n- 🎯 Ensures everything starts from the moment you push code.\n\nIt’s the spark that kicks off the automation engine. 🔧⚡\n",
+          "height": 320,
+          "width": 540,
+          "color": 6
+        },
+        "id": "2952ec17-b871-41dd-a993-b2ac7a5096e7",
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2944,
+          1184
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "content": "### Step 3: To PR, or Not to PR? 🤔\n\nThis is a checkpoint that gives you control.\n\nIt asks a simple question: \"Did the developer include the `[auto-pr]` command?\"\n\n- If **YES**, we proceed down the \"True\" path to create the Pull Request automatically. No more manual form-filling in GitHub!\n\n- If **NO**, we skip it. This lets you push multiple work-in-progress commits without flooding your team with PRs.",
+          "height": 300,
+          "width": 480,
+          "color": 6
+        },
+        "id": "de522cd1-3af1-496d-a10d-ad6da6a0bc83",
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2768,
+          1952
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "modelId": {
+            "__rl": true,
+            "value": "models/gemini-3-flash-preview",
+            "mode": "list",
+            "cachedResultName": "models/gemini-3-flash-preview"
+          },
+          "messages": {
+            "values": [
+              {
+                "content": "You are a Senior Technical Architect and DevOps Specialist. Your goal is to transform a raw Product Requirements Document (PRD) into actionable engineering assets.\n\n### OUTPUT RULES:\n1. STRICT JSON ONLY: Your entire response must be a single, valid JSON object. \n2. NO MARKDOWN: Do not include ```json or any other formatting characters. Start with { and end with }.\n3. TECHNICAL ACCURACY: SQL must be valid DDL. API specs must follow OpenAPI 3.0 standards.\n4. AGNOSTICISM: Unless a specific tech stack is provided in the input, default to PostgreSQL and Node.js/Express.\n\n### JSON STRUCTURE REQUIRED:\n{\n  \"sql_schema\": \"String containing the DDL (CREATE TABLE statements, keys, and relations).\",\n  \"api_spec\": \"String containing the OpenAPI/Swagger YAML for core endpoints.\",\n  \"task_list\": [\n    { \"title\": \"Task Title\", \"description\": \"Detailed technical description for a Jira ticket.\" }\n  ],\n  \"staffing_needs\": \"A concise summary of the 3-4 most critical roles (e.g., Senior Backend Engineer with PostgreSQL expertise).\"\n}"
+              }
+            ]
+          },
+          "jsonOutput": true,
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.googleGemini",
+        "typeVersion": 1,
+        "position": [
+          -2656,
+          1664
+        ],
+        "id": "9d70bdda-8d9e-4bc4-b875-36861dc1b448",
+        "name": "Message a model",
+        "credentials": {
+          "googlePalmApi": {
+            "id": "swFyc6Uff0xsd4oG",
+            "name": "Google Gemini(PaLM) Api account 3"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://api.github.com/user/repos",
+          "authentication": "predefinedCredentialType",
+          "nodeCredentialType": "githubApi",
+          "sendBody": true,
+          "bodyParameters": {
+            "parameters": [
+              {
+                "name": "name",
+                "value": "={{ $('Webhook').item.json.project_name }}"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.3,
+        "position": [
+          -2080,
+          1568
+        ],
+        "id": "61e5c1c7-a0a9-4b80-bd42-da62f74e1f03",
+        "name": "HTTP Request",
+        "credentials": {
+          "githubApi": {
+            "id": "jE61Wi1zxEKWV41R",
+            "name": "GitHub account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "resource": "file",
+          "owner": {
+            "__rl": true,
+            "value": "=blakefrasure",
+            "mode": "name"
+          },
+          "repository": {
+            "__rl": true,
+            "value": "test1",
+            "mode": "list",
+            "cachedResultName": "test1",
+            "cachedResultUrl": "https://github.com/blakefrasure/test1"
+          },
+          "filePath": "docs/prd.md",
+          "fileContent": "={{ $node[\"Webhook\"].json[\"prd_text\"] }}",
+          "commitMessage": "={{ $node[\"HTTP Request\"].json[\"name\"] }}"
+        },
+        "type": "n8n-nodes-base.github",
+        "typeVersion": 1.1,
+        "position": [
+          -1856,
+          1568
+        ],
+        "id": "f0b7050f-a824-46dd-b158-709fd76045c6",
+        "name": "Create a file",
+        "webhookId": "0cd74836-3d21-44ac-afce-fcdc28e07c90",
+        "credentials": {
+          "githubApi": {
+            "id": "qovRCB8mq5yN55fF",
+            "name": "GitHub account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "resource": "file",
+          "owner": {
+            "__rl": true,
+            "value": "=blakefrasure",
+            "mode": "name"
+          },
+          "repository": {
+            "__rl": true,
+            "value": "test1",
+            "mode": "list",
+            "cachedResultName": "test1",
+            "cachedResultUrl": "https://github.com/blakefrasure/test1"
+          },
+          "filePath": "db/init.sql",
+          "fileContent": "=sql_schema",
+          "commitMessage": "={{ $node[\"HTTP Request\"].json[\"name\"] }}"
+        },
+        "type": "n8n-nodes-base.github",
+        "typeVersion": 1.1,
+        "position": [
+          -1632,
+          1568
+        ],
+        "id": "ff7ab9e0-7186-4582-8bce-8e6b91a84b2e",
+        "name": "Create a file1",
+        "webhookId": "0cd74836-3d21-44ac-afce-fcdc28e07c90",
+        "credentials": {
+          "githubApi": {
+            "id": "qovRCB8mq5yN55fF",
+            "name": "GitHub account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "project": {
+            "__rl": true,
+            "value": "10000",
+            "mode": "list",
+            "cachedResultName": "My Project Management Team"
+          },
+          "issueType": {
+            "__rl": true,
+            "value": "10004",
+            "mode": "list",
+            "cachedResultName": "Task"
+          },
+          "summary": "={{ $json.title }}",
+          "additionalFields": {
+            "description": "={{ $json.description }}"
+          }
+        },
+        "type": "n8n-nodes-base.jira",
+        "typeVersion": 1,
+        "position": [
+          -1856,
+          1760
+        ],
+        "id": "8d42d9d5-74d5-4c0f-aa85-7882655d7b68",
+        "name": "Create an issue",
+        "credentials": {
+          "jiraSoftwareCloudApi": {
+            "id": "nbFvdS2L42W9MVWM",
+            "name": "Jira SW Cloud account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "jsCode": "// 1. Grab the text from the Gemini output\nconst rawText = $input.first().json.content.parts[0].text;\n\n// 2. Clean out any potential markdown \"backticks\" Gemini might have added\nconst cleanJsonString = rawText.replace(/```json|```/g, \"\").trim();\n\ntry {\n  // 3. Turn the string into a real JSON object\n  const parsedData = JSON.parse(cleanJsonString);\n  \n  // 4. Return it so n8n can see the fields\n  return parsedData;\n} catch (error) {\n  throw new Error(\"Gemini did not return valid JSON. Check the model output.\");\n}"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          -2304,
+          1664
+        ],
+        "id": "a7119370-3862-4693-8ea1-33849b2a6a01",
+        "name": "Code in JavaScript"
+      },
+      {
+        "parameters": {
+          "fieldToSplitOut": "task_list",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.splitOut",
+        "typeVersion": 1,
+        "position": [
+          -1408,
+          1568
+        ],
+        "id": "f8555db0-b7c2-4e99-b997-61be71ee2438",
+        "name": "Split Out",
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "fieldToSplitOut": "task_list",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.splitOut",
+        "typeVersion": 1,
+        "position": [
+          -2080,
+          1760
+        ],
+        "id": "5d65fd1c-c135-40aa-8a63-3e0d779cf3d4",
+        "name": "Split Out2"
+      },
+      {
+        "parameters": {
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.3,
+        "position": [
+          -1152,
+          1664
+        ],
+        "id": "17e01309-6a8f-4e12-892b-63e93ca0d0e6",
+        "name": "Send to ReadyToGo.AI",
+        "disabled": true
+      }
+    ],
+    "connections": {
+      "Webhook": {
+        "main": [
+          [
+            {
+              "node": "Message a model",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Message a model": {
+        "main": [
+          [
+            {
+              "node": "Code in JavaScript",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "HTTP Request": {
+        "main": [
+          [
+            {
+              "node": "Create a file",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Create a file": {
+        "main": [
+          [
+            {
+              "node": "Create a file1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Create a file1": {
+        "main": [
+          [
+            {
+              "node": "Split Out",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Create an issue": {
+        "main": [
+          [
+            {
+              "node": "Create an issue",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "Send to ReadyToGo.AI",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Code in JavaScript": {
+        "main": [
+          [
+            {
+              "node": "HTTP Request",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "Split Out2",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Split Out": {
+        "main": [
+          [
+            {
+              "node": "Send to ReadyToGo.AI",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Split Out2": {
+        "main": [
+          [
+            {
+              "node": "Create an issue",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "authors": "system migration",
+    "name": null,
+    "description": null,
+    "autosaved": false
+  },
+  "activeVersionId": "b1f388df-e3f6-4e02-a235-1b2605f2e13c",
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Create a file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create a file": {
+      "main": [
+        [
+          {
+            "node": "Create a file1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create a file1": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create an issue": {
+      "main": [
+        [
+          {
+            "node": "Create an issue",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Send to ReadyToGo.AI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Split Out2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Send to ReadyToGo.AI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out2": {
+      "main": [
+        [
+          {
+            "node": "Create an issue",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2026-04-03T18:06:17.893Z",
+  "id": "qWTqzjXuOiCn6nmJ",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Customer Idea to Roadmap Workflow using Jira and Github",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "github-push",
+        "options": {
+          "rawBody": true
+        }
+      },
+      "id": "3ed71091-8fc7-43b9-b206-3d74326b5246",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        -2880,
+        1664
+      ],
+      "webhookId": "{YOUR_GITHUB_WEBHOOK_ID}",
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "content": "## 🔧 Quick Setup Required!\n\nWelcome! To make this workflow yours, you just need to do two things:\n\n1.  **Connect Your Accounts:** Click on the GitHub and Jira nodes and select your credentials. Also, add the slack and notion credentials to ensure smooth message delivery\n\n2.  **Add Webhooks to the required repositories:** Add the production webhook link to the concerned repositories\n \n\n\nThat's it! You're ready to automate.",
+        "height": 280,
+        "width": 680,
+        "color": 4
+      },
+      "id": "30bf7f6d-0438-48d5-8e41-02ccbacc29a2",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -2080,
+        1120
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "### Step 1: Webhook Activated! 🪝\n\nThis is the entry point of the workflow.\n\nIt acts as a **listener for GitHub push events**, tapping into your repositories to catch every new commit.\n\nHere’s what it does:\n\n- 📦 Listens for `push` requests on specific branches.\n- 🚦 Triggers the workflow only when new commits hit the repo.\n- 🎯 Ensures everything starts from the moment you push code.\n\nIt’s the spark that kicks off the automation engine. 🔧⚡\n",
+        "height": 320,
+        "width": 540,
+        "color": 6
+      },
+      "id": "2952ec17-b871-41dd-a993-b2ac7a5096e7",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -2944,
+        1184
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "### Step 3: To PR, or Not to PR? 🤔\n\nThis is a checkpoint that gives you control.\n\nIt asks a simple question: \"Did the developer include the `[auto-pr]` command?\"\n\n- If **YES**, we proceed down the \"True\" path to create the Pull Request automatically. No more manual form-filling in GitHub!\n\n- If **NO**, we skip it. This lets you push multiple work-in-progress commits without flooding your team with PRs.",
+        "height": 300,
+        "width": 480,
+        "color": 6
+      },
+      "id": "de522cd1-3af1-496d-a10d-ad6da6a0bc83",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -2768,
+        1952
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-3-flash-preview",
+          "mode": "list",
+          "cachedResultName": "models/gemini-3-flash-preview"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You are a Senior Technical Architect and DevOps Specialist. Your goal is to transform a raw Product Requirements Document (PRD) into actionable engineering assets.\n\n### OUTPUT RULES:\n1. STRICT JSON ONLY: Your entire response must be a single, valid JSON object. \n2. NO MARKDOWN: Do not include ```json or any other formatting characters. Start with { and end with }.\n3. TECHNICAL ACCURACY: SQL must be valid DDL. API specs must follow OpenAPI 3.0 standards.\n4. AGNOSTICISM: Unless a specific tech stack is provided in the input, default to PostgreSQL and Node.js/Express.\n\n### JSON STRUCTURE REQUIRED:\n{\n  \"sql_schema\": \"String containing the DDL (CREATE TABLE statements, keys, and relations).\",\n  \"api_spec\": \"String containing the OpenAPI/Swagger YAML for core endpoints.\",\n  \"task_list\": [\n    { \"title\": \"Task Title\", \"description\": \"Detailed technical description for a Jira ticket.\" }\n  ],\n  \"staffing_needs\": \"A concise summary of the 3-4 most critical roles (e.g., Senior Backend Engineer with PostgreSQL expertise).\"\n}"
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        -2656,
+        1664
+      ],
+      "id": "9d70bdda-8d9e-4bc4-b875-36861dc1b448",
+      "name": "Message a model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "swFyc6Uff0xsd4oG",
+          "name": "Google Gemini(PaLM) Api account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.github.com/user/repos",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "githubApi",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "name",
+              "value": "={{ $('Webhook').item.json.project_name }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -2080,
+        1568
+      ],
+      "id": "61e5c1c7-a0a9-4b80-bd42-da62f74e1f03",
+      "name": "HTTP Request",
+      "credentials": {
+        "githubApi": {
+          "id": "jE61Wi1zxEKWV41R",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "owner": {
+          "__rl": true,
+          "value": "=blakefrasure",
+          "mode": "name"
+        },
+        "repository": {
+          "__rl": true,
+          "value": "test1",
+          "mode": "list",
+          "cachedResultName": "test1",
+          "cachedResultUrl": "https://github.com/blakefrasure/test1"
+        },
+        "filePath": "docs/prd.md",
+        "fileContent": "={{ $node[\"Webhook\"].json[\"prd_text\"] }}",
+        "commitMessage": "={{ $node[\"HTTP Request\"].json[\"name\"] }}"
+      },
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1.1,
+      "position": [
+        -1856,
+        1568
+      ],
+      "id": "f0b7050f-a824-46dd-b158-709fd76045c6",
+      "name": "Create a file",
+      "webhookId": "0cd74836-3d21-44ac-afce-fcdc28e07c90",
+      "credentials": {
+        "githubApi": {
+          "id": "qovRCB8mq5yN55fF",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "owner": {
+          "__rl": true,
+          "value": "=blakefrasure",
+          "mode": "name"
+        },
+        "repository": {
+          "__rl": true,
+          "value": "test1",
+          "mode": "list",
+          "cachedResultName": "test1",
+          "cachedResultUrl": "https://github.com/blakefrasure/test1"
+        },
+        "filePath": "db/init.sql",
+        "fileContent": "=sql_schema",
+        "commitMessage": "={{ $node[\"HTTP Request\"].json[\"name\"] }}"
+      },
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1.1,
+      "position": [
+        -1632,
+        1568
+      ],
+      "id": "ff7ab9e0-7186-4582-8bce-8e6b91a84b2e",
+      "name": "Create a file1",
+      "webhookId": "0cd74836-3d21-44ac-afce-fcdc28e07c90",
+      "credentials": {
+        "githubApi": {
+          "id": "qovRCB8mq5yN55fF",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "project": {
+          "__rl": true,
+          "value": "10000",
+          "mode": "list",
+          "cachedResultName": "My Project Management Team"
+        },
+        "issueType": {
+          "__rl": true,
+          "value": "10004",
+          "mode": "list",
+          "cachedResultName": "Task"
+        },
+        "summary": "={{ $json.title }}",
+        "additionalFields": {
+          "description": "={{ $json.description }}"
+        }
+      },
+      "type": "n8n-nodes-base.jira",
+      "typeVersion": 1,
+      "position": [
+        -1856,
+        1760
+      ],
+      "id": "8d42d9d5-74d5-4c0f-aa85-7882655d7b68",
+      "name": "Create an issue",
+      "credentials": {
+        "jiraSoftwareCloudApi": {
+          "id": "nbFvdS2L42W9MVWM",
+          "name": "Jira SW Cloud account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// 1. Grab the text from the Gemini output\nconst rawText = $input.first().json.content.parts[0].text;\n\n// 2. Clean out any potential markdown \"backticks\" Gemini might have added\nconst cleanJsonString = rawText.replace(/```json|```/g, \"\").trim();\n\ntry {\n  // 3. Turn the string into a real JSON object\n  const parsedData = JSON.parse(cleanJsonString);\n  \n  // 4. Return it so n8n can see the fields\n  return parsedData;\n} catch (error) {\n  throw new Error(\"Gemini did not return valid JSON. Check the model output.\");\n}"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -2304,
+        1664
+      ],
+      "id": "a7119370-3862-4693-8ea1-33849b2a6a01",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "task_list",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -1408,
+        1568
+      ],
+      "id": "f8555db0-b7c2-4e99-b997-61be71ee2438",
+      "name": "Split Out",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "task_list",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -2080,
+        1760
+      ],
+      "id": "5d65fd1c-c135-40aa-8a63-3e0d779cf3d4",
+      "name": "Split Out2"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -1152,
+        1664
+      ],
+      "id": "17e01309-6a8f-4e12-892b-63e93ca0d0e6",
+      "name": "Send to ReadyToGo.AI",
+      "disabled": true
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "project_name": "FleetTrack-Logistics",
+          "tech_stack": "React, FastAPI, PostgreSQL, Docker",
+          "prd_text": "A comprehensive logistics management platform for small delivery fleets. The system needs to manage: 1. Drivers (Name, license, vehicle assigned). 2. Deliveries (Pickup location, drop-off location, status). 3. Vehicle Maintenance (Last service date, mileage). 4. A REST API for a mobile driver app. 5. A manager dashboard to view real-time delivery status on a map. Data security is paramount, requiring JWT authentication for all API endpoints and role-based access control."
+        }
+      }
+    ]
+  },
+  "repo_name": "N8N-Backup",
+  "repo_owner": "blakefrasure",
+  "repo_path": "",
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "updatedAt": "2026-04-03T18:06:17.901Z",
+      "createdAt": "2026-04-03T18:06:17.901Z",
+      "role": "workflow:owner",
+      "workflowId": "qWTqzjXuOiCn6nmJ",
+      "projectId": "o0dLpT0DC7ihHtEO"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2026-04-03T19:40:02.000Z",
+  "versionId": "b1f388df-e3f6-4e02-a235-1b2605f2e13c"
+}
