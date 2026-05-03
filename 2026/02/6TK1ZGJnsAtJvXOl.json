@@ -1,0 +1,2950 @@
+{
+  "active": false,
+  "activeVersion": null,
+  "activeVersionId": null,
+  "connections": {
+    "Create Post Data From AI": {
+      "main": [
+        [
+          {
+            "node": "WP Make Category2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pexel Err If": {
+      "main": [
+        [
+          {
+            "node": "Pexels HTTP Request on Empty",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Pexel Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Pexels HTTP Request on Empty": {
+      "main": [
+        [
+          {
+            "node": "Pexel Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pexel Merge": {
+      "main": [
+        []
+      ]
+    },
+    "Pexel Image Url": {
+      "main": [
+        []
+      ]
+    },
+    "WP Make Tag 1": {
+      "main": [
+        [
+          {
+            "node": "Tag 1 Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tag 1 Search": {
+      "main": [
+        [
+          {
+            "node": "Tag 1 Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Tag 1 Switch": {
+      "main": [
+        [
+          {
+            "node": "Tag 1 Merge",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Tag 1 Search",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tag 1 Merge": {
+      "main": [
+        [
+          {
+            "node": "Tag 1 ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tag 1 ID": {
+      "main": [
+        [
+          {
+            "node": "WP Make Tag 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WP Make Tag 2": {
+      "main": [
+        [
+          {
+            "node": "Tag 2 Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tag 2 Switch": {
+      "main": [
+        [
+          {
+            "node": "Tag 2 Merge",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Tag 2 Search",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tag 2 Search": {
+      "main": [
+        [
+          {
+            "node": "Tag 2 Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tag 2 Filter": {
+      "main": [
+        [
+          {
+            "node": "Tag 2 Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Tag 2 Merge": {
+      "main": [
+        [
+          {
+            "node": "Tag 2 ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tag 2 ID": {
+      "main": [
+        [
+          {
+            "node": "WP Make Tag 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WP Make Tag 3": {
+      "main": [
+        [
+          {
+            "node": "Tag 3 Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tag 3 Switch": {
+      "main": [
+        [
+          {
+            "node": "Tag 3 Merge",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Tag 3 Search",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tag 3 Search": {
+      "main": [
+        [
+          {
+            "node": "Tag 3 Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tag 3 Filter": {
+      "main": [
+        [
+          {
+            "node": "Tag 3 Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Tag 3 Merge": {
+      "main": [
+        [
+          {
+            "node": "Tag 3 ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tag 3 ID": {
+      "main": [
+        [
+          {
+            "node": "WP Make Tag 4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WP Make Tag 4": {
+      "main": [
+        [
+          {
+            "node": "Tag 4 Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tag 4 Switch": {
+      "main": [
+        [
+          {
+            "node": "Tag 4 Merge",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Tag 4 Search",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tag 4 Search": {
+      "main": [
+        [
+          {
+            "node": "Tag 4 Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tag 4 Filter": {
+      "main": [
+        [
+          {
+            "node": "Tag 4 Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Tag 4 Merge": {
+      "main": [
+        [
+          {
+            "node": "Tag 4 ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tag 4 ID": {
+      "main": [
+        [
+          {
+            "node": "Create Post Data2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create a post": {
+      "main": [
+        [
+          {
+            "node": "Post ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Post ID": {
+      "main": [
+        [
+          {
+            "node": "Slug Generator1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pexel Image Download": {
+      "main": [
+        []
+      ]
+    },
+    "Image Upload To Wordpress": {
+      "main": [
+        [
+          {
+            "node": "Set alt text and description to image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set alt text and description to image": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Update a post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI": {
+      "main": [
+        [
+          {
+            "node": "Create Post Data From AI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pexels HTTP Request image1": {
+      "main": [
+        []
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Auto-fixing Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Category Filter2": {
+      "main": [
+        [
+          {
+            "node": "Category Merge2",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "WP Make Category2": {
+      "main": [
+        [
+          {
+            "node": "Category Switch2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Category ID3": {
+      "main": [
+        [
+          {
+            "node": "WP Make Tag 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Category Search2": {
+      "main": [
+        [
+          {
+            "node": "Category Filter3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Category Merge3": {
+      "main": [
+        [
+          {
+            "node": "Category ID3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Category Switch2": {
+      "main": [
+        [
+          {
+            "node": "Category Merge3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Category Search2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Category Filter3": {
+      "main": [
+        [
+          {
+            "node": "Category Merge3",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Create Post Data2": {
+      "main": [
+        [
+          {
+            "node": "Create a post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Upload To Wordpress1": {
+      "main": [
+        [
+          {
+            "node": "Set alt text and description to image1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slug Generator1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set alt text and description to image1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Update a post2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update a post2": {
+      "main": [
+        [
+          {
+            "node": "Send message and wait for response",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Delete rows or columns from sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "AI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send message and wait for response": {
+      "main": [
+        [
+          {
+            "node": "Post on X",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Structured Output Parser",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "WP Image Download1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WP Image Download1": {
+      "main": [
+        [
+          {
+            "node": "Image Upload To Wordpress1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request5": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2026-02-06T17:27:33.989Z",
+  "id": "6TK1ZGJnsAtJvXOl",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Theme Park Savvy News copy",
+  "nodes": [
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "2b77ce9f-13e2-4b7d-a163-497d85ea8208",
+              "name": "title",
+              "type": "string",
+              "value": "={{ $json.output.title }}"
+            },
+            {
+              "id": "4ff99c65-b7b0-4d8f-9680-1fff9236dcdd",
+              "name": "content",
+              "type": "string",
+              "value": "={{ $json.output.content }}"
+            },
+            {
+              "id": "9be5a4a8-28f8-4356-9480-e45d27c9524a",
+              "name": "category",
+              "type": "string",
+              "value": "={{ $json.output.category }}"
+            },
+            {
+              "id": "b399f9e4-a19a-4acf-a3e3-4f2eb7f19020",
+              "name": "tags",
+              "type": "array",
+              "value": "={{ $json.output.tag }}"
+            },
+            {
+              "id": "cc7de1f2-fd0f-4929-866f-f6638be3aacb",
+              "name": "image_search_keyword",
+              "type": "string",
+              "value": "={{ $json.output.image_search_keyword }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "dea5f321-4564-46da-9ae7-0c93be07b560",
+      "name": "Create Post Data From AI",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        816,
+        352
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "3fbf57aa-2821-4343-95a2-ce05e9b6f4a3",
+              "operator": {
+                "type": "array",
+                "operation": "empty",
+                "singleValue": true
+              },
+              "leftValue": "={{ $json.photos }}",
+              "rightValue": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "99fb4bee-4ff9-44fc-9815-4e7df8eb5330",
+      "name": "Pexel Err If",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        1424,
+        352
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "url": "https://api.pexels.com/v1/search",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=ai"
+            },
+            {
+              "name": "per_page",
+              "value": "1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "41af6edb-e2b5-48b1-89f1-10e0d31cd910",
+      "name": "Pexels HTTP Request on Empty",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1792,
+        160
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "9Igs8Y2V98yZ4kdk",
+          "name": "Header Auth account 2"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "869e139f-38a5-4cec-94e0-67658aa8d321",
+      "name": "Pexel Merge",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        2016,
+        304
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "08edec66-9d1d-4e08-b402-34c11ab3042f",
+              "name": "Photo Landscape",
+              "type": "string",
+              "value": "={{ $json.photos[0].src.landscape }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9d0b5110-e884-4c2f-9f81-758e044e6462",
+      "name": "Pexel Image Url",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        2288,
+        288
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://themeparksavvy.com/wp-json/wp/v2/tags",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "name",
+              "value": "={{ $('Create Post Data From AI').item.json.tags[0] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a799ef7d-ba4d-4e05-85b9-e1c527343fb3",
+      "name": "WP Make Tag 1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        4144,
+        352
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "url": "=https://themeparksavvy.com/wp-json/wp/v2/tags?search={{ $('Create Post Data From AI').item.json.tags[0] }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "options": {}
+      },
+      "id": "c8b0548e-7721-4ba2-8991-d4690d6628a7",
+      "name": "Tag 1 Search",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        4752,
+        704
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "bbc751f4-668f-42ce-8648-ad32f7a7eb4a",
+                    "operator": {
+                      "type": "number",
+                      "operation": "exists",
+                      "singleValue": true
+                    },
+                    "leftValue": "={{ $json.id }}",
+                    "rightValue": ""
+                  }
+                ]
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "4364e900-1980-4afc-b673-aa3f655c1d85",
+                    "operator": {
+                      "type": "number",
+                      "operation": "notExists",
+                      "singleValue": true
+                    },
+                    "leftValue": "={{ $json.id }}",
+                    "rightValue": ""
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a7fb4d5c-31b7-446a-a7bc-8dee4ffc75c7",
+      "name": "Tag 1 Switch",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        4464,
+        352
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "096b866a-e670-4232-914e-cb712ea7a218",
+              "operator": {
+                "name": "filter.operator.equals",
+                "type": "string",
+                "operation": "equals"
+              },
+              "leftValue": "={{ $json.name }}",
+              "rightValue": "={{ $('Create Post Data From AI').item.json.tags[0] }}"
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "bff128c0-90ab-4fe9-b217-4eca087d3d86",
+      "name": "Tag 1 Filter",
+      "type": "n8n-nodes-base.filter",
+      "position": [
+        4928,
+        704
+      ],
+      "typeVersion": 2.2,
+      "disabled": true
+    },
+    {
+      "parameters": {},
+      "id": "7c71e2a2-db91-470a-bff9-75a108531efb",
+      "name": "Tag 1 Merge",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        5456,
+        352
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "45b8961f-b94d-4be2-8ecb-6f1cf0cc524a",
+              "name": "Tag 1 id",
+              "type": "number",
+              "value": "={{ $json.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "add2f235-fb6d-4393-b76f-2c85df6f77f4",
+      "name": "Tag 1 ID",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        5776,
+        352
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://themeparksavvy.com/wp-json/wp/v2/tags",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "name",
+              "value": "={{ $('Create Post Data From AI').item.json.tags[1] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c329e2e9-fab6-4d85-924f-568dac9aa329",
+      "name": "WP Make Tag 2",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        6112,
+        352
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "bbc751f4-668f-42ce-8648-ad32f7a7eb4a",
+                    "operator": {
+                      "type": "number",
+                      "operation": "exists",
+                      "singleValue": true
+                    },
+                    "leftValue": "={{ $json.id }}",
+                    "rightValue": ""
+                  }
+                ]
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "4364e900-1980-4afc-b673-aa3f655c1d85",
+                    "operator": {
+                      "type": "number",
+                      "operation": "notExists",
+                      "singleValue": true
+                    },
+                    "leftValue": "={{ $json.id }}",
+                    "rightValue": ""
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5c4e1e00-6e26-4b3b-b898-de5daa281e18",
+      "name": "Tag 2 Switch",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        6464,
+        352
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "url": "=https://themeparksavvy.com/wp-json/wp/v2/tags?search={{ $('Create Post Data From AI').item.json.tags[1] }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "options": {}
+      },
+      "id": "9c79fcfb-31fb-412f-8e29-b4d34e9faa65",
+      "name": "Tag 2 Search",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        6752,
+        704
+      ],
+      "typeVersion": 4.2,
+      "alwaysOutputData": false,
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "096b866a-e670-4232-914e-cb712ea7a218",
+              "operator": {
+                "name": "filter.operator.equals",
+                "type": "string",
+                "operation": "equals"
+              },
+              "leftValue": "={{ $json.name }}",
+              "rightValue": "={{ $('Create Post Data From AI').item.json.tags[1] }}"
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "ec6fb18c-9dc5-42f4-8269-dd38c28be4e1",
+      "name": "Tag 2 Filter",
+      "type": "n8n-nodes-base.filter",
+      "position": [
+        7136,
+        704
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {},
+      "id": "3c3e5932-8d31-4709-a436-82814315c702",
+      "name": "Tag 2 Merge",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        7456,
+        352
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "45b8961f-b94d-4be2-8ecb-6f1cf0cc524a",
+              "name": "Tag 2 id",
+              "type": "number",
+              "value": "={{ $json.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "59d62f5e-126a-4395-9da0-fb169e42e64d",
+      "name": "Tag 2 ID",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        7776,
+        352
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://themeparksavvy.com/wp-json/wp/v2/tags",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "name",
+              "value": "={{ $('Create Post Data From AI').item.json.tags[2] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b8533c89-b451-4b20-8698-9b029f0c307a",
+      "name": "WP Make Tag 3",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        8016,
+        352
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "bbc751f4-668f-42ce-8648-ad32f7a7eb4a",
+                    "operator": {
+                      "type": "number",
+                      "operation": "exists",
+                      "singleValue": true
+                    },
+                    "leftValue": "={{ $json.id }}",
+                    "rightValue": ""
+                  }
+                ]
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "4364e900-1980-4afc-b673-aa3f655c1d85",
+                    "operator": {
+                      "type": "number",
+                      "operation": "notExists",
+                      "singleValue": true
+                    },
+                    "leftValue": "={{ $json.id }}",
+                    "rightValue": ""
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "226ad685-e2bc-4b21-b873-966992f8a7d8",
+      "name": "Tag 3 Switch",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        8352,
+        352
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "url": "=https://themeparksavvy.com/wp-json/wp/v2/tags?search={{ $('Create Post Data From AI').item.json.tags[2] }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "options": {}
+      },
+      "id": "9c37f35d-6218-4af5-86eb-fe14c588a07b",
+      "name": "Tag 3 Search",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        8656,
+        704
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "096b866a-e670-4232-914e-cb712ea7a218",
+              "operator": {
+                "name": "filter.operator.equals",
+                "type": "string",
+                "operation": "equals"
+              },
+              "leftValue": "={{ $json.name }}",
+              "rightValue": "={{ $('Create Post Data From AI').item.json.tags[2] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3a7f97fa-e70f-4d8b-8914-cc2e8a621ee2",
+      "name": "Tag 3 Filter",
+      "type": "n8n-nodes-base.filter",
+      "position": [
+        9040,
+        704
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {},
+      "id": "15a2b960-b104-4c89-87f2-eeb7206551d3",
+      "name": "Tag 3 Merge",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        9360,
+        352
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "45b8961f-b94d-4be2-8ecb-6f1cf0cc524a",
+              "name": "Tag 3 id",
+              "type": "number",
+              "value": "={{ $json.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "52ad21f4-8bc8-4ed8-a986-e96501d193db",
+      "name": "Tag 3 ID",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        9680,
+        352
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://themeparksavvy.com/wp-json/wp/v2/tags",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "name",
+              "value": "={{ $('Create Post Data From AI').item.json.tags[3] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d961a54e-d764-4d80-a367-2b806d42a89d",
+      "name": "WP Make Tag 4",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        9920,
+        352
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "bbc751f4-668f-42ce-8648-ad32f7a7eb4a",
+                    "operator": {
+                      "type": "number",
+                      "operation": "exists",
+                      "singleValue": true
+                    },
+                    "leftValue": "={{ $json.id }}",
+                    "rightValue": ""
+                  }
+                ]
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "4364e900-1980-4afc-b673-aa3f655c1d85",
+                    "operator": {
+                      "type": "number",
+                      "operation": "notExists",
+                      "singleValue": true
+                    },
+                    "leftValue": "={{ $json.id }}",
+                    "rightValue": ""
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e36475ce-2024-4482-876c-27320526b6c2",
+      "name": "Tag 4 Switch",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        10256,
+        352
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "url": "=https://themeparksavvy.com/wp-json/wp/v2/tags?search={{ $('Create Post Data From AI').item.json.tags[3] }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "options": {}
+      },
+      "id": "78dd2b66-bd05-4a55-bc52-f933499dbea2",
+      "name": "Tag 4 Search",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        10560,
+        704
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "096b866a-e670-4232-914e-cb712ea7a218",
+              "operator": {
+                "name": "filter.operator.equals",
+                "type": "string",
+                "operation": "equals"
+              },
+              "leftValue": "={{ $json.name }}",
+              "rightValue": "={{ $('Create Post Data From AI').item.json.tags[3] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3887836c-857c-49e3-8d5a-d01ac53d721a",
+      "name": "Tag 4 Filter",
+      "type": "n8n-nodes-base.filter",
+      "position": [
+        10944,
+        704
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {},
+      "id": "44cb899d-e989-44ec-a3c0-b395b69cfa8e",
+      "name": "Tag 4 Merge",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        11264,
+        352
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "45b8961f-b94d-4be2-8ecb-6f1cf0cc524a",
+              "name": "Tag 4 id",
+              "type": "number",
+              "value": "={{ $json.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9675290a-ba2a-4599-b416-94e30f5d9582",
+      "name": "Tag 4 ID",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        11584,
+        352
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "aa611f11-bfa7-47af-bcce-24366905f78e",
+              "name": "title",
+              "type": "string",
+              "value": "={{ $('Create Post Data From AI').item.json.title }}"
+            },
+            {
+              "id": "a8160930-2acb-4af4-a158-f7757a34c0f5",
+              "name": "content",
+              "type": "string",
+              "value": "={{ $('Create Post Data From AI').item.json.content }}"
+            },
+            {
+              "id": "d5c6a651-71ec-4201-be55-999ba7de6790",
+              "name": "category id",
+              "type": "number",
+              "value": "={{ $('Category ID').item.json['category id'] }}"
+            },
+            {
+              "id": "94c55328-dab7-4782-989e-56e7a86eabb7",
+              "name": "Tag 1 id",
+              "type": "number",
+              "value": "={{ $('Tag 1 ID').item.json['Tag 1 id'] }}"
+            },
+            {
+              "id": "69623581-0279-45ab-8bb3-a5ca5ab9007a",
+              "name": "Tag 2 id",
+              "type": "number",
+              "value": "={{ $('Tag 2 ID').item.json['Tag 2 id'] }}"
+            },
+            {
+              "id": "d0672775-4605-4c73-b9e3-ad6ea3540c9d",
+              "name": "Tag 3 id",
+              "type": "number",
+              "value": "={{ $('Tag 3 ID').item.json['Tag 3 id'] }}"
+            },
+            {
+              "id": "77c66569-d663-4a2c-8863-d85afd8313ea",
+              "name": "Tag 4 id",
+              "type": "number",
+              "value": "={{ $json['Tag 4 id'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c0374128-e0e1-4a4c-afa4-d58a2543c49f",
+      "name": "Create Post Data",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        11632,
+        704
+      ],
+      "typeVersion": 3.4,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "title": "={{ $json.title }}",
+        "additionalFields": {
+          "content": "={{ $json.content }}",
+          "status": "draft",
+          "categories": "={{ [$json['category id']] }}",
+          "tags": "={{ [$json['Tag 1 id'], $json['Tag 2 id'], $json['Tag 3 id'], $json['Tag 4 id']] }}"
+        }
+      },
+      "id": "4449f153-3354-4af3-a398-995e91f7003e",
+      "name": "Create a post",
+      "type": "n8n-nodes-base.wordpress",
+      "position": [
+        12064,
+        352
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4a7905b0-4861-4432-a75e-e49d64377ad7",
+              "name": "Post id",
+              "type": "number",
+              "value": "={{ $json.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "06b89ddf-ddc8-4db9-b572-0c9504a284fa",
+      "name": "Post ID",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        11520,
+        272
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.pexel_url_to_download }}",
+        "options": {}
+      },
+      "id": "a82afd8b-8313-4d6e-ac80-133ae3a1a94b",
+      "name": "Pexel Image Download",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        12784,
+        672
+      ],
+      "typeVersion": 4.2,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://themeparksavvy.com//wp-json/wp/v2/media",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Disposition",
+              "value": "=attachment; filename=\"{{ $('Slug Generator').item.json.slug }}.jpg\""
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "binaryData",
+        "inputDataFieldName": "data",
+        "options": {}
+      },
+      "id": "9019a943-2010-4416-bfa8-a90bc623b2a5",
+      "name": "Image Upload To Wordpress",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        10560,
+        1552
+      ],
+      "typeVersion": 4.2,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// 1. Get the title from the \"Create Post Data2\" node for the current item\nconst title = $('Create Post Data2').item.json.title || 'themeparksavvy-post';\n\n// 2. Get the Pexel URL from the \"Pexel Image Url\" node for the current item\n// (Assuming 'Pexel Image Url' is the correct node name)\nconst pexelUrl = $('Pexel Image Url').item.json['Photo Landscape'];\n\n// 3. Generate the slug\nconst slug = title\n  .toLowerCase()\n  .trim()\n  .replace(/[^\\w\\s-]/g, '') // Remove all non-word chars except spaces and hyphens\n  .replace(/[\\s_-]+/g, '-') // Replace spaces and underscores with a single hyphen\n  .replace(/^[-\\s]+|[-\\s]+$/g, ''); // Remove leading/trailing hyphens\n\n// 4. Return BOTH the new slug AND the Pexel URL\nreturn {\n  slug: slug,\n  pexel_url_to_download: pexelUrl\n}"
+      },
+      "id": "e0cb504e-e8eb-4eb5-9671-f9ea15674652",
+      "name": "Slug Generator",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        10128,
+        1488
+      ],
+      "typeVersion": 2,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://themeparksavvy.com/wp-json/wp/v2/media/{{ $json.id }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "alt_text",
+              "value": "={{ $('Create Post Data2').first().json.title }}"
+            },
+            {
+              "name": "description",
+              "value": "={{ $('Create Post Data2').first().json.title }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "061402df-07f1-4277-adda-b852fffd6332",
+      "name": "Set alt text and description to image",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        10752,
+        1536
+      ],
+      "typeVersion": 4.2,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://themeparksavvy.com/wp-json/wp/v2/",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "featured_media",
+              "value": "={{ $json.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6376b3d1-52e9-4074-9eed-36d0243cbe80",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        10976,
+        1552
+      ],
+      "typeVersion": 4.2,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "postId": "={{ $('Post ID').item.json['Post id'] }}",
+        "updateFields": {
+          "status": "publish"
+        }
+      },
+      "id": "b064dbac-47f6-4b37-8ed0-2f2200858f8a",
+      "name": "Update a post",
+      "type": "n8n-nodes-base.wordpress",
+      "position": [
+        11216,
+        1552
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"title\": {\n      \"type\": \"string\"\n    },\n    \"content\": {\n      \"type\": \"string\"\n    },\n    \"category\": {\n      \"type\": \"string\"\n    },\n    \"tag\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    },\n    \"image_search_keyword\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\"title\", \"content\", \"category\", \"tag\", \"image_search_keyword\"]\n}",
+        "autoFix": true,
+        "customizeRetryPrompt": true,
+        "prompt": "Instructions:\n--------------\n{instructions}\n--------------\nCompletion:\n--------------\n{completion}\n--------------\n\nThe output above FAILED validation.\nError:\n--------------\n{error}\n--------------\n\nCRITICAL: You must output ONLY valid JSON. Common mistakes to fix:\n1. If you created HTML or a webpage, STOP. Create a JSON object instead.\n2. If you wrapped output in ```json or backticks, remove them.\n3. The \"tag\" field MUST be an array: [\"tag1\",\"tag2\",\"tag3\",\"tag4\"] NOT a string.\n4. The \"category\" field MUST be a single string NOT an array.\n5. All 5 fields (title, content, category, tag, image_search_keyword) are REQUIRED.\n6. Your response must start with { and end with }.\n\nExtract the blog post data from your previous output and format it as valid JSON matching the schema. Output the corrected JSON now:"
+      },
+      "id": "10b58b8d-0e79-4720-989b-fa854a6ea679",
+      "name": "Structured Output Parser",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "position": [
+        608,
+        672
+      ],
+      "typeVersion": 1.3
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.Transcripts }}",
+        "hasOutputParser": true,
+        "messages": {
+          "messageValues": [
+            {
+              "type": "AIMessagePromptTemplate",
+              "message": "TASK: Generate JSON data for a theme park news blog post. OUTPUT FORMAT: You must output ONLY valid JSON. No HTML. No webpage. No markdown. No text before or after. Just the JSON object starting with { and ending with }. EXAMPLE OUTPUT (follow this exact format but not the same content. This is just to show you what it looks like. Just so you know, this is an n8n node and will not accept anything that doesn't fit a certain format in Json): {\"title\":\"Disney Names Josh D'Amaro as Next CEO Replacing Bob Iger\",\"content\":\"Disney just made it official. Josh D'Amaro, the current head of Disney Experiences, will take over as CEO on March 18, 2026. The Board voted unanimously, and Bob Iger will step down after more than a decade of leading the company through its biggest transformation.\\\\n\\\\nD'Amaro has spent 28 years at Disney, starting at Disneyland Resort in 1998. He's been running Disney Experiences since 2020, overseeing 12 theme parks, 57 resort hotels, Disney Cruise Line, and the entire consumer products division. That's $36 billion in annual revenue and 185,000 cast members worldwide.\\\\n\\\\nThe choice makes sense. D'Amaro's fingerprints are all over some of Disney's biggest recent wins—Star Wars: Galaxy's Edge, Avengers Campus, and the massive Magic Kingdom expansion currently underway. He knows how to translate IP into experiences that people actually want to pay for.\\\\n\\\\nDana Walden, currently Co-Chairman of Disney Entertainment, gets a promotion too. She's now President and Chief Creative Officer, reporting directly to D'Amaro. It's a newly created role focused on storytelling across all of Disney's businesses.\\\\n\\\\nIger will stick around as Senior Advisor through the end of 2026. Whether that's a smooth transition or Iger looking over D'Amaro's shoulder remains to be seen. Iger has a history of not fully letting go.\\\\n\\\\nThe Board started this succession process back in January 2023, evaluating both internal and external candidates. D'Amaro got mentorship from Iger, external coaching, and plenty of face time with board members. They wanted to get this right after the Michael Eisner-to-Iger drama years ago.\\\\n\\\\nWhat happens next? D'Amaro takes the reins at a company generating $94.4 billion annually, but facing real challenges. Streaming is profitable now, but growth is slowing. The parks print money, but there's only so much pricing power before guests push back. And the film studio has been inconsistent at best.\\\\n\\\\nD'Amaro's first test will be proving he can lead more than just the parks division. Can he navigate Hollywood egos, sports broadcasting rights, and Wall Street expectations the way he handled theme park expansions? We'll find out soon enough.\",\"category\":\"Disney\",\"tag\":[\"Disney\",\"Leadership\",\"JoshDAmaro\",\"Business\"],\"image_search_keyword\":\"Business\"} REQUIRED FIELDS (all 5 must be present): 1. title - String, 8-14 words, no colons. Use action verbs: Announces, Reveals, Confirms, Faces, Sparks, Names, Quietly, Finally, Just. Name the company specifically. Examples: \"Universal's Newest Attraction Closes Just Weeks After Opening\" or \"SeaWorld Faces Third Lawsuit This Year Over Guest Injuries\". 2. content - String, 700-1000 words. Write like Inside the Magic or WDW News Today. Informed, engaging, slightly skeptical but fair. STRUCTURE: Opening (1-2 paragraphs, lead with news immediately), Body (4-6 paragraphs with details, context, numbers, names), Closing (1 paragraph, what's next). STYLE: Use contractions (it's, don't, they're). Vary sentence length. Be specific with names and numbers. Never say: \"It's worth noting\" \"Only time will tell\" \"Let's dive in\" \"At the end of the day\" \"Moving forward\". Use double backslash n for paragraph breaks. Escape quotes with backslash. No asterisks, headers, or bullets. 3. category - ONE string. Choose: Disney, Universal, SeaWorld, Six Flags, Cedar Fair, Theme Parks, Streaming, Entertainment, Disney World, Disneyland, or similar. 4. tag - EXACTLY 4 strings in array. Format: [\"Company\",\"Topic\",\"PersonOrPlace\",\"Category\"]. Example: [\"Disney\",\"Leadership\",\"JoshDAmaro\",\"Business\"]. 5. image_search_keyword - ONE word. Examples: Business, Castle, Rollercoaster, Cinema, Ship, Ocean, Park. JSON RULES: Double quotes only. Escape internal quotes with backslash. No trailing commas. CRITICAL: Output must be ONLY the JSON object. First character { last character }. Nothing else."
+            }
+          ]
+        },
+        "batching": {
+          "batchSize": null
+        }
+      },
+      "id": "8b7308dd-16ef-49cb-8e58-861920135924",
+      "name": "AI",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "position": [
+        176,
+        352
+      ],
+      "typeVersion": 1.7,
+      "executeOnce": true,
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000
+    },
+    {
+      "parameters": {
+        "url": "https://api.pexels.com/v1/search",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "={{ $json.image_search_keyword }}"
+            },
+            {
+              "name": "per_page",
+              "value": "1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9b08f32d-408e-4c4a-80ae-72c8e0f6a497",
+      "name": "Pexels HTTP Request image1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        992,
+        192
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "9Igs8Y2V98yZ4kdk",
+          "name": "Header Auth account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "maxOutputTokens": 5000
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        64,
+        560
+      ],
+      "id": "60329c64-9041-44dd-ac36-1d4b9b8cb81d",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "teS4CFeJzwufVFZQ",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "prompt": "The previous output failed JSON validation. You must fix it. ROLE: Theme park industry blogger (Disney, Universal, SeaWorld, Six Flags, Cedar Fair). Write like Inside the Magic or WDW News Today—informed, engaging, slightly skeptical but fair. CRITICAL OUTPUT FORMAT: You MUST output ONLY valid JSON with these 5 required fields: title, content, category, tag, image_search_keyword. No markdown. No explanation. No code blocks. Start with { end with }. SCHEMA REQUIREMENTS: All 5 fields REQUIRED, none null or empty. TITLE: string, 8-14 words, no colons. Use action verbs (Announces, Reveals, Confirms, Faces, Sparks). Name the company specifically. Good: \"Disney's $6.5 Billion Box Office Year Has Hollywood Scrambling\" Bad: colons, clickbait, vague, passive. CONTENT: string, 700-1000 words. Use double backslash n for paragraph breaks. Escape quotes with backslash. Opening leads with news (1-2 paragraphs), Body has details and context (4-6 paragraphs), Closing looks ahead (1 paragraph). Use contractions, vary sentences, be specific with names and numbers. No asterisks, headers, bullets. Never say: \"It's worth noting\" or \"Only time will tell\" or \"Let's dive in\" or \"It remains to be seen\" or \"Moving forward\". CATEGORY: ONE string (Disney, Universal, SeaWorld, Theme Parks, Streaming, Entertainment). TAG: Array with EXACTLY 4 strings formatted as square bracket quote Tag1 quote comma quote Tag2 quote comma quote Tag3 quote comma quote Tag4 quote square bracket. Include company name, topic, person or location, broad category. IMAGE_SEARCH_KEYWORD: ONE word (Castle, Rollercoaster, Business, Cinema, Ship). JSON SYNTAX: Double quotes for all keys and values. No trailing commas. No single quotes. FIX THE OUTPUT: Ensure title is a non-empty string. Ensure content is a string with properly escaped newlines and quotes. Ensure category is a single string NOT an array. Ensure tag is an array with exactly 4 strings. Ensure image_search_keyword is a single word. Output ONLY the corrected raw JSON starting with { and ending with } nothing else."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "typeVersion": 1,
+      "position": [
+        256,
+        656
+      ],
+      "id": "1b3a1719-0ae5-4974-885e-1e79cd02d898",
+      "name": "Auto-fixing Output Parser",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "title": "{{ $json.title }}",
+        "additionalFields": {
+          "content": "YEssir stuff",
+          "status": "draft"
+        }
+      },
+      "type": "n8n-nodes-base.wordpress",
+      "typeVersion": 1,
+      "position": [
+        11856,
+        512
+      ],
+      "id": "df039b27-d2f3-4493-99d0-06cbac5b4e51",
+      "name": "Create a post1",
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "45b8961f-b94d-4be2-8ecb-6f1cf0cc524a",
+              "name": "category id",
+              "type": "number",
+              "value": "={{ $json.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "63a8c467-65cf-495c-8a9e-485a4075bc70",
+      "name": "Category ID2",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        3824,
+        880
+      ],
+      "typeVersion": 3.4,
+      "disabled": true
+    },
+    {
+      "parameters": {},
+      "id": "9d499dc4-4d91-498a-95da-ff07b36a18a9",
+      "name": "Category Merge2",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        3632,
+        1104
+      ],
+      "typeVersion": 3.2,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "096b866a-e670-4232-914e-cb712ea7a218",
+              "operator": {
+                "name": "filter.operator.equals",
+                "type": "string",
+                "operation": "equals"
+              },
+              "leftValue": "={{ $json.name }}",
+              "rightValue": "={{ $('Create Post Data From AI1').item.json.category }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f2b4144e-026d-4605-ac2d-d6baae6c719f",
+      "name": "Category Filter2",
+      "type": "n8n-nodes-base.filter",
+      "position": [
+        3248,
+        1056
+      ],
+      "typeVersion": 2.2,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://themeparksavvy.com/wp-json/wp/v2/categories",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "name",
+              "value": "={{ $('Create Post Data From AI').item.json.category }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "05f0d0d6-a850-4260-9bbb-2a06faf1d17b",
+      "name": "WP Make Category2",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        2624,
+        416
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "45b8961f-b94d-4be2-8ecb-6f1cf0cc524a",
+              "name": "category id",
+              "type": "number",
+              "value": "={{ $json.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "18214758-ab65-4cdc-bda5-c7c8c2cb962c",
+      "name": "Category ID3",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        3920,
+        432
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "url": "=https://themeparksavvy.com/wp-json/wp/v2/categories?search={{ $('Create Post Data From AI').item.json.category }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "options": {}
+      },
+      "id": "47ddf02e-8f2c-4027-ae0f-d05fc3c4c583",
+      "name": "Category Search2",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        3232,
+        752
+      ],
+      "typeVersion": 4.2,
+      "alwaysOutputData": true,
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {},
+      "id": "5fda0d4d-18a5-44a0-8ad6-4c9668b1869e",
+      "name": "Category Merge3",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        3712,
+        432
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "bbc751f4-668f-42ce-8648-ad32f7a7eb4a",
+                    "operator": {
+                      "type": "number",
+                      "operation": "exists",
+                      "singleValue": true
+                    },
+                    "leftValue": "={{ $json.id }}",
+                    "rightValue": ""
+                  }
+                ]
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "4364e900-1980-4afc-b673-aa3f655c1d85",
+                    "operator": {
+                      "type": "number",
+                      "operation": "notExists",
+                      "singleValue": true
+                    },
+                    "leftValue": "={{ $json.id }}",
+                    "rightValue": ""
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fd19a8a2-7db8-4098-9008-47363238b82e",
+      "name": "Category Switch2",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        2880,
+        464
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "096b866a-e670-4232-914e-cb712ea7a218",
+              "operator": {
+                "name": "filter.operator.equals",
+                "type": "string",
+                "operation": "equals"
+              },
+              "leftValue": "={{ $json.name }}",
+              "rightValue": "={{ $('Create Post Data From AI').item.json.category }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "bcfca994-8e6e-4bbc-9424-5f9e42f9b22e",
+      "name": "Category Filter3",
+      "type": "n8n-nodes-base.filter",
+      "position": [
+        3488,
+        752
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "aa611f11-bfa7-47af-bcce-24366905f78e",
+              "name": "title",
+              "type": "string",
+              "value": "={{ $('Create Post Data From AI').item.json.title }}"
+            },
+            {
+              "id": "a8160930-2acb-4af4-a158-f7757a34c0f5",
+              "name": "content",
+              "type": "string",
+              "value": "={{ $('Create Post Data From AI').item.json.content }}"
+            },
+            {
+              "id": "d5c6a651-71ec-4201-be55-999ba7de6790",
+              "name": "category id",
+              "type": "number",
+              "value": "={{ $('Category ID3').item.json['category id'] }}"
+            },
+            {
+              "id": "94c55328-dab7-4782-989e-56e7a86eabb7",
+              "name": "Tag 1 id",
+              "type": "number",
+              "value": "={{ $('Tag 1 ID').item.json['Tag 1 id'] }}"
+            },
+            {
+              "id": "69623581-0279-45ab-8bb3-a5ca5ab9007a",
+              "name": "Tag 2 id",
+              "type": "number",
+              "value": "={{ $('Tag 2 ID').item.json['Tag 2 id'] }}"
+            },
+            {
+              "id": "d0672775-4605-4c73-b9e3-ad6ea3540c9d",
+              "name": "Tag 3 id",
+              "type": "number",
+              "value": "={{ $('Tag 3 ID').item.json['Tag 3 id'] }}"
+            },
+            {
+              "id": "77c66569-d663-4a2c-8863-d85afd8313ea",
+              "name": "Tag 4 id",
+              "type": "number",
+              "value": "={{ $json['Tag 4 id'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "399cbcf7-54ae-4d1e-b09e-858b0b6b571b",
+      "name": "Create Post Data2",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        11792,
+        368
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 11,
+              "triggerAtMinute": "={{ Math.floor(Math.random() * 60) }}"
+            },
+            {
+              "triggerAtHour": 17,
+              "triggerAtMinute": "={{ Math.floor(Math.random() * 60) }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -1520,
+        224
+      ],
+      "id": "e7869ae2-7ad8-4cd0-a3d8-6c145474df28",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://themeparksavvy.com/wp-json/wp/v2/media",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Disposition",
+              "value": "=attachment; filename=\"{{ $('Slug Generator1').item.json.slug }}.jpg\""
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "binaryData",
+        "inputDataFieldName": "data",
+        "options": {}
+      },
+      "id": "38afc840-6d6b-486c-bc08-5fa6455dc114",
+      "name": "Image Upload To Wordpress1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        13136,
+        368
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// --- Make sure these node names are correct ---\nconst POST_DATA_NODE = 'Create Post Data2';\nconst PEXEL_NODE = 'Pexel Image Url';\n// ---------------------------------------------\n\n// 1. Get the title from your \"Create Post Data2\" node\nconst title = $(POST_DATA_NODE).item.json.title || 'themeparksavvy-post';\n\n// 2. Get the Pexel URL from the \"Pexel Image Url\" node\nconst pexelUrl = $(PEXEL_NODE).item.json['Photo Landscape'];\n\n// 3. Generate the slug (your code is perfect)\nconst slug = title\n  .toLowerCase()\n  .trim()\n  .replace(/[^\\w\\s-]/g, '') // Remove all non-word chars except spaces and hyphens\n  .replace(/[\\s_-]+/g, '-') // Replace spaces and underscores with a single hyphen\n  .replace(/^[-\\s]+|[-\\s]+$/g, ''); // Remove leading/trailing hyphens\n\n// 4. Return BOTH the new slug AND the Pexel URL\nreturn {\n  slug: slug,\n  pexel_url_to_download: pexelUrl\n}"
+      },
+      "id": "e52ad68f-1a6d-4c6a-82fc-a6aa5f0cef2f",
+      "name": "Slug Generator1",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        12048,
+        112
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://themeparksavvy.com/wp-json/wp/v2/media/{{ $json.id }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "alt_text",
+              "value": "={{ $('Create Post Data2').first().json.title }}"
+            },
+            {
+              "name": "description",
+              "value": "={{ $('Create Post Data2').first().json.title }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d71fb4b0-7f3f-4fd4-abbe-dc4b90bc577a",
+      "name": "Set alt text and description to image1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        13344,
+        368
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://themeparksavvy.com/wp-json/wp/v2/posts/{{ $('Create a post').first().json.id}}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "featured_media",
+              "value": "={{ $json.id }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "featured_media",
+              "value": "={{ $json.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0eb4beef-7274-42a4-aa12-57d87358b0ae",
+      "name": "HTTP Request1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        13568,
+        368
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "postId": "={{ $('Create a post').first().json.id}}",
+        "updateFields": {
+          "status": "publish"
+        }
+      },
+      "id": "bef58f34-2e3e-4f45-a742-fa38d59c0d54",
+      "name": "Update a post2",
+      "type": "n8n-nodes-base.wordpress",
+      "position": [
+        13792,
+        368
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Pexel Image Url').item.json['Photo Landscape'] }}",
+        "options": {}
+      },
+      "id": "3cc6bfef-6abf-4402-8a95-1a6b8b8200cb",
+      "name": "Pexel Image Download1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        10448,
+        1568
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "options": {
+          "maxOutputTokens": 5000
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -208,
+        240
+      ],
+      "id": "d8932475-6d9e-4d4b-af34-a040b6ccf797",
+      "name": "Google Gemini Chat Model1",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "teS4CFeJzwufVFZQ",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1f4j3BnH9_54jUN1ATdC_ZGhst73-MsRBEWgVYURJJ60",
+          "mode": "list",
+          "cachedResultName": "Theme Park Savvy Posting",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1f4j3BnH9_54jUN1ATdC_ZGhst73-MsRBEWgVYURJJ60/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1f4j3BnH9_54jUN1ATdC_ZGhst73-MsRBEWgVYURJJ60/edit#gid=0"
+        },
+        "options": {
+          "dataLocationOnSheet": {
+            "values": {
+              "rangeDefinition": "specifyRangeA1",
+              "range": "A1:A2"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -880,
+        256
+      ],
+      "id": "1e5bd077-919a-40c8-b981-206bbc6a16ac",
+      "name": "Get row(s) in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Uy1yaxpnjjuyRf5I",
+          "name": "Google Sheets account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "documentId": {
+          "__rl": true,
+          "value": "1f4j3BnH9_54jUN1ATdC_ZGhst73-MsRBEWgVYURJJ60",
+          "mode": "list",
+          "cachedResultName": "Theme Park Savvy Posting",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1f4j3BnH9_54jUN1ATdC_ZGhst73-MsRBEWgVYURJJ60/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1f4j3BnH9_54jUN1ATdC_ZGhst73-MsRBEWgVYURJJ60/edit#gid=0"
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        14224,
+        656
+      ],
+      "id": "1da90665-d10b-433b-9674-70acf557bffa",
+      "name": "Delete rows or columns from sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Uy1yaxpnjjuyRf5I",
+          "name": "Google Sheets account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "text": "={{ $('Update a post2').item.json.title.raw }}\n\n{{ $('Update a post2').item.json.link }}",
+        "additionalFields": {}
+      },
+      "id": "74989be5-135f-4f7c-a212-d526feb258e4",
+      "name": "Post on X",
+      "type": "n8n-nodes-base.twitter",
+      "position": [
+        14064,
+        960
+      ],
+      "typeVersion": 2,
+      "credentials": {
+        "twitterOAuth2Api": {
+          "id": "zLyyrG3meROBYvVW",
+          "name": "X account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# Setup\n### 1/ Add Your credentials\n[Google - Sheet](https://docs.n8n.io/integrations/builtin/credentials/google/)\n[X - Twitter](https://docs.n8n.io/integrations/builtin/credentials/twitter/)\n\n### 2/ Create a new Google Spread Sheet, with one sheet named Tweets and in the first cell, write tweet.\n\n### 3/ Define your desire frequency\n\n# 👇",
+        "height": 406.7602710975665,
+        "width": 275.01592825011585,
+        "color": 6
+      },
+      "id": "fe216f24-6192-4f9a-9178-5c4bb85fea03",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        3536,
+        1552
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "### Crafted by the\n## [🥷 n8n.ninja](https://n8n.ninja)",
+        "height": 85.79488430601403,
+        "width": 202.64787116404852,
+        "color": 7
+      },
+      "id": "eb06eada-d669-4e62-9548-f74011a94402",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        7728,
+        1200
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "chatId": "8505252153",
+        "message": "={{ $('Image Upload To Wordpress1').item.json.guid.rendered  }} {{ $json.link }} Good Master shall I send it?",
+        "approvalOptions": {
+          "values": {
+            "approvalType": "double"
+          }
+        },
+        "options": {
+          "limitWaitTime": {
+            "values": {
+              "resumeAmount": 12,
+              "resumeUnit": "minutes"
+            }
+          }
+        },
+        "path": "95c49793-8204-4f0b-ab4e-88f3b38fe506"
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        13024,
+        592
+      ],
+      "id": "66f1c07b-998a-4ff7-8194-fc217368832f",
+      "name": "Send message and wait for response",
+      "webhookId": "95c49793-8204-4f0b-ab4e-88f3b38fe506",
+      "credentials": {
+        "telegramApi": {
+          "id": "wWkjz8XWMjKh6Ur1",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        848,
+        1024
+      ],
+      "id": "66877a70-e59a-4ad2-8452-e06f129b4711",
+      "name": "Google Gemini Chat Model2",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "teS4CFeJzwufVFZQ",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://themeparksavvy.com/wp-json/wp/v2/media",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "per_page",
+              "value": "100"
+            },
+            {
+              "name": "context",
+              "value": "view"
+            }
+          ]
+        },
+        "options": {
+          "batching": {
+            "batch": {}
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -256,
+        1344
+      ],
+      "id": "02c3fde6-025d-4ab8-a869-922c0338b991",
+      "name": "HTTP Request2",
+      "credentials": {
+        "wordpressApi": {
+          "id": "hdZjbKSZA97wLS3A",
+          "name": "Wordpress account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop through all the items from the previous node\nconst cleanList = items.map(item => {\n  // Get the title (safely handle if it's missing)\n  const title = item.json.title ? item.json.title.rendered : \"No Title\";\n  \n  // Get the direct image link (guid.rendered is the file URL in your screenshot)\n  const url = item.json.guid ? item.json.guid.rendered : \"No URL\";\n  \n  // Get the ID (we need this to reference it later)\n  const id = item.json.id;\n\n  // Format it as a single line of text\n  return `ID: ${id} | Title: \"${title}\" | URL: ${url}`;\n});\n\n// Combine all lines into one big text block for the AI\nreturn [\n  {\n    json: {\n      image_list_for_ai: cleanList.join(\"\\n\")\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -48,
+        1344
+      ],
+      "id": "a7bab7e8-8f96-4e50-b93b-2cdfc4344b21",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-2.5-flash",
+          "mode": "list",
+          "cachedResultName": "models/gemini-2.5-flash"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=I have a social media post with the text below:\n\" {{ $('Create Content with AI').first().json.output }}} \"\n\nPlease look at the following list of images from my media library and choose the single best image URL that matches the context of that post.\n\nImage List:\n{{ $json.image_list_for_ai }}\n\nReturn ONLY the URL. No other text."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        12640,
+        48
+      ],
+      "id": "8ec15554-0304-4f6d-adbf-18bc838ad39b",
+      "name": "Message a model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "teS4CFeJzwufVFZQ",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://themeparksavvy.com/wp-json/wp/v2/media",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "={{ $json.content.parts[0].text }}"
+            },
+            {
+              "name": "per_page",
+              "value": "100"
+            },
+            {
+              "name": "orientation",
+              "value": "landscape"
+            },
+            {
+              "name": "media_type",
+              "value": "image"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "3dc90627-73c4-4da6-b376-6816b0e1b70e",
+      "name": "Pexels Image Search",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        12896,
+        192
+      ],
+      "typeVersion": 4.3,
+      "credentials": {
+        "wordpressApi": {
+          "id": "hdZjbKSZA97wLS3A",
+          "name": "Wordpress account 2"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Message a model').first().json.content.parts[0].text.trim() }}",
+        "options": {}
+      },
+      "id": "2854d047-0856-4964-9dd8-49315a8bf0f8",
+      "name": "WP Image Download1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        12928,
+        48
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.photos[0].src.original }}",
+        "options": {}
+      },
+      "id": "4cc4a0cf-71a0-4b52-be1c-5d9b989fe0c6",
+      "name": "Pexel Image Download2",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        13248,
+        192
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "url": "https://themeparksavvy.com/wp-json/wp/v2/media",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "per_page",
+              "value": "200"
+            },
+            {
+              "name": "context",
+              "value": "view"
+            }
+          ]
+        },
+        "options": {
+          "batching": {
+            "batch": {}
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        12240,
+        96
+      ],
+      "id": "acb72b0a-262e-4372-b257-859165e8402c",
+      "name": "HTTP Request5",
+      "credentials": {
+        "wordpressApi": {
+          "id": "hdZjbKSZA97wLS3A",
+          "name": "Wordpress account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop through all the items from the previous node\nconst cleanList = items.map(item => {\n  // Get the title (safely handle if it's missing)\n  const title = item.json.title ? item.json.title.rendered : \"No Title\";\n  \n  // Get the direct image link (guid.rendered is the file URL in your screenshot)\n  const url = item.json.guid ? item.json.guid.rendered : \"No URL\";\n  \n  // Get the ID (we need this to reference it later)\n  const id = item.json.id;\n\n  // Format it as a single line of text\n  return `ID: ${id} | Title: \"${title}\" | URL: ${url}`;\n});\n\n// Combine all lines into one big text block for the AI\nreturn [\n  {\n    json: {\n      image_list_for_ai: cleanList.join(\"\\n\")\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12400,
+        96
+      ],
+      "id": "f95faed7-a7da-4e8d-95c6-6c5c669e1c2e",
+      "name": "Code in JavaScript1"
+    }
+  ],
+  "pinData": {},
+  "repo_name": "N8N-Backup",
+  "repo_owner": "blakefrasure",
+  "repo_path": "",
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "shared": [
+    {
+      "updatedAt": "2026-02-06T17:27:34.037Z",
+      "createdAt": "2026-02-06T17:27:34.037Z",
+      "role": "workflow:owner",
+      "workflowId": "6TK1ZGJnsAtJvXOl",
+      "projectId": "o0dLpT0DC7ihHtEO"
+    }
+  ],
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrenceRules": []
+    },
+    "node:Schedule posting every 6 hours": {
+      "recurrenceRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2026-02-06T17:27:33.989Z",
+  "versionId": "e9dfd39b-1660-4b77-bf2e-22cf2fcec809"
+}
