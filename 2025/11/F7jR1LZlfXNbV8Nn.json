@@ -1,0 +1,778 @@
+{
+  "active": true,
+  "activeVersion": {
+    "updatedAt": "2026-05-02T23:40:14.401Z",
+    "createdAt": "2026-05-02T23:40:14.401Z",
+    "versionId": "28bcd837-1ef7-41cb-8793-1757fcd3314e",
+    "workflowId": "F7jR1LZlfXNbV8Nn",
+    "nodes": [
+      {
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "45268b04-68a1-420f-9ad2-950844d16af1",
+                "name": "niche",
+                "type": "string",
+                "value": "Student Founder & Creator Economy. You tweet about the reality of building real businesses (websites, podcasts, and brands) while being a student at a prestigious university. You mix insights from your podcast the Leaderboard, the struggles of indie hacking (coding, side hustles), and the creative process of writing and video production. You are building in public, not lecturing from a podium."
+              },
+              {
+                "id": "d95f4a1c-ab1c-4eca-8732-3d7a087f82d8",
+                "name": "style",
+                "type": "string",
+                "value": "Raw, Punchy, and Twitter-Native.  NO \"AI Voice\": Do not use words like \"unleash,\" \"elevate,\" \"landscape,\" \"foster,\" or \"delve.\" Never start tweets with \"In a world where...\"  Casual Authority: Write like a 20-year-old founder, not a corporate PR department. Use sentence fragments. It’s okay to be opinionated.  Show, Don't Tell: Don't say \"I am working hard.\" Say \"Just spent 6 hours debugging an API wrapper.\"  Formatting: Keep it visual. Use line breaks. Use simple language (Grade 8 reading level). Sparse use of emojis (maximum 1 per tweet)."
+              },
+              {
+                "id": "1ee088f7-7021-48c0-bcb7-d1011eb0db3d",
+                "name": "inspiration",
+                "type": "string",
+                "value": "The \"Indie Hacker\" & Storyteller Path. Your inspiration comes from the \"ship fast\" mentality of indie developers (like Pieter Levels), the business breakdowns of the \"My First Million\" podcast, and the immersive storytelling found in high-end theme park design (Imagineering). You value execution over theory."
+              }
+            ]
+          },
+          "options": {}
+        },
+        "id": "a7ff2e90-8f57-4a62-8b5a-788185a5693d",
+        "name": "Configure your influencer profile1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -1280,
+          320
+        ],
+        "typeVersion": 3.3
+      },
+      {
+        "parameters": {
+          "modelId": {
+            "__rl": true,
+            "value": "models/gemini-3.1-flash-lite-preview",
+            "mode": "list",
+            "cachedResultName": "models/gemini-3.1-flash-lite-preview"
+          },
+          "messages": {
+            "values": [
+              {
+                "content": "=You're going to be a successful modern Twitter influencer. Your tweets always go viral.\n\nYou have a specific writing style: {{ $json.style }}\npply this specific writing style rigorously: {{ $json.style }}\n\nCRITICAL ANTI-ROBOT RULES:\n\nBan these words: Never use \"unleash,\" \"delve,\" \"elevate,\" \"foster,\" \"tapestry,\" \"landscape,\" or \"realm\" and any CUSS WORDS or Hell. Just be chill about it but convincing.\n\nTone: Write like you are texting a smart friend. Be direct. Use sentence fragments if it adds good message.\n\nNo Hashtags: Do not use hashtags unless explicitly asked.\n\nFormatting: If the tweet is longer than one sentence, use line breaks for readability. If it sounds like a LinkedIn post, rewrite it to be more casual.\nAnswer with the viral tweet and nothing else as a response. Keep the tweet within 280 characters. Current date and time are {{DateTime.now()}}. Add hashtags and emojis where relevant. Don't be crazy with the marketing, NO CUSSING, no hell. etc.\n\nWrite a tweet that is certain to go viral. Take your time in writing it. Think. Use the vast knowledge you have. Also this is only to re-post about your book, not a brand new book. I'll take care of tweets for those. This is for stuff like \"Uncharted Faith ...\"\n\nMy new book include at the end. \"Check it out: Uncharted Faith Sling of the Protector\"...\n"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.googleGemini",
+        "typeVersion": 1,
+        "position": [
+          -1136,
+          0
+        ],
+        "id": "1951c95a-7008-4b5c-939a-fab70d18fa6e",
+        "name": "Message a model",
+        "credentials": {
+          "googlePalmApi": {
+            "id": "teS4CFeJzwufVFZQ",
+            "name": "Google Gemini(PaLM) Api account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "45268b04-68a1-420f-9ad2-950844d16af1",
+                "name": "niche",
+                "type": "string",
+                "value": "Indie Fiction Author. Genre: High-Stakes Espionage & Religious Thriller."
+              },
+              {
+                "id": "d95f4a1c-ab1c-4eca-8732-3d7a087f82d8",
+                "name": "style",
+                "type": "string",
+                "value": "simple, and hype. Write like as an author that is trying to conivce people the book is out. Super stoked and a really good story. Follow for more too.Be confident: this book is a banger and you know it."
+              },
+              {
+                "id": "1ee088f7-7021-48c0-bcb7-d1011eb0db3d",
+                "name": "inspiration",
+                "type": "string",
+                "value": "Topic: I just hit publish on KDP for my novel, Uncharted Faith.  The Hook: The Vibe: I wrote this because I was tired of boring thrillers. This is \"National Treasure\" meets \"The Work.\"  Call to Action: It's live on Amazon now. Go read it."
+              }
+            ]
+          },
+          "options": {}
+        },
+        "id": "40ab9f85-7504-4377-97d6-ef45ac60191f",
+        "name": "Configure your influencer profile",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -1440,
+          0
+        ],
+        "typeVersion": 3.3
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 1
+            },
+            "conditions": [
+              {
+                "id": "0a6ebbb6-4b14-4c7e-9390-215e32921663",
+                "operator": {
+                  "type": "number",
+                  "operation": "gt"
+                },
+                "leftValue": "={{ $json.content.parts[0].text.length }}",
+                "rightValue": 280
+              }
+            ],
+            "combinator": "and"
+          },
+          "options": {}
+        },
+        "id": "50b7a154-4f71-4685-af5b-41610066dd14",
+        "name": "Verify tweet constraints",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -624,
+          0
+        ],
+        "typeVersion": 2
+      },
+      {
+        "parameters": {
+          "content": "## Post the tweet\nPost the tweet to your X account.",
+          "height": 265,
+          "width": 389
+        },
+        "id": "72427407-484b-432e-9250-4c7fab643a4e",
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -272,
+          -112
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "content": "## Validate tweet\nIf the generated tweet does not meet length constraints, regenerate it.",
+          "height": 265,
+          "width": 389
+        },
+        "id": "4dfd362c-903d-4d09-93c2-c6aaf40a1e0a",
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -784,
+          -96
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "content": "## Generate tweet\nGenerate a potentially viral tweet based on your configuration.",
+          "height": 265,
+          "width": 389
+        },
+        "id": "05297a42-e33a-4bba-b0ee-fa29d9b32e04",
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1232,
+          -96
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "content": "## Configure influencer profile \nSet your target niche, writing style, and inspiration.\n",
+          "height": 265,
+          "width": 389
+        },
+        "id": "1be145aa-8eaf-41e3-b61e-b9d326e986ce",
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1664,
+          -96
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {},
+        "id": "fffd2783-886f-4758-89cd-9514bb17d00a",
+        "name": "Trigger posting manually",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          -1888,
+          336
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "rule": {
+            "interval": [
+              {
+                "daysInterval": 2,
+                "triggerAtHour": 10,
+                "triggerAtMinute": "={{ Math.floor(Math.random() * 60) }}"
+              }
+            ]
+          }
+        },
+        "id": "b7a68c6c-edd8-42b5-9b85-e470ed3d11e6",
+        "name": "Schedule posting every 6 hours",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -1888,
+          0
+        ],
+        "typeVersion": 1.1
+      },
+      {
+        "parameters": {
+          "text": "={{ $json.content.parts[0].text }}",
+          "additionalFields": {}
+        },
+        "id": "8fa93a34-658b-4986-aa0c-e6404bc91108",
+        "name": "Post tweet",
+        "type": "n8n-nodes-base.twitter",
+        "position": [
+          0,
+          -48
+        ],
+        "typeVersion": 2,
+        "credentials": {
+          "twitterOAuth2Api": {
+            "id": "9RqXKnXYh44KnDnv",
+            "name": "X account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "loose",
+              "version": 2
+            },
+            "conditions": [
+              {
+                "id": "548b7ebf-046a-4a98-b685-b321ab818e5c",
+                "leftValue": "={{ $json.data.approved }}",
+                "rightValue": "=true",
+                "operator": {
+                  "type": "string",
+                  "operation": "equals",
+                  "name": "filter.operator.equals"
+                }
+              }
+            ],
+            "combinator": "and"
+          },
+          "looseTypeValidation": true,
+          "options": {}
+        },
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.2,
+        "position": [
+          -128,
+          240
+        ],
+        "id": "84c57db5-412d-4844-95f2-ddd2d25fa261",
+        "name": "If",
+        "disabled": true
+      },
+      {
+        "parameters": {},
+        "type": "n8n-nodes-base.limit",
+        "typeVersion": 1,
+        "position": [
+          -1024,
+          272
+        ],
+        "id": "8b774637-7fe6-4e40-be1d-692235ae3686",
+        "name": "Limit"
+      }
+    ],
+    "connections": {
+      "Message a model": {
+        "main": [
+          [
+            {
+              "node": "Verify tweet constraints",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Configure your influencer profile": {
+        "main": [
+          [
+            {
+              "node": "Message a model",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Verify tweet constraints": {
+        "main": [
+          [
+            {
+              "node": "Configure your influencer profile",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Post tweet",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Trigger posting manually": {
+        "main": [
+          [
+            {
+              "node": "Configure your influencer profile",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Schedule posting every 6 hours": {
+        "main": [
+          [
+            {
+              "node": "Configure your influencer profile",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "If": {
+        "main": [
+          [],
+          []
+        ]
+      }
+    },
+    "authors": "system migration",
+    "name": null,
+    "description": null,
+    "autosaved": false
+  },
+  "activeVersionId": "28bcd837-1ef7-41cb-8793-1757fcd3314e",
+  "connections": {
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "Verify tweet constraints",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Configure your influencer profile": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Verify tweet constraints": {
+      "main": [
+        [
+          {
+            "node": "Configure your influencer profile",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Post tweet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Trigger posting manually": {
+      "main": [
+        [
+          {
+            "node": "Configure your influencer profile",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule posting every 6 hours": {
+      "main": [
+        [
+          {
+            "node": "Configure your influencer profile",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [],
+        []
+      ]
+    }
+  },
+  "createdAt": "2025-11-21T19:44:12.975Z",
+  "id": "F7jR1LZlfXNbV8Nn",
+  "isArchived": false,
+  "meta": null,
+  "name": "Twitter Book Uncharted",
+  "nodes": [
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "45268b04-68a1-420f-9ad2-950844d16af1",
+              "name": "niche",
+              "type": "string",
+              "value": "Student Founder & Creator Economy. You tweet about the reality of building real businesses (websites, podcasts, and brands) while being a student at a prestigious university. You mix insights from your podcast the Leaderboard, the struggles of indie hacking (coding, side hustles), and the creative process of writing and video production. You are building in public, not lecturing from a podium."
+            },
+            {
+              "id": "d95f4a1c-ab1c-4eca-8732-3d7a087f82d8",
+              "name": "style",
+              "type": "string",
+              "value": "Raw, Punchy, and Twitter-Native.  NO \"AI Voice\": Do not use words like \"unleash,\" \"elevate,\" \"landscape,\" \"foster,\" or \"delve.\" Never start tweets with \"In a world where...\"  Casual Authority: Write like a 20-year-old founder, not a corporate PR department. Use sentence fragments. It’s okay to be opinionated.  Show, Don't Tell: Don't say \"I am working hard.\" Say \"Just spent 6 hours debugging an API wrapper.\"  Formatting: Keep it visual. Use line breaks. Use simple language (Grade 8 reading level). Sparse use of emojis (maximum 1 per tweet)."
+            },
+            {
+              "id": "1ee088f7-7021-48c0-bcb7-d1011eb0db3d",
+              "name": "inspiration",
+              "type": "string",
+              "value": "The \"Indie Hacker\" & Storyteller Path. Your inspiration comes from the \"ship fast\" mentality of indie developers (like Pieter Levels), the business breakdowns of the \"My First Million\" podcast, and the immersive storytelling found in high-end theme park design (Imagineering). You value execution over theory."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a7ff2e90-8f57-4a62-8b5a-788185a5693d",
+      "name": "Configure your influencer profile1",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -1280,
+        320
+      ],
+      "typeVersion": 3.3
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-3.1-flash-lite-preview",
+          "mode": "list",
+          "cachedResultName": "models/gemini-3.1-flash-lite-preview"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You're going to be a successful modern Twitter influencer. Your tweets always go viral.\n\nYou have a specific writing style: {{ $json.style }}\npply this specific writing style rigorously: {{ $json.style }}\n\nCRITICAL ANTI-ROBOT RULES:\n\nBan these words: Never use \"unleash,\" \"delve,\" \"elevate,\" \"foster,\" \"tapestry,\" \"landscape,\" or \"realm\" and any CUSS WORDS or Hell. Just be chill about it but convincing.\n\nTone: Write like you are texting a smart friend. Be direct. Use sentence fragments if it adds good message.\n\nNo Hashtags: Do not use hashtags unless explicitly asked.\n\nFormatting: If the tweet is longer than one sentence, use line breaks for readability. If it sounds like a LinkedIn post, rewrite it to be more casual.\nAnswer with the viral tweet and nothing else as a response. Keep the tweet within 280 characters. Current date and time are {{DateTime.now()}}. Add hashtags and emojis where relevant. Don't be crazy with the marketing, NO CUSSING, no hell. etc.\n\nWrite a tweet that is certain to go viral. Take your time in writing it. Think. Use the vast knowledge you have. Also this is only to re-post about your book, not a brand new book. I'll take care of tweets for those. This is for stuff like \"Uncharted Faith ...\"\n\nMy new book include at the end. \"Check it out: Uncharted Faith Sling of the Protector\"...\n"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        -1136,
+        0
+      ],
+      "id": "1951c95a-7008-4b5c-939a-fab70d18fa6e",
+      "name": "Message a model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "teS4CFeJzwufVFZQ",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "45268b04-68a1-420f-9ad2-950844d16af1",
+              "name": "niche",
+              "type": "string",
+              "value": "Indie Fiction Author. Genre: High-Stakes Espionage & Religious Thriller."
+            },
+            {
+              "id": "d95f4a1c-ab1c-4eca-8732-3d7a087f82d8",
+              "name": "style",
+              "type": "string",
+              "value": "simple, and hype. Write like as an author that is trying to conivce people the book is out. Super stoked and a really good story. Follow for more too.Be confident: this book is a banger and you know it."
+            },
+            {
+              "id": "1ee088f7-7021-48c0-bcb7-d1011eb0db3d",
+              "name": "inspiration",
+              "type": "string",
+              "value": "Topic: I just hit publish on KDP for my novel, Uncharted Faith.  The Hook: The Vibe: I wrote this because I was tired of boring thrillers. This is \"National Treasure\" meets \"The Work.\"  Call to Action: It's live on Amazon now. Go read it."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "40ab9f85-7504-4377-97d6-ef45ac60191f",
+      "name": "Configure your influencer profile",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -1440,
+        0
+      ],
+      "typeVersion": 3.3
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "0a6ebbb6-4b14-4c7e-9390-215e32921663",
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              },
+              "leftValue": "={{ $json.content.parts[0].text.length }}",
+              "rightValue": 280
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "50b7a154-4f71-4685-af5b-41610066dd14",
+      "name": "Verify tweet constraints",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -624,
+        0
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "content": "## Post the tweet\nPost the tweet to your X account.",
+        "height": 265,
+        "width": 389
+      },
+      "id": "72427407-484b-432e-9250-4c7fab643a4e",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -272,
+        -112
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Validate tweet\nIf the generated tweet does not meet length constraints, regenerate it.",
+        "height": 265,
+        "width": 389
+      },
+      "id": "4dfd362c-903d-4d09-93c2-c6aaf40a1e0a",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -784,
+        -96
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Generate tweet\nGenerate a potentially viral tweet based on your configuration.",
+        "height": 265,
+        "width": 389
+      },
+      "id": "05297a42-e33a-4bba-b0ee-fa29d9b32e04",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1232,
+        -96
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Configure influencer profile \nSet your target niche, writing style, and inspiration.\n",
+        "height": 265,
+        "width": 389
+      },
+      "id": "1be145aa-8eaf-41e3-b61e-b9d326e986ce",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1664,
+        -96
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "fffd2783-886f-4758-89cd-9514bb17d00a",
+      "name": "Trigger posting manually",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        -1888,
+        336
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "daysInterval": 2,
+              "triggerAtHour": 10,
+              "triggerAtMinute": "={{ Math.floor(Math.random() * 60) }}"
+            }
+          ]
+        }
+      },
+      "id": "b7a68c6c-edd8-42b5-9b85-e470ed3d11e6",
+      "name": "Schedule posting every 6 hours",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [
+        -1888,
+        0
+      ],
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "text": "={{ $json.content.parts[0].text }}",
+        "additionalFields": {}
+      },
+      "id": "8fa93a34-658b-4986-aa0c-e6404bc91108",
+      "name": "Post tweet",
+      "type": "n8n-nodes-base.twitter",
+      "position": [
+        0,
+        -48
+      ],
+      "typeVersion": 2,
+      "credentials": {
+        "twitterOAuth2Api": {
+          "id": "9RqXKnXYh44KnDnv",
+          "name": "X account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "548b7ebf-046a-4a98-b685-b321ab818e5c",
+              "leftValue": "={{ $json.data.approved }}",
+              "rightValue": "=true",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -128,
+        240
+      ],
+      "id": "84c57db5-412d-4844-95f2-ddd2d25fa261",
+      "name": "If",
+      "disabled": true
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        -1024,
+        272
+      ],
+      "id": "8b774637-7fe6-4e40-be1d-692235ae3686",
+      "name": "Limit"
+    }
+  ],
+  "pinData": {},
+  "repo_name": "N8N-Backup",
+  "repo_owner": "blakefrasure",
+  "repo_path": "",
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "updatedAt": "2025-11-21T19:44:12.984Z",
+      "createdAt": "2025-11-21T19:44:12.984Z",
+      "role": "workflow:owner",
+      "workflowId": "F7jR1LZlfXNbV8Nn",
+      "projectId": "o0dLpT0DC7ihHtEO"
+    }
+  ],
+  "staticData": {
+    "node:Schedule posting every 6 hours": {
+      "recurrenceRules": [
+        38
+      ]
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2026-03-06T06:21:47.000Z",
+  "versionId": "28bcd837-1ef7-41cb-8793-1757fcd3314e"
+}
