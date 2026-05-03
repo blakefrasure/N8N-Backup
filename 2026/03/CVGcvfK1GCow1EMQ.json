@@ -1,0 +1,332 @@
+{
+  "active": true,
+  "activeVersion": {
+    "updatedAt": "2026-05-02T23:40:14.401Z",
+    "createdAt": "2026-05-02T23:40:14.401Z",
+    "versionId": "29a177c7-f983-4658-af11-9ba8b57de29b",
+    "workflowId": "CVGcvfK1GCow1EMQ",
+    "nodes": [
+      {
+        "parameters": {
+          "httpMethod": "POST",
+          "path": "scraper-webhook",
+          "options": {}
+        },
+        "id": "144888f5-f0b9-4b71-a318-89f8d971aad9",
+        "name": "Webhook Listener",
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 1,
+        "position": [
+          -160,
+          176
+        ],
+        "webhookId": "cd0d7497-c524-44a9-b2d7-e2a7bb019169"
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://api.hotdeals.themeparksavvy.com/wp-json/wp/v2/posts",
+          "authentication": "predefinedCredentialType",
+          "nodeCredentialType": "wordpressApi",
+          "sendBody": true,
+          "bodyParameters": {
+            "parameters": [
+              {
+                "name": "title",
+                "value": "={{ $json.title }}"
+              },
+              {
+                "name": "content",
+                "value": "={{ $json.description }}"
+              },
+              {
+                "name": "status",
+                "value": "publish"
+              },
+              {
+                "name": "acf",
+                "value": "={{ {\n  \"title\": $json.title,\n  \"content\": $json.description,\n  \"status\": \"publish\",\n  \"acf\": {\n    \"deal_price\": parseFloat(($json.price || \"0\").replace(/[^0-9.]/g, \"\")),\n    \"original_price\": parseFloat(($json.price || \"0\").replace(/[^0-9.]/g, \"\")) + parseFloat(($json.savings || \"0\").replace(/[^0-9.]/g, \"\")),\n    \"deal_link\": $json.url,\n    \"expires_at\": new Date(Date.now() + 14 * 24 * 60 * 60 * 1000).toISOString().split(\"T\")[0],\n    \"deal_category\": $json.category || \"other\"\n  }\n} }}"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "id": "a920da68-4f48-4479-ad4e-c43f0db2d21f",
+        "name": "Post to WordPress",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.1,
+        "position": [
+          400,
+          176
+        ],
+        "credentials": {
+          "wordpressApi": {
+            "id": "alBZJGVAk1gqmU33",
+            "name": "Wordpress account 7"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "jsCode": "return $input.first().json.body;\n"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          48,
+          176
+        ],
+        "id": "abd06153-5ac3-4edd-b101-639675ab0733",
+        "name": "Code in JavaScript"
+      }
+    ],
+    "connections": {
+      "Webhook Listener": {
+        "main": [
+          [
+            {
+              "node": "Code in JavaScript",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Code in JavaScript": {
+        "main": [
+          [
+            {
+              "node": "Post to WordPress",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "authors": "system migration",
+    "name": null,
+    "description": null,
+    "autosaved": false
+  },
+  "activeVersionId": "29a177c7-f983-4658-af11-9ba8b57de29b",
+  "connections": {
+    "Webhook Listener": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Post to WordPress",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2026-03-07T18:45:13.416Z",
+  "id": "CVGcvfK1GCow1EMQ",
+  "isArchived": false,
+  "meta": null,
+  "name": "My workflow 6",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "scraper-webhook",
+        "options": {}
+      },
+      "id": "144888f5-f0b9-4b71-a318-89f8d971aad9",
+      "name": "Webhook Listener",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        176
+      ],
+      "webhookId": "cd0d7497-c524-44a9-b2d7-e2a7bb019169"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.hotdeals.themeparksavvy.com/wp-json/wp/v2/posts",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "title",
+              "value": "={{ $json.title }}"
+            },
+            {
+              "name": "content",
+              "value": "={{ $json.description }}"
+            },
+            {
+              "name": "status",
+              "value": "publish"
+            },
+            {
+              "name": "acf",
+              "value": "={{ {\n  \"title\": $json.title,\n  \"content\": $json.description,\n  \"status\": \"publish\",\n  \"acf\": {\n    \"deal_price\": parseFloat(($json.price || \"0\").replace(/[^0-9.]/g, \"\")),\n    \"original_price\": parseFloat(($json.price || \"0\").replace(/[^0-9.]/g, \"\")) + parseFloat(($json.savings || \"0\").replace(/[^0-9.]/g, \"\")),\n    \"deal_link\": $json.url,\n    \"expires_at\": new Date(Date.now() + 14 * 24 * 60 * 60 * 1000).toISOString().split(\"T\")[0],\n    \"deal_category\": $json.category || \"other\"\n  }\n} }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a920da68-4f48-4479-ad4e-c43f0db2d21f",
+      "name": "Post to WordPress",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        400,
+        176
+      ],
+      "credentials": {
+        "wordpressApi": {
+          "id": "alBZJGVAk1gqmU33",
+          "name": "Wordpress account 7"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "return $input.first().json.body;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        48,
+        176
+      ],
+      "id": "abd06153-5ac3-4edd-b101-639675ab0733",
+      "name": "Code in JavaScript"
+    }
+  ],
+  "pinData": {
+    "Webhook Listener": [
+      {
+        "json": {
+          "headers": {
+            "host": "bot.blakefrasure.com",
+            "x-forwarded-scheme": "https",
+            "x-forwarded-proto": "https",
+            "x-forwarded-for": "74.50.64.123",
+            "x-real-ip": "74.50.64.123",
+            "content-length": "3824",
+            "user-agent": "curl/7.81.0",
+            "accept": "*/*",
+            "content-type": "application/json"
+          },
+          "params": {},
+          "query": {},
+          "body": [
+            {
+              "title": "Universal 5-Day (Park-to-Park) Ticket + 2 Days FREE",
+              "price": "$561.46",
+              "savings": "Save $98",
+              "description": "LIMITED TIME OFFER - 7 DAYS FOR THE PRICE OF 5 DAYS! 7 Days at Universal Studios Florida, Islands of Adventure, and Epic Universe.",
+              "url": "https://www.undercovertourist.com/orlando/universal-orlando-resort/universal-5-day-park-to-park-ticket-2-days-free/"
+            },
+            {
+              "title": "3-Day Disney Theme Park Base Ticket + FREE $20 Dining Credit",
+              "price": "$488.09",
+              "savings": "Save $40",
+              "description": "Enjoy 3 days at the Disney Parks! Plus save 15% off Disney Gift Cards with Free $20 Credit Included.",
+              "url": "https://www.undercovertourist.com/orlando/walt-disney-world-resort/3-day-disney-theme-park-base-ticket-free-20-credit/"
+            },
+            {
+              "title": "4-Day Disney Theme Park Ticket with Park Hopper® Option",
+              "price": "$710.08",
+              "savings": "Save $51",
+              "description": "Visit multiple Disney parks per day, plus receive a FREE $20 DiningDollars.com Credit.",
+              "url": "https://www.undercovertourist.com/orlando/walt-disney-world-resort/4-day-disney-theme-park-ticket-park-hopper/"
+            },
+            {
+              "title": "6-Day Disney Theme Park Ticket with Park Hopper® Plus",
+              "price": "$823.39",
+              "savings": "Save $79",
+              "description": "Ultimate flexibility! 6 days of Park hopping AND access to Disney water parks. Includes a FREE $20 Credit.",
+              "url": "https://www.undercovertourist.com/orlando/walt-disney-world-resort/6-day-disney-theme-park-ticket-park-hopper-plus/"
+            },
+            {
+              "title": "10-Day Disney Theme Park Base Ticket with Water Park and Sports",
+              "price": "$868.03",
+              "savings": "Save $83",
+              "description": "Extended 10-day base ticket with Disney water park and sports options included. FREE $20 Credit.",
+              "url": "https://www.undercovertourist.com/orlando/walt-disney-world-resort/10-day-disney-theme-park-base-ticket-water-park-sports/"
+            },
+            {
+              "title": "Universal 3-Day (Park-to-Park) with Volcano Bay Ticket",
+              "price": "$559.43",
+              "savings": "Save $89",
+              "description": "3 Days at Universal Studios, Islands of Adventure, Epic Universe, and Volcano Bay.",
+              "url": "https://www.undercovertourist.com/orlando/universal-orlando-resort/universal-3-day-park-to-park-volcano-bay-ticket/"
+            },
+            {
+              "title": "Universal 1-Park 1-Day VIP Experience - Epic Universe",
+              "price": "$387.44",
+              "savings": "Save $48",
+              "description": "Get the red carpet treatment! A 4-hour guided tour of Universal Epic Universe.",
+              "url": "https://www.undercovertourist.com/orlando/universal-orlando-resort/universal-1-park-1-day-vip-experience-epic-universe/"
+            },
+            {
+              "title": "Universal 2-Park FL Resident Power Pass + 3 Months FREE",
+              "price": "$358.94",
+              "savings": "Save $6",
+              "description": "SPECIAL OFFER For Florida Residents! Buy a Universal 2-Park Power Pass and get 3 months FREE!",
+              "url": "https://www.undercovertourist.com/orlando/universal-orlando-resort/universal-2-park-fl-resident-power-pass/"
+            },
+            {
+              "title": "4-Day Disney Theme Park Ticket with Park Hopper® Option - Extra Day",
+              "price": "$765.63",
+              "savings": "Save $74",
+              "description": "This is a 5-Day Hopper Ticket! Save 15% off Disney Gift Cards with Free $20 Credit Included.",
+              "url": "https://www.undercovertourist.com/orlando/walt-disney-world-resort/4-day-disney-theme-park-ticket-park-hopper-extra-day/"
+            },
+            {
+              "title": "2-Day Universal Express Pass (including Universal Epic Universe)",
+              "price": "$264.52",
+              "savings": "Save $27",
+              "description": "Get to the fun faster! Enjoy shorter wait times ONE TIME per participating ride for 2 days.",
+              "url": "https://www.undercovertourist.com/orlando/universal-orlando-resort/2-day-universal-express-pass-epic-universe/"
+            }
+          ],
+          "webhookUrl": "https://bot.blakefrasure.com/webhook/scraper-webhook",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "repo_name": "N8N-Backup",
+  "repo_owner": "blakefrasure",
+  "repo_path": "",
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "updatedAt": "2026-03-07T18:45:13.425Z",
+      "createdAt": "2026-03-07T18:45:13.425Z",
+      "role": "workflow:owner",
+      "workflowId": "CVGcvfK1GCow1EMQ",
+      "projectId": "o0dLpT0DC7ihHtEO"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2026-03-15T07:38:49.000Z",
+  "versionId": "29a177c7-f983-4658-af11-9ba8b57de29b"
+}
