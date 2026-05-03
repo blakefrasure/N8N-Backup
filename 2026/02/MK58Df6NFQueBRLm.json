@@ -1,0 +1,1810 @@
+{
+  "active": true,
+  "activeVersion": {
+    "updatedAt": "2026-05-02T23:40:14.401Z",
+    "createdAt": "2026-05-02T23:40:14.401Z",
+    "versionId": "957eeeab-99fb-45ec-ab09-8c6fb98db995",
+    "workflowId": "MK58Df6NFQueBRLm",
+    "nodes": [
+      {
+        "parameters": {
+          "operation": "getAll",
+          "limit": 1,
+          "options": {}
+        },
+        "type": "n8n-nodes-base.wordpress",
+        "typeVersion": 1,
+        "position": [
+          640,
+          -448
+        ],
+        "id": "b362be64-2b81-466e-92e9-0d62ac22f6d2",
+        "name": "Get many posts",
+        "credentials": {
+          "wordpressApi": {
+            "id": "L14CIRPb2cfuxc7H",
+            "name": "Wordpress account"
+          }
+        },
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "promptType": "define",
+          "text": "=This is a post on a topic revoling around theme parks. I want you to use it to write a tweet that is a maxmium of 250 characters. Something that is purely informational and factional, simple, and a hooker at the beginning. It will usually be accompanied by an image. Match the style of these tweets, not the content: NEW: Walt Disney Imagineering has revealed a new real-life robotic Olaf character coming to Disneyland Paris and Hong Kong Disneyland early next year.\" or \"NEW: Walt Disney World and Hallmark Channel announce an all-new holiday movie \"Holiday Ever After: A Disney World Wish Come True\" will debut next year. The movie will shoot on location at WDW and will star Lacey Chabert, Christy Carlson Romano, Richard Kind, and more.\" or \"NEW: Disney shared a first look at the new Coco suite, now available to book at Pixar Place Hotel at Disneyland Resort. Includes unique handcrafted wooden furniture, hand-painted art, and more.\" {{ $json.content.rendered }}",
+          "batching": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "typeVersion": 1.7,
+        "position": [
+          1040,
+          -432
+        ],
+        "id": "6e03da79-d61a-4525-aeb8-cdfd1baff45e",
+        "name": "Basic LLM Chain",
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "typeVersion": 1,
+        "position": [
+          1456,
+          -352
+        ],
+        "id": "ec091404-657b-4610-9cee-ad8b4b50ae04",
+        "name": "Google Gemini Chat Model",
+        "credentials": {
+          "googlePalmApi": {
+            "id": "teS4CFeJzwufVFZQ",
+            "name": "Google Gemini(PaLM) Api account 2"
+          }
+        },
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "text": "={{ $('Create Content with AI').item.json.output }}\n\n{{ $json.photos[0].src.original }}",
+          "additionalFields": {}
+        },
+        "type": "n8n-nodes-base.twitter",
+        "typeVersion": 2,
+        "position": [
+          704,
+          -208
+        ],
+        "id": "833995d3-c01c-4e94-ae15-14531c3c91bb",
+        "name": "Create Tweet",
+        "credentials": {
+          "twitterOAuth2Api": {
+            "id": "zLyyrG3meROBYvVW",
+            "name": "X account 2"
+          }
+        },
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "text": "Liked this? Check out more by clicking that subscribe button! 👌\n\n\n\nhttps://themeparksavvy.com/",
+          "additionalFields": {
+            "inReplyToStatusId": {
+              "__rl": true,
+              "mode": "id",
+              "value": "={{ $json.id }}"
+            }
+          }
+        },
+        "type": "n8n-nodes-base.twitter",
+        "typeVersion": 2,
+        "position": [
+          1104,
+          -176
+        ],
+        "id": "b4b7ba3a-203d-48b4-b55f-fac2d757d0f1",
+        "name": "Create Tweet1",
+        "credentials": {
+          "twitterOAuth2Api": {
+            "id": "zLyyrG3meROBYvVW",
+            "name": "X account 2"
+          }
+        },
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "rule": {
+            "interval": [
+              {
+                "field": "hours",
+                "hoursInterval": 5,
+                "triggerAtMinute": 5
+              }
+            ]
+          }
+        },
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "typeVersion": 1.2,
+        "position": [
+          -80,
+          624
+        ],
+        "id": "75bef115-378a-4762-8b67-3c51e453918e",
+        "name": "Schedule Trigger"
+      },
+      {
+        "parameters": {
+          "promptType": "define",
+          "text": "=Just the text of the tweet. Nothing more",
+          "options": {
+            "systemMessage": "=This is a post on a topic revoling around theme parks. I want you to use it to write a tweet that is a maxmium of 250 characters. Something that is purely informational and factional, simple, and a hooker at the beginning. It will usually be accompanied by an image. Match the style of these tweets, not the content: Walt Disney Imagineering has revealed a new real-life robotic Olaf character coming to Disneyland Paris and Hong Kong Disneyland early next year.\" or \"NEW: Walt Disney World and Hallmark Channel announce an all-new holiday movie \"Holiday Ever After: A Disney World Wish Come True\" will debut soon. The movie will shoot on location at WDW and will star Lacey Chabert, Christy Carlson Romano, Richard Kind, and more.\" or \"Disney shared a first look at the new Coco suite, now available to book at Pixar Place Hotel at Disneyland Resort. Includes unique handcrafted wooden furniture, hand-painted art, and more.\" DON'T Make Stuff up! Only put something related to the information here:  {{ $json.content.rendered }}\"\" If there is no information, and it just is empty, it means there is no news today, so just put null"
+          }
+        },
+        "id": "c69804d1-ab7c-4518-bac5-b3ea9ab40ac9",
+        "name": "Create Content with AI",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          416,
+          640
+        ],
+        "typeVersion": 3
+      },
+      {
+        "parameters": {
+          "promptType": "define",
+          "text": "test",
+          "options": {
+            "systemMessage": "=You are an expert in {{ $('On form submission').item.json['Content Type'] }} and develop beautiful HTML posting.\n\nFrom below info create the {{ $('On form submission').item.json['Topic or Keyword'] }} in HTML format.\n\n\n{{ $('Create Content with AI').item.json.output }}\n\nThis is the URL Image: {{ $json.photos[0].url }}\n\n** Just give the ouput no explanation.\n** Don't start the HTML with ```html\n"
+          }
+        },
+        "id": "8dea65a3-8d6e-4237-a2ae-e23487d465ff",
+        "name": "Create Suitable Content Including Image",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          1136,
+          -848
+        ],
+        "typeVersion": 3,
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "jsCode": "const items = $input.all();\nconst out = [];\n\nfor (const item of items) {\n  let raw = item.json.output;\n\n  raw = raw.trim();\n  if (raw.startsWith('```json')) {\n    raw = raw.substring(7);\n  } else if (raw.startsWith('```')) {\n    raw = raw.substring(3);\n  }\n  \n  if (raw.endsWith('```')) {\n    raw = raw.substring(0, raw.length - 3);\n  }\n  raw = raw.trim();\n\n  const parsed = JSON.parse(raw);\n\n  out.push({\n    json: {\n      Title: parsed.Title,\n      Content: parsed.Content,\n      Image_keyword: parsed.Image_keyword,\n    }\n  });\n}\n\nreturn out;\n"
+        },
+        "id": "aa3a2c23-f7c9-4d06-8248-631f96b7ea31",
+        "name": "Extract Content and Image Keyword",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          560,
+          1136
+        ],
+        "typeVersion": 2,
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "content": "## AI Content Generator with Auto Pexels Image Matching\n\n### How it works\n1. Submit your content topic or keyword through the form.\n2. AI will generate initial content based on your input.\n3. The AI extracts suitable keywords from the generated content.\n4. The keywords are sent to Pexels API to search for relevant royalty-free images.\n5. AI creates the final polished content that matches the selected image.\n6. The result is displayed as a formatted HTML template with content and image combined.\n\n### How to Set Up\n1. Get a OpenAI API key from [https://platform.openai.com](https://platform.openai.com).\n2. Get a free Pexels API key from [https://www.pexels.com/api](https://www.pexels.com/api). You can make up to 200 requests per hour.\n3. Insert your OpenAI API key in the \"Create Content with AI\" and \"Create Suitable Content\" nodes.\n4. Insert your Pexels API key in the \"Pexels Image Search\" node in the Authorization header.\n\n### Customize\n1. **Optimize token usage**: If you are an advanced user, use the floating node in the \"Alternative way to optimize token usage\" section to process everything in one prompt and minimize API costs. If you use this option, update the expressions in the \"Pexels Image Search\" node and \"Create Suitable Content Including Image\" node to reference the extracted contents and keywords from the JS node.\n2. If you want deeper content analysis, change the model to a more advanced one, for example GPT-4.1, GPT-5.1, or GPT-5.2.",
+          "height": 752,
+          "width": 512
+        },
+        "id": "81f16e5f-48d2-4150-a2a7-4f9b871a0817",
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1264,
+          160
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "content": "## 1.Create RAW content from the the user's input",
+          "height": 448,
+          "width": 608,
+          "color": 7
+        },
+        "id": "7f820ef5-e0ad-403a-9f34-b08ca4442eaa",
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          160,
+          496
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "content": "## 2. Generate suitable image for the content",
+          "height": 320,
+          "width": 528,
+          "color": 7
+        },
+        "id": "4f9f1c02-a5c8-4495-a3dd-e37cad4cbc3f",
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          944,
+          160
+        ],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "content": "## Alternative way to optimize token usage",
+          "height": 448,
+          "width": 608,
+          "color": 7
+        },
+        "id": "d61d3401-afe7-411a-a197-4b109ba4cb94",
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          176,
+          1072
+        ],
+        "typeVersion": 1,
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "promptType": "define",
+          "text": "=Create a {{ $json['Content Type'] }} about: {{ $json['Topic or Keyword'] }} \nTone: {{ $json.Tone }}\nLength: {{ $json['Content Length'] }} words\nRemember to respond with valid JSON only.",
+          "options": {
+            "systemMessage": "=You are a professional content writer. Generate high-quality content based on user requirements. Your response MUST be valid JSON with this exact structure:\n\nTitle: Engaging title here\nContent: Main content with multiple paragraphs \nImage_keyword: Give one word suitable keyword to send to Pexels API\n\nContent should be engaging, well-structured, and match the requested tone. Use proper grammar and formatting."
+          }
+        },
+        "id": "cce7ee1e-e79b-4e5e-aa59-5cd9775c78f7",
+        "name": "Create Content and Find Suitable Image",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          240,
+          1136
+        ],
+        "typeVersion": 3,
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "model": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gpt-4.1-mini"
+          },
+          "builtInTools": {},
+          "options": {}
+        },
+        "id": "4f7661b6-1b4c-4518-86fd-b946f8065e5e",
+        "name": "OpenAi 4.1 Mini",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          624,
+          -608
+        ],
+        "typeVersion": 1.3
+      },
+      {
+        "parameters": {
+          "model": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gpt-4.1-mini"
+          },
+          "builtInTools": {},
+          "options": {}
+        },
+        "id": "31436503-dadf-482f-97db-38524f715cc7",
+        "name": "OpenAI 4.1 mini for Content and Image",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          240,
+          1328
+        ],
+        "typeVersion": 1.3,
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "operation": "getAll",
+          "limit": 1,
+          "options": {}
+        },
+        "type": "n8n-nodes-base.wordpress",
+        "typeVersion": 1,
+        "position": [
+          208,
+          640
+        ],
+        "id": "1e5d4538-2515-4538-9a74-505c1be0507a",
+        "name": "Get many posts1",
+        "credentials": {
+          "wordpressApi": {
+            "id": "L14CIRPb2cfuxc7H",
+            "name": "Wordpress account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "modelId": {
+            "__rl": true,
+            "value": "models/gemini-2.5-flash",
+            "mode": "list",
+            "cachedResultName": "models/gemini-2.5-flash"
+          },
+          "messages": {
+            "values": [
+              {
+                "content": "=I have a social media post with the text below:\n\" {{ $('Create Content with AI').first().json.output }}} \"\n\nPlease look at the following list of images from my media library and choose the single best image URL that matches the context of that post.\n\nImage List:\n{{ $json.image_list_for_ai }}\n\nReturn ONLY the URL. No other text."
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.googleGemini",
+        "typeVersion": 1,
+        "position": [
+          1392,
+          624
+        ],
+        "id": "bc59edfb-88a2-457c-ac23-1006d6bbd0a2",
+        "name": "Message a model",
+        "credentials": {
+          "googlePalmApi": {
+            "id": "teS4CFeJzwufVFZQ",
+            "name": "Google Gemini(PaLM) Api account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "typeVersion": 1,
+        "position": [
+          400,
+          816
+        ],
+        "id": "2a5daf30-9e3f-49bc-a25a-9677e2443232",
+        "name": "Google Gemini Chat Model1",
+        "credentials": {
+          "googlePalmApi": {
+            "id": "teS4CFeJzwufVFZQ",
+            "name": "Google Gemini(PaLM) Api account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://upload.twitter.com/1.1/media/upload.json",
+          "authentication": "predefinedCredentialType",
+          "nodeCredentialType": "twitterOAuth1Api",
+          "sendBody": true,
+          "contentType": "multipart-form-data",
+          "bodyParameters": {
+            "parameters": [
+              {
+                "name": "media_category",
+                "value": "tweet_image"
+              },
+              {
+                "parameterType": "formBinaryData",
+                "name": "media",
+                "inputDataFieldName": "data"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.3,
+        "position": [
+          2064,
+          752
+        ],
+        "id": "41d3cb70-0b80-41c9-b335-af1d4a8fce53",
+        "name": "HTTP Request",
+        "credentials": {
+          "oAuth2Api": {
+            "id": "saXwOYsXaDV7PsR7",
+            "name": "Unnamed credential"
+          },
+          "xAiApi": {
+            "id": "dbjBrKkxQyTikEPj",
+            "name": "xAi account"
+          },
+          "twitterOAuth1Api": {
+            "id": "WjjFYYdupjYKIKFa",
+            "name": "X OAuth account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://themeparksavvy.com/wp-json/wp/v2/media",
+          "authentication": "predefinedCredentialType",
+          "nodeCredentialType": "wordpressApi",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Content-Disposition",
+                "value": "=attachment; filename=\"{{ $('Slug Generator1').item.json.slug }}.jpg\""
+              }
+            ]
+          },
+          "sendBody": true,
+          "contentType": "binaryData",
+          "inputDataFieldName": "data",
+          "options": {}
+        },
+        "id": "f1a59b50-90db-4842-9b8b-03788181784a",
+        "name": "Image Upload To Wordpress1",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          464,
+          -528
+        ],
+        "typeVersion": 4.2,
+        "credentials": {
+          "wordpressApi": {
+            "id": "L14CIRPb2cfuxc7H",
+            "name": "Wordpress account"
+          }
+        },
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://api.x.com/2/tweets",
+          "authentication": "predefinedCredentialType",
+          "nodeCredentialType": "twitterOAuth1Api",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          },
+          "sendBody": true,
+          "specifyBody": "json",
+          "jsonBody": "={\n  \"text\": \"{{ $node['Create Content with AI'].json.output }}\",\n  \"media\": {\n    \"media_ids\": [\"{{ $node['HTTP Request'].json.media_id_string }}\"]\n  }\n}",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.3,
+        "position": [
+          2416,
+          832
+        ],
+        "id": "773fce86-31e3-4a68-acf7-95fa9c3dc0b6",
+        "name": "HTTP Request1",
+        "credentials": {
+          "oAuth2Api": {
+            "id": "saXwOYsXaDV7PsR7",
+            "name": "Unnamed credential"
+          },
+          "twitterOAuth1Api": {
+            "id": "WjjFYYdupjYKIKFa",
+            "name": "X OAuth account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "resource": "__CUSTOM_API_CALL__"
+        },
+        "type": "n8n-nodes-base.twitterTool",
+        "typeVersion": 2,
+        "position": [
+          1056,
+          -560
+        ],
+        "id": "644360ee-65be-4595-93a2-32b219e0b066",
+        "name": "X",
+        "credentials": {
+          "twitterOAuth2Api": {
+            "id": "zLyyrG3meROBYvVW",
+            "name": "X account 2"
+          }
+        },
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "amount": 60
+        },
+        "type": "n8n-nodes-base.wait",
+        "typeVersion": 1.1,
+        "position": [
+          704,
+          480
+        ],
+        "id": "b6b96edf-0755-4b6f-bc88-b5df2bb102d2",
+        "name": "Wait",
+        "webhookId": "9611ad3a-5bf8-4ec2-8369-c75052d3adae"
+      },
+      {
+        "parameters": {
+          "url": "https://themeparksavvy.com/wp-json/wp/v2/media",
+          "authentication": "predefinedCredentialType",
+          "nodeCredentialType": "wordpressApi",
+          "sendQuery": true,
+          "queryParameters": {
+            "parameters": [
+              {
+                "name": "per_page",
+                "value": "100"
+              },
+              {
+                "name": "context",
+                "value": "view"
+              }
+            ]
+          },
+          "options": {
+            "batching": {
+              "batch": {}
+            }
+          }
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.3,
+        "position": [
+          896,
+          640
+        ],
+        "id": "e524eca8-1e7e-4805-81a9-2df1814e1534",
+        "name": "HTTP Request2",
+        "credentials": {
+          "wordpressApi": {
+            "id": "hdZjbKSZA97wLS3A",
+            "name": "Wordpress account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "jsCode": "// Loop through all the items from the previous node\nconst cleanList = items.map(item => {\n  // Get the title (safely handle if it's missing)\n  const title = item.json.title ? item.json.title.rendered : \"No Title\";\n  \n  // Get the direct image link (guid.rendered is the file URL in your screenshot)\n  const url = item.json.guid ? item.json.guid.rendered : \"No URL\";\n  \n  // Get the ID (we need this to reference it later)\n  const id = item.json.id;\n\n  // Format it as a single line of text\n  return `ID: ${id} | Title: \"${title}\" | URL: ${url}`;\n});\n\n// Combine all lines into one big text block for the AI\nreturn [\n  {\n    json: {\n      image_list_for_ai: cleanList.join(\"\\n\")\n    }\n  }\n];"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1120,
+          672
+        ],
+        "id": "1fc17a9c-b9fc-49a2-9a08-96a7ca231ad2",
+        "name": "Code in JavaScript"
+      },
+      {
+        "parameters": {
+          "url": "={{ $json.photos[0].src.original }}",
+          "options": {}
+        },
+        "id": "68d9ec47-2ade-4432-82ab-f959edb93733",
+        "name": "Pexel Image Download",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1168,
+          1424
+        ],
+        "typeVersion": 4.2,
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "url": "https://themeparksavvy.com/wp-json/wp/v2/media",
+          "authentication": "predefinedCredentialType",
+          "nodeCredentialType": "wordpressApi",
+          "sendQuery": true,
+          "queryParameters": {
+            "parameters": [
+              {
+                "name": "query",
+                "value": "={{ $json.content.parts[0].text }}"
+              },
+              {
+                "name": "per_page",
+                "value": "100"
+              },
+              {
+                "name": "orientation",
+                "value": "landscape"
+              },
+              {
+                "name": "media_type",
+                "value": "image"
+              }
+            ]
+          },
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {}
+            ]
+          },
+          "options": {}
+        },
+        "id": "b367993b-3f8c-4ef7-9ba6-ade69633d695",
+        "name": "Pexels Image Search",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          480,
+          1344
+        ],
+        "typeVersion": 4.3,
+        "credentials": {
+          "wordpressApi": {
+            "id": "hdZjbKSZA97wLS3A",
+            "name": "Wordpress account 2"
+          }
+        },
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "url": "={{ $('Message a model').first().json.content.parts[0].text.trim() }}",
+          "options": {}
+        },
+        "id": "113c0dc2-72cf-4a60-a73a-2e6aad1aea25",
+        "name": "WP Image Download1",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1840,
+          832
+        ],
+        "typeVersion": 4.2
+      },
+      {
+        "parameters": {
+          "amount": 15
+        },
+        "type": "n8n-nodes-base.wait",
+        "typeVersion": 1.1,
+        "position": [
+          1488,
+          1232
+        ],
+        "id": "85d4ccd4-be90-4742-b6dc-39a23bad066a",
+        "name": "Wait1",
+        "webhookId": "56558745-47fc-48ae-8bb6-80b5d6154257",
+        "disabled": true
+      }
+    ],
+    "connections": {
+      "Google Gemini Chat Model": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "Basic LLM Chain",
+              "type": "ai_languageModel",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Get many posts": {
+        "main": [
+          [
+            {
+              "node": "Basic LLM Chain",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Basic LLM Chain": {
+        "main": [
+          []
+        ]
+      },
+      "Create Tweet": {
+        "main": [
+          [
+            {
+              "node": "Create Tweet1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Schedule Trigger": {
+        "main": [
+          [
+            {
+              "node": "Get many posts1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "OpenAi 4.1 Mini": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "Create Suitable Content Including Image",
+              "type": "ai_languageModel",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Create Content with AI": {
+        "main": [
+          [
+            {
+              "node": "Wait",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "OpenAI 4.1 mini for Content and Image": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "Create Content and Find Suitable Image",
+              "type": "ai_languageModel",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Create Content and Find Suitable Image": {
+        "main": [
+          [
+            {
+              "node": "Extract Content and Image Keyword",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Create Suitable Content Including Image": {
+        "main": [
+          []
+        ]
+      },
+      "Get many posts1": {
+        "main": [
+          [
+            {
+              "node": "Create Content with AI",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Message a model": {
+        "main": [
+          [
+            {
+              "node": "WP Image Download1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Google Gemini Chat Model1": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "Create Content with AI",
+              "type": "ai_languageModel",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Image Upload To Wordpress1": {
+        "main": [
+          []
+        ]
+      },
+      "HTTP Request": {
+        "main": [
+          [
+            {
+              "node": "HTTP Request1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Wait": {
+        "main": [
+          [
+            {
+              "node": "HTTP Request2",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "HTTP Request2": {
+        "main": [
+          [
+            {
+              "node": "Code in JavaScript",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Code in JavaScript": {
+        "main": [
+          [
+            {
+              "node": "Message a model",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Pexels Image Search": {
+        "main": [
+          []
+        ]
+      },
+      "WP Image Download1": {
+        "main": [
+          [
+            {
+              "node": "HTTP Request",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Wait1": {
+        "main": [
+          [
+            {
+              "node": "HTTP Request1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "authors": "system migration",
+    "name": null,
+    "description": null,
+    "autosaved": false
+  },
+  "activeVersionId": "957eeeab-99fb-45ec-ab09-8c6fb98db995",
+  "connections": {
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get many posts": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        []
+      ]
+    },
+    "Create Tweet": {
+      "main": [
+        [
+          {
+            "node": "Create Tweet1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get many posts1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAi 4.1 Mini": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Create Suitable Content Including Image",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Content with AI": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI 4.1 mini for Content and Image": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Create Content and Find Suitable Image",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Content and Find Suitable Image": {
+      "main": [
+        [
+          {
+            "node": "Extract Content and Image Keyword",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Suitable Content Including Image": {
+      "main": [
+        []
+      ]
+    },
+    "Get many posts1": {
+      "main": [
+        [
+          {
+            "node": "Create Content with AI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "WP Image Download1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Create Content with AI",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Upload To Wordpress1": {
+      "main": [
+        []
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pexels Image Search": {
+      "main": [
+        []
+      ]
+    },
+    "WP Image Download1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2026-02-05T00:27:55.417Z",
+  "id": "MK58Df6NFQueBRLm",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "AI Content Generator with wordpress library",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.wordpress",
+      "typeVersion": 1,
+      "position": [
+        640,
+        -448
+      ],
+      "id": "b362be64-2b81-466e-92e9-0d62ac22f6d2",
+      "name": "Get many posts",
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=This is a post on a topic revoling around theme parks. I want you to use it to write a tweet that is a maxmium of 250 characters. Something that is purely informational and factional, simple, and a hooker at the beginning. It will usually be accompanied by an image. Match the style of these tweets, not the content: NEW: Walt Disney Imagineering has revealed a new real-life robotic Olaf character coming to Disneyland Paris and Hong Kong Disneyland early next year.\" or \"NEW: Walt Disney World and Hallmark Channel announce an all-new holiday movie \"Holiday Ever After: A Disney World Wish Come True\" will debut next year. The movie will shoot on location at WDW and will star Lacey Chabert, Christy Carlson Romano, Richard Kind, and more.\" or \"NEW: Disney shared a first look at the new Coco suite, now available to book at Pixar Place Hotel at Disneyland Resort. Includes unique handcrafted wooden furniture, hand-painted art, and more.\" {{ $json.content.rendered }}",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        1040,
+        -432
+      ],
+      "id": "6e03da79-d61a-4525-aeb8-cdfd1baff45e",
+      "name": "Basic LLM Chain",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        1456,
+        -352
+      ],
+      "id": "ec091404-657b-4610-9cee-ad8b4b50ae04",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "teS4CFeJzwufVFZQ",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "text": "={{ $('Create Content with AI').item.json.output }}\n\n{{ $json.photos[0].src.original }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.twitter",
+      "typeVersion": 2,
+      "position": [
+        704,
+        -208
+      ],
+      "id": "833995d3-c01c-4e94-ae15-14531c3c91bb",
+      "name": "Create Tweet",
+      "credentials": {
+        "twitterOAuth2Api": {
+          "id": "zLyyrG3meROBYvVW",
+          "name": "X account 2"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "text": "Liked this? Check out more by clicking that subscribe button! 👌\n\n\n\nhttps://themeparksavvy.com/",
+        "additionalFields": {
+          "inReplyToStatusId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.id }}"
+          }
+        }
+      },
+      "type": "n8n-nodes-base.twitter",
+      "typeVersion": 2,
+      "position": [
+        1104,
+        -176
+      ],
+      "id": "b4b7ba3a-203d-48b4-b55f-fac2d757d0f1",
+      "name": "Create Tweet1",
+      "credentials": {
+        "twitterOAuth2Api": {
+          "id": "zLyyrG3meROBYvVW",
+          "name": "X account 2"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 5,
+              "triggerAtMinute": 5
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -80,
+        624
+      ],
+      "id": "75bef115-378a-4762-8b67-3c51e453918e",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Just the text of the tweet. Nothing more",
+        "options": {
+          "systemMessage": "=This is a post on a topic revoling around theme parks. I want you to use it to write a tweet that is a maxmium of 250 characters. Something that is purely informational and factional, simple, and a hooker at the beginning. It will usually be accompanied by an image. Match the style of these tweets, not the content: Walt Disney Imagineering has revealed a new real-life robotic Olaf character coming to Disneyland Paris and Hong Kong Disneyland early next year.\" or \"NEW: Walt Disney World and Hallmark Channel announce an all-new holiday movie \"Holiday Ever After: A Disney World Wish Come True\" will debut soon. The movie will shoot on location at WDW and will star Lacey Chabert, Christy Carlson Romano, Richard Kind, and more.\" or \"Disney shared a first look at the new Coco suite, now available to book at Pixar Place Hotel at Disneyland Resort. Includes unique handcrafted wooden furniture, hand-painted art, and more.\" DON'T Make Stuff up! Only put something related to the information here:  {{ $json.content.rendered }}\"\" If there is no information, and it just is empty, it means there is no news today, so just put null"
+        }
+      },
+      "id": "c69804d1-ab7c-4518-bac5-b3ea9ab40ac9",
+      "name": "Create Content with AI",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        416,
+        640
+      ],
+      "typeVersion": 3
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "test",
+        "options": {
+          "systemMessage": "=You are an expert in {{ $('On form submission').item.json['Content Type'] }} and develop beautiful HTML posting.\n\nFrom below info create the {{ $('On form submission').item.json['Topic or Keyword'] }} in HTML format.\n\n\n{{ $('Create Content with AI').item.json.output }}\n\nThis is the URL Image: {{ $json.photos[0].url }}\n\n** Just give the ouput no explanation.\n** Don't start the HTML with ```html\n"
+        }
+      },
+      "id": "8dea65a3-8d6e-4237-a2ae-e23487d465ff",
+      "name": "Create Suitable Content Including Image",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        1136,
+        -848
+      ],
+      "typeVersion": 3,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\nconst out = [];\n\nfor (const item of items) {\n  let raw = item.json.output;\n\n  raw = raw.trim();\n  if (raw.startsWith('```json')) {\n    raw = raw.substring(7);\n  } else if (raw.startsWith('```')) {\n    raw = raw.substring(3);\n  }\n  \n  if (raw.endsWith('```')) {\n    raw = raw.substring(0, raw.length - 3);\n  }\n  raw = raw.trim();\n\n  const parsed = JSON.parse(raw);\n\n  out.push({\n    json: {\n      Title: parsed.Title,\n      Content: parsed.Content,\n      Image_keyword: parsed.Image_keyword,\n    }\n  });\n}\n\nreturn out;\n"
+      },
+      "id": "aa3a2c23-f7c9-4d06-8248-631f96b7ea31",
+      "name": "Extract Content and Image Keyword",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        560,
+        1136
+      ],
+      "typeVersion": 2,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "## AI Content Generator with Auto Pexels Image Matching\n\n### How it works\n1. Submit your content topic or keyword through the form.\n2. AI will generate initial content based on your input.\n3. The AI extracts suitable keywords from the generated content.\n4. The keywords are sent to Pexels API to search for relevant royalty-free images.\n5. AI creates the final polished content that matches the selected image.\n6. The result is displayed as a formatted HTML template with content and image combined.\n\n### How to Set Up\n1. Get a OpenAI API key from [https://platform.openai.com](https://platform.openai.com).\n2. Get a free Pexels API key from [https://www.pexels.com/api](https://www.pexels.com/api). You can make up to 200 requests per hour.\n3. Insert your OpenAI API key in the \"Create Content with AI\" and \"Create Suitable Content\" nodes.\n4. Insert your Pexels API key in the \"Pexels Image Search\" node in the Authorization header.\n\n### Customize\n1. **Optimize token usage**: If you are an advanced user, use the floating node in the \"Alternative way to optimize token usage\" section to process everything in one prompt and minimize API costs. If you use this option, update the expressions in the \"Pexels Image Search\" node and \"Create Suitable Content Including Image\" node to reference the extracted contents and keywords from the JS node.\n2. If you want deeper content analysis, change the model to a more advanced one, for example GPT-4.1, GPT-5.1, or GPT-5.2.",
+        "height": 752,
+        "width": 512
+      },
+      "id": "81f16e5f-48d2-4150-a2a7-4f9b871a0817",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1264,
+        160
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## 1.Create RAW content from the the user's input",
+        "height": 448,
+        "width": 608,
+        "color": 7
+      },
+      "id": "7f820ef5-e0ad-403a-9f34-b08ca4442eaa",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        160,
+        496
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## 2. Generate suitable image for the content",
+        "height": 320,
+        "width": 528,
+        "color": 7
+      },
+      "id": "4f9f1c02-a5c8-4495-a3dd-e37cad4cbc3f",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        944,
+        160
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Alternative way to optimize token usage",
+        "height": 448,
+        "width": 608,
+        "color": 7
+      },
+      "id": "d61d3401-afe7-411a-a197-4b109ba4cb94",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        176,
+        1072
+      ],
+      "typeVersion": 1,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Create a {{ $json['Content Type'] }} about: {{ $json['Topic or Keyword'] }} \nTone: {{ $json.Tone }}\nLength: {{ $json['Content Length'] }} words\nRemember to respond with valid JSON only.",
+        "options": {
+          "systemMessage": "=You are a professional content writer. Generate high-quality content based on user requirements. Your response MUST be valid JSON with this exact structure:\n\nTitle: Engaging title here\nContent: Main content with multiple paragraphs \nImage_keyword: Give one word suitable keyword to send to Pexels API\n\nContent should be engaging, well-structured, and match the requested tone. Use proper grammar and formatting."
+        }
+      },
+      "id": "cce7ee1e-e79b-4e5e-aa59-5cd9775c78f7",
+      "name": "Create Content and Find Suitable Image",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        240,
+        1136
+      ],
+      "typeVersion": 3,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "id": "4f7661b6-1b4c-4518-86fd-b946f8065e5e",
+      "name": "OpenAi 4.1 Mini",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "position": [
+        624,
+        -608
+      ],
+      "typeVersion": 1.3
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "id": "31436503-dadf-482f-97db-38524f715cc7",
+      "name": "OpenAI 4.1 mini for Content and Image",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "position": [
+        240,
+        1328
+      ],
+      "typeVersion": 1.3,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.wordpress",
+      "typeVersion": 1,
+      "position": [
+        208,
+        640
+      ],
+      "id": "1e5d4538-2515-4538-9a74-505c1be0507a",
+      "name": "Get many posts1",
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-2.5-flash",
+          "mode": "list",
+          "cachedResultName": "models/gemini-2.5-flash"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=I have a social media post with the text below:\n\" {{ $('Create Content with AI').first().json.output }}} \"\n\nPlease look at the following list of images from my media library and choose the single best image URL that matches the context of that post.\n\nImage List:\n{{ $json.image_list_for_ai }}\n\nReturn ONLY the URL. No other text."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        1392,
+        624
+      ],
+      "id": "bc59edfb-88a2-457c-ac23-1006d6bbd0a2",
+      "name": "Message a model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "teS4CFeJzwufVFZQ",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        400,
+        816
+      ],
+      "id": "2a5daf30-9e3f-49bc-a25a-9677e2443232",
+      "name": "Google Gemini Chat Model1",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "teS4CFeJzwufVFZQ",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://upload.twitter.com/1.1/media/upload.json",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "twitterOAuth1Api",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "media_category",
+              "value": "tweet_image"
+            },
+            {
+              "parameterType": "formBinaryData",
+              "name": "media",
+              "inputDataFieldName": "data"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        2064,
+        752
+      ],
+      "id": "41d3cb70-0b80-41c9-b335-af1d4a8fce53",
+      "name": "HTTP Request",
+      "credentials": {
+        "oAuth2Api": {
+          "id": "saXwOYsXaDV7PsR7",
+          "name": "Unnamed credential"
+        },
+        "xAiApi": {
+          "id": "dbjBrKkxQyTikEPj",
+          "name": "xAi account"
+        },
+        "twitterOAuth1Api": {
+          "id": "WjjFYYdupjYKIKFa",
+          "name": "X OAuth account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://themeparksavvy.com/wp-json/wp/v2/media",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Disposition",
+              "value": "=attachment; filename=\"{{ $('Slug Generator1').item.json.slug }}.jpg\""
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "binaryData",
+        "inputDataFieldName": "data",
+        "options": {}
+      },
+      "id": "f1a59b50-90db-4842-9b8b-03788181784a",
+      "name": "Image Upload To Wordpress1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        464,
+        -528
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "wordpressApi": {
+          "id": "L14CIRPb2cfuxc7H",
+          "name": "Wordpress account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.x.com/2/tweets",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "twitterOAuth1Api",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"text\": \"{{ $node['Create Content with AI'].json.output }}\",\n  \"media\": {\n    \"media_ids\": [\"{{ $node['HTTP Request'].json.media_id_string }}\"]\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        2416,
+        832
+      ],
+      "id": "773fce86-31e3-4a68-acf7-95fa9c3dc0b6",
+      "name": "HTTP Request1",
+      "credentials": {
+        "oAuth2Api": {
+          "id": "saXwOYsXaDV7PsR7",
+          "name": "Unnamed credential"
+        },
+        "twitterOAuth1Api": {
+          "id": "WjjFYYdupjYKIKFa",
+          "name": "X OAuth account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "__CUSTOM_API_CALL__"
+      },
+      "type": "n8n-nodes-base.twitterTool",
+      "typeVersion": 2,
+      "position": [
+        1056,
+        -560
+      ],
+      "id": "644360ee-65be-4595-93a2-32b219e0b066",
+      "name": "X",
+      "credentials": {
+        "twitterOAuth2Api": {
+          "id": "zLyyrG3meROBYvVW",
+          "name": "X account 2"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "amount": 60
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        704,
+        480
+      ],
+      "id": "b6b96edf-0755-4b6f-bc88-b5df2bb102d2",
+      "name": "Wait",
+      "webhookId": "9611ad3a-5bf8-4ec2-8369-c75052d3adae"
+    },
+    {
+      "parameters": {
+        "url": "https://themeparksavvy.com/wp-json/wp/v2/media",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "per_page",
+              "value": "100"
+            },
+            {
+              "name": "context",
+              "value": "view"
+            }
+          ]
+        },
+        "options": {
+          "batching": {
+            "batch": {}
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        896,
+        640
+      ],
+      "id": "e524eca8-1e7e-4805-81a9-2df1814e1534",
+      "name": "HTTP Request2",
+      "credentials": {
+        "wordpressApi": {
+          "id": "hdZjbKSZA97wLS3A",
+          "name": "Wordpress account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop through all the items from the previous node\nconst cleanList = items.map(item => {\n  // Get the title (safely handle if it's missing)\n  const title = item.json.title ? item.json.title.rendered : \"No Title\";\n  \n  // Get the direct image link (guid.rendered is the file URL in your screenshot)\n  const url = item.json.guid ? item.json.guid.rendered : \"No URL\";\n  \n  // Get the ID (we need this to reference it later)\n  const id = item.json.id;\n\n  // Format it as a single line of text\n  return `ID: ${id} | Title: \"${title}\" | URL: ${url}`;\n});\n\n// Combine all lines into one big text block for the AI\nreturn [\n  {\n    json: {\n      image_list_for_ai: cleanList.join(\"\\n\")\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1120,
+        672
+      ],
+      "id": "1fc17a9c-b9fc-49a2-9a08-96a7ca231ad2",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.photos[0].src.original }}",
+        "options": {}
+      },
+      "id": "68d9ec47-2ade-4432-82ab-f959edb93733",
+      "name": "Pexel Image Download",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1168,
+        1424
+      ],
+      "typeVersion": 4.2,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "https://themeparksavvy.com/wp-json/wp/v2/media",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "search",
+              "value": "={{ $json.content.parts[0].text }}"
+            },
+            {
+              "name": "per_page",
+              "value": "100"
+            },
+            {
+              "name": "orientation",
+              "value": "landscape"
+            },
+            {
+              "name": "media_type",
+              "value": "image"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "b367993b-3f8c-4ef7-9ba6-ade69633d695",
+      "name": "Pexels Image Search",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        480,
+        1344
+      ],
+      "typeVersion": 4.3,
+      "credentials": {
+        "wordpressApi": {
+          "id": "hdZjbKSZA97wLS3A",
+          "name": "Wordpress account 2"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Message a model').first().json.content.parts[0].text.trim() }}",
+        "options": {}
+      },
+      "id": "113c0dc2-72cf-4a60-a73a-2e6aad1aea25",
+      "name": "WP Image Download1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1840,
+        832
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "amount": 15
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1488,
+        1232
+      ],
+      "id": "85d4ccd4-be90-4742-b6dc-39a23bad066a",
+      "name": "Wait1",
+      "webhookId": "56558745-47fc-48ae-8bb6-80b5d6154257",
+      "disabled": true
+    }
+  ],
+  "pinData": {},
+  "repo_name": "N8N-Backup",
+  "repo_owner": "blakefrasure",
+  "repo_path": "",
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "updatedAt": "2026-02-05T00:27:55.431Z",
+      "createdAt": "2026-02-05T00:27:55.431Z",
+      "role": "workflow:owner",
+      "workflowId": "MK58Df6NFQueBRLm",
+      "projectId": "o0dLpT0DC7ihHtEO"
+    }
+  ],
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrenceRules": [
+        20
+      ]
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2026-02-24T00:23:33.000Z",
+  "versionId": "957eeeab-99fb-45ec-ab09-8c6fb98db995"
+}
