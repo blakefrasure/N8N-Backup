@@ -1,0 +1,365 @@
+{
+  "active": false,
+  "activeVersion": null,
+  "activeVersionId": null,
+  "connections": {
+    "Schedule posting every 6 hours": {
+      "main": [
+        [
+          {
+            "node": "Configure your influencer profile",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Trigger posting manually": {
+      "main": [
+        [
+          {
+            "node": "Configure your influencer profile",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Verify tweet constraints": {
+      "main": [
+        [
+          {
+            "node": "Configure your influencer profile",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Send message and wait for response",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Post tweet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Configure your influencer profile": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "Verify tweet constraints",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-11-21T18:47:48.017Z",
+  "error": "The resource you are requesting could not be found",
+  "id": "5mQfoxHBltXtuJN6",
+  "isArchived": false,
+  "meta": null,
+  "name": "My workflow 2",
+  "nodes": [
+    {
+      "parameters": {
+        "text": "={{ $json.content.parts[0].text }}",
+        "additionalFields": {}
+      },
+      "id": "92262728-1197-4c40-8304-01de5dfcdae0",
+      "name": "Post tweet",
+      "type": "n8n-nodes-base.twitter",
+      "position": [
+        624,
+        16
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 6,
+              "triggerAtMinute": "={{ Math.floor(Math.random() * 60) }}"
+            }
+          ]
+        }
+      },
+      "id": "d1274732-0173-472f-8677-da2b78599f66",
+      "name": "Schedule posting every 6 hours",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [
+        -1200,
+        0
+      ],
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {},
+      "id": "159abade-d62f-40a7-b6b8-87fc8d122d54",
+      "name": "Trigger posting manually",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        -1200,
+        336
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Configure influencer profile \nSet your target niche, writing style, and inspiration.\n",
+        "height": 265,
+        "width": 389
+      },
+      "id": "8eefe19c-c38c-488a-88ff-b2f5c51b34d0",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -976,
+        -96
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Generate tweet\nGenerate a potentially viral tweet based on your configuration.",
+        "height": 265,
+        "width": 389
+      },
+      "id": "c0ac1d59-68bc-4e0f-b3e1-ff43e96f0227",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -544,
+        -96
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Validate tweet\nIf the generated tweet does not meet length constraints, regenerate it.",
+        "height": 265,
+        "width": 389
+      },
+      "id": "091cf647-1ce0-41eb-adcb-e34250c8df1d",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -96,
+        -96
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Post the tweet\nPost the tweet to your X account.",
+        "height": 265,
+        "width": 389
+      },
+      "id": "597ea430-559c-4744-9d61-ffb8496b6403",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        352,
+        -96
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "0a6ebbb6-4b14-4c7e-9390-215e32921663",
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              },
+              "leftValue": "={{ $json.content.parts[0].text.length }}",
+              "rightValue": 280
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "5c0b4253-c28c-47e0-854d-fd9a258c7d0e",
+      "name": "Verify tweet constraints",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        64,
+        0
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "45268b04-68a1-420f-9ad2-950844d16af1",
+              "name": "niche",
+              "type": "string",
+              "value": "Student Founder & Creator Economy. You tweet about the reality of building real businesses (websites, podcasts, and brands) while being a student at a prestigious university. You mix insights from your podcast the Leaderboard, the struggles of indie hacking (coding, side hustles), and the creative process of writing and video production. You are building in public, not lecturing from a podium."
+            },
+            {
+              "id": "d95f4a1c-ab1c-4eca-8732-3d7a087f82d8",
+              "name": "style",
+              "type": "string",
+              "value": "Raw, Punchy, and Twitter-Native.  NO \"AI Voice\": Do not use words like \"unleash,\" \"elevate,\" \"landscape,\" \"foster,\" or \"delve.\" Never start tweets with \"In a world where...\"  Casual Authority: Write like a 20-year-old founder, not a corporate PR department. Use sentence fragments. It’s okay to be opinionated.  Show, Don't Tell: Don't say \"I am working hard.\" Say \"Just spent 6 hours debugging an API wrapper.\"  Formatting: Keep it visual. Use line breaks. Use simple language (Grade 8 reading level). Sparse use of emojis (maximum 1 per tweet)."
+            },
+            {
+              "id": "1ee088f7-7021-48c0-bcb7-d1011eb0db3d",
+              "name": "inspiration",
+              "type": "string",
+              "value": "The \"Indie Hacker\" & Storyteller Path. Your inspiration comes from the \"ship fast\" mentality of indie developers (like Pieter Levels), the business breakdowns of the \"My First Million\" podcast, and the immersive storytelling found in high-end theme park design (Imagineering). You value execution over theory."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2c3aa728-daa9-48ac-896e-b27ab6296a4b",
+      "name": "Configure your influencer profile",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -752,
+        0
+      ],
+      "typeVersion": 3.3
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-2.5-flash",
+          "mode": "list",
+          "cachedResultName": "models/gemini-2.5-flash"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You're going to be a successful modern Twitter influencer. Your tweets always go viral. \n\nYou have a specific writing style: {{ $json.style }}\npply this specific writing style rigorously: {{ $json.style }}\n\nCRITICAL ANTI-ROBOT RULES:\n\nBan these words: Never use \"unleash,\" \"delve,\" \"elevate,\" \"foster,\" \"tapestry,\" \"landscape,\" or \"realm.\"\n\nTone: Write like you are texting a smart friend. Be direct. Use sentence fragments if it adds punch.\n\nNo Hashtags: Do not use hashtags unless explicitly asked.\n\nFormatting: If the tweet is longer than one sentence, use line breaks for readability. If it sounds like a LinkedIn post, rewrite it to be more casual.\nAnswer with the viral tweet and nothing else as a response. Keep the tweet within 280 characters. Current date and time are {{DateTime.now()}}. Add hashtags and emojis where relevant.\n\nWrite a tweet that is certain to go viral. Take your time in writing it. Think. Use the vast knowledge you have.\n"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        -448,
+        0
+      ],
+      "id": "74ee1e4a-ed6f-471d-bc7f-4688eb6e1748",
+      "name": "Message a model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "teS4CFeJzwufVFZQ",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "45268b04-68a1-420f-9ad2-950844d16af1",
+              "name": "niche",
+              "type": "string",
+              "value": "Student Founder & Creator Economy. You tweet about the reality of building real businesses (websites, podcasts, and brands) while being a student at a prestigious university. You mix insights from your podcast the Leaderboard, the struggles of indie hacking (coding, side hustles), and the creative process of writing and video production. You are building in public, not lecturing from a podium."
+            },
+            {
+              "id": "d95f4a1c-ab1c-4eca-8732-3d7a087f82d8",
+              "name": "style",
+              "type": "string",
+              "value": "Raw, Punchy, and Twitter-Native.  NO \"AI Voice\": Do not use words like \"unleash,\" \"elevate,\" \"landscape,\" \"foster,\" or \"delve.\" Never start tweets with \"In a world where...\"  Casual Authority: Write like a 20-year-old founder, not a corporate PR department. Use sentence fragments. It’s okay to be opinionated.  Show, Don't Tell: Don't say \"I am working hard.\" Say \"Just spent 6 hours debugging an API wrapper.\"  Formatting: Keep it visual. Use line breaks. Use simple language (Grade 8 reading level). Sparse use of emojis (maximum 1 per tweet)."
+            },
+            {
+              "id": "1ee088f7-7021-48c0-bcb7-d1011eb0db3d",
+              "name": "inspiration",
+              "type": "string",
+              "value": "The \"Indie Hacker\" & Storyteller Path. Your inspiration comes from the \"ship fast\" mentality of indie developers (like Pieter Levels), the business breakdowns of the \"My First Million\" podcast, and the immersive storytelling found in high-end theme park design (Imagineering). You value execution over theory."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b84048fa-267c-4037-b27b-07423d8e1ca7",
+      "name": "Configure your influencer profile1",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -592,
+        320
+      ],
+      "typeVersion": 3.3
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        272,
+        -96
+      ],
+      "id": "9bfb3def-c6d0-4eeb-8bb4-b3a34b3404dc",
+      "name": "Send message and wait for response",
+      "webhookId": "eda85bab-120a-4630-a533-4ab0effb4f8f",
+      "credentials": {
+        "telegramApi": {
+          "id": "wWkjz8XWMjKh6Ur1",
+          "name": "Telegram account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "repo_name": "N8N-Backup",
+  "repo_owner": "blakefrasure",
+  "repo_path": "",
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "updatedAt": "2025-11-21T18:47:48.024Z",
+      "createdAt": "2025-11-21T18:47:48.024Z",
+      "role": "workflow:owner",
+      "workflowId": "5mQfoxHBltXtuJN6",
+      "projectId": "o0dLpT0DC7ihHtEO"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-11-21T18:47:48.017Z",
+  "versionId": "53fd316c-7836-4890-ab5f-249551286173"
+}
