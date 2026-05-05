@@ -1,0 +1,1211 @@
+{
+  "active": true,
+  "activeVersion": {
+    "updatedAt": "2026-05-05T00:52:43.000Z",
+    "createdAt": "2026-05-05T00:52:31.131Z",
+    "versionId": "11ee5c41-2b43-4cee-9b62-4beec2dfefe8",
+    "workflowId": "JyTJJ5CHAgVdvD9x",
+    "nodes": [
+      {
+        "parameters": {
+          "url": "https://www.nellisauction.com/search?query=battery&_p1=s%3A120%2Cn%3A1&_data=routes%2Fsearch",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              },
+              {
+                "name": "Referer",
+                "value": "https://www.nellisauction.com/search?location+Name=Mesa"
+              },
+              {
+                "name": "x-remix-service",
+                "value": "1"
+              },
+              {
+                "name": "Cookie",
+                "value": "GCLB=CInapJKjzYPzWhAD; __kla_id=eyJjaWQiOiJNMkprTTJNM1pHRXRZemhrWkMwMFlqTXlMV0l3TVdNdE5UQTVZbUl4WVdReE1HSXoifQ==; _ALGOLIA=anonymous-f11443c7-fe93-4c8e-9106-002f5d93d4aa; _gcl_au=1.1.826653640.1777857312; _vb=f20c6dba-e374-4f93-8c1e-d17223f0ee4c; _tt_enable_cookie=1; _ttp=01KQR8VEM74H06YYXXKARSSXQM_.tt.1; _fbp=fb.1.1777857313674.506029877470457349; _ga=GA1.2.1440229340.1777857313; _gid=GA1.2.976880496.1777857317; clientside-cookie=b31a97237ea6762aef38bf4ed5acebb552a8219eb64f59f45f8afa6ceb4d3f6a5b12cdd1596e37f6c8bfa9e4e70153f617871c2e61387ed7b7c96948dc4d7d5cb00c99c90a866274ffc61b05af17faacda4b0aa28082a05836a22f827233671623f442d04952762653dd154b63f527c856fcb55752c35f19829fd57868222a470be6ed3933665de78ebd345490c6857c1ee15a3d00a6c21e71b7; __shopping-location=eyJzaG9wcGluZ0xvY2F0aW9uIjp7ImlkIjoyLCJuYW1lIjoiUGhvZW5peCwgQVoiLCJsb2NhdGlvblBob3RvIjpbeyJpZCI6NjQsImxvY2F0aW9uSWQiOm51bGwsInBob3RvSWQiOjY0LCJzaG9wcGluZ0xvY2F0aW9uSWQiOjIsInZlcnNpb24iOiJhIiwicGhvdG8iOnsiaWQiOjY0LCJmb3JtYXQiOiJqcGciLCJuYW1lIjoiYXJpem9uYV85MDAiLCJwcm9wZXJ0aWVzIjp7fSwidXJsIjoiaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL25hLWxvY2F0aW9uLWltYWdlcy1wcmQvYXJpem9uYV85MDAuanBnIn19XX19.11A2VLnA4tZfsRJbeW6igI%2FRKIarFI7G9VvM5OhxarU; __public=eyJjbGllbnRJZCI6IllsMjgtSmtnLW8tMVI5QmpFVGtpNSIsImNsaWVudFNlc3Npb25JZCI6Ik1iSl9LbGxWQS1jN1V5MXJSWHBsNCIsImNsaWVudFNlc3Npb25JZEV4cGlyZXMiOiIyMDI2LTA1LTA0VDAxOjU1OjIxLjc3NSswMDowMCIsImZlYXR1cmVHcm91cCI6ImIifQ%3D%3D.baSyxFzIECqg7w6H5HQDMEsPjOGNJOgTn59vUbICNhw; GAESA=CpwBMDAwN2I3MzRkOTFlNzRiZjFhYjEyOTA1NzIwYjAwYzk1Y2U1YTExMTc0MWYzYWE0MzJjNmU0ZmFlMWFkZDExMjk3MTBhOGE5ZjE4MmU5OWNlNjdmZmMxNDM2ZGUxYzI4NDVkZDk0MDljZDVhYmE2MDI5Mjg3ZDAyOTE5MTMyYmJjOTFkZGVlMTRhMGU4ZjFhMGZjZDZiYjU4M2Q5EK3O3YTfMw; ttcsid=1777857313424::9Ln0obYWz-bzMbP9PKBU.1.1777858188346.0::1.873786.0::874868.11.836.30::0.0.0; ttcsid_CR1QQGRC77U1RMG5DD20=1777857313423::hz86Xt5G7_LpWdHL64FW.1.1777858188346.1; _ga_Q6Q3RQPY0N=GS2.1.s1777857312$o1$g1$t1777858188$j60$l0$h0; _ga_Z14LK6XFVL=GS2.1.s1777857313$o1$g1$t1777858188$j60$l0$h0"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.4,
+        "position": [
+          272,
+          -48
+        ],
+        "id": "bbc71b20-918c-4c65-a104-84e39d23c1d3",
+        "name": "HTTP Request"
+      },
+      {
+        "parameters": {
+          "url": "https://www.nellisauction.com/search?location+Name=Mesa&_data=routes%2Fsearch",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "User_Agent",
+                "value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Mobile Safari/537.36"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.4,
+        "position": [
+          976,
+          336
+        ],
+        "id": "7529430e-618f-4e0b-adc3-dc7609cb4fbc",
+        "name": "HTTP Request1"
+      },
+      {
+        "parameters": {
+          "jsCode": "// Grab all incoming items from the HTTP Request node\nconst items = $input.all();\n\n// The actual payload is inside the 'json' property of the first item\nconst data = items[0].json;\nconst products = data.products;\n\n// Helper function to calculate time remaining in total minutes\nconst getMinutesRemaining = (closeTimeIso) => {\n  const closeTime = new Date(closeTimeIso);\n  const now = new Date(); \n  const diffMs = closeTime - now;\n\n  // If the auction is already closed, return 0\n  if (diffMs <= 0) return 0;\n\n  // Convert milliseconds to total minutes\n  return Math.floor(diffMs / (1000 * 60));\n};\n\n// Map over the products to pull out the stats\nconst stats = products.map(product => {\n  return {\n    Item: product.title,\n    Location: product.location.name,\n    Bids: product.bidCount,\n    CurrentPrice: `$${product.currentPrice}`,\n    RetailPrice: `$${product.retailPrice}`,\n    TimeLeftMinutes: getMinutesRemaining(product.closeTime.value), // Now outputs a pure number\n    Condition: product.grade.conditionType.description\n  };\n});\n\n// Sort by highest current price\nstats.sort((a, b) => \n  parseFloat(b.CurrentPrice.slice(1)) - parseFloat(a.CurrentPrice.slice(1))\n);\n\n// Return the array directly.\nreturn stats;"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          944,
+          -32
+        ],
+        "id": "afe4dee9-28df-4952-96e0-8550fd3c3dd7",
+        "name": "Code in JavaScript"
+      },
+      {
+        "parameters": {
+          "promptType": "define",
+          "text": "=You are an expert auction analyst and deal sniper. Evaluate the following item to determine if it is a highly profitable target.\n\n**Item Details:**\n- Item Name: {{ $json.Item }}\n- Current Bid: {{ $json.CurrentPrice }}\n- Retail Price: {{ $json.RetailPrice }}\n- Active Bids: {{ $json.Bids }}\n- Condition: {{ $json.Condition }}\n\n**Evaluation Rules:**\n1. **Margin:** Calculate the potential profit. The current bid must be a massive discount (at least 70% off the retail price) to be considered.\n2. **Competition:** High bids mean a bidding war. If there are 4 or more bids, heavily scrutinize the deal. Discard it unless the margin is astronomically high.\n3. **Categorization (Target):**\n   - \"Repair\": The item is an electronic device, gaming console, or tech hardware listed as Used, broken, or \"for parts.\"\n   - \"Retail\": The item is New, Open Box, or highly desirable consumer goods with a massive profit margin for a quick flip.\n   - \"None\": The deal doesn't meet the criteria, the margin is too tight, or the item has low resale demand.\n\n**Output Requirement:**\nYou must respond ONLY with a valid JSON object. Do not include markdown formatting like ```json or any conversational text. Use this exact structure:\n{\n  \"Verdict\": \"SNIPE\" or \"SKIP\",\n  \"Target\": \"Repair\", \"Retail\", or \"None\",\n  \"Reason\": \"One punchy sentence explaining the margin, competition, and your decision.\"\n}",
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "typeVersion": 3.1,
+        "position": [
+          1376,
+          -80
+        ],
+        "id": "057e35f4-48e2-4c15-a9d2-e2921c2f6759",
+        "name": "AI Agent",
+        "retryOnFail": true,
+        "waitBetweenTries": 5000
+      },
+      {
+        "parameters": {},
+        "type": "n8n-nodes-base.wait",
+        "typeVersion": 1.1,
+        "position": [
+          272,
+          160
+        ],
+        "id": "86318ddc-de69-4742-b040-346ea073f30a",
+        "name": "Wait",
+        "webhookId": "e109e49e-74c2-44be-b2da-5349d16b2f6b"
+      },
+      {
+        "parameters": {},
+        "type": "n8n-nodes-base.wait",
+        "typeVersion": 1.1,
+        "position": [
+          272,
+          336
+        ],
+        "id": "57dcffa8-1453-4975-8b40-26974cb53bdb",
+        "name": "Wait1",
+        "webhookId": "67d6b18b-7141-432e-8cbb-59b0424f7799"
+      },
+      {
+        "parameters": {
+          "url": "https://www.nellisauction.com/search?query=nintendo&_p=1s%3A120%2Cn%3A1&_data=routes%2Fsearch",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              },
+              {
+                "name": "Referer",
+                "value": "https://www.nellisauction.com/search?location+Name=Mesa"
+              },
+              {
+                "name": "x-remix-service",
+                "value": "1"
+              },
+              {
+                "name": "Cookie",
+                "value": "GCLB=CInapJKjzYPzWhAD; __kla_id=eyJjaWQiOiJNMkprTTJNM1pHRXRZemhrWkMwMFlqTXlMV0l3TVdNdE5UQTVZbUl4WVdReE1HSXoifQ==; _ALGOLIA=anonymous-f11443c7-fe93-4c8e-9106-002f5d93d4aa; _gcl_au=1.1.826653640.1777857312; _vb=f20c6dba-e374-4f93-8c1e-d17223f0ee4c; _tt_enable_cookie=1; _ttp=01KQR8VEM74H06YYXXKARSSXQM_.tt.1; _fbp=fb.1.1777857313674.506029877470457349; _ga=GA1.2.1440229340.1777857313; _gid=GA1.2.976880496.1777857317; clientside-cookie=b31a97237ea6762aef38bf4ed5acebb552a8219eb64f59f45f8afa6ceb4d3f6a5b12cdd1596e37f6c8bfa9e4e70153f617871c2e61387ed7b7c96948dc4d7d5cb00c99c90a866274ffc61b05af17faacda4b0aa28082a05836a22f827233671623f442d04952762653dd154b63f527c856fcb55752c35f19829fd57868222a470be6ed3933665de78ebd345490c6857c1ee15a3d00a6c21e71b7; __shopping-location=eyJzaG9wcGluZ0xvY2F0aW9uIjp7ImlkIjoyLCJuYW1lIjoiUGhvZW5peCwgQVoiLCJsb2NhdGlvblBob3RvIjpbeyJpZCI6NjQsImxvY2F0aW9uSWQiOm51bGwsInBob3RvSWQiOjY0LCJzaG9wcGluZ0xvY2F0aW9uSWQiOjIsInZlcnNpb24iOiJhIiwicGhvdG8iOnsiaWQiOjY0LCJmb3JtYXQiOiJqcGciLCJuYW1lIjoiYXJpem9uYV85MDAiLCJwcm9wZXJ0aWVzIjp7fSwidXJsIjoiaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL25hLWxvY2F0aW9uLWltYWdlcy1wcmQvYXJpem9uYV85MDAuanBnIn19XX19.11A2VLnA4tZfsRJbeW6igI%2FRKIarFI7G9VvM5OhxarU; __public=eyJjbGllbnRJZCI6IllsMjgtSmtnLW8tMVI5QmpFVGtpNSIsImNsaWVudFNlc3Npb25JZCI6Ik1iSl9LbGxWQS1jN1V5MXJSWHBsNCIsImNsaWVudFNlc3Npb25JZEV4cGlyZXMiOiIyMDI2LTA1LTA0VDAxOjU1OjIxLjc3NSswMDowMCIsImZlYXR1cmVHcm91cCI6ImIifQ%3D%3D.baSyxFzIECqg7w6H5HQDMEsPjOGNJOgTn59vUbICNhw; GAESA=CpwBMDAwN2I3MzRkOTFlNzRiZjFhYjEyOTA1NzIwYjAwYzk1Y2U1YTExMTc0MWYzYWE0MzJjNmU0ZmFlMWFkZDExMjk3MTBhOGE5ZjE4MmU5OWNlNjdmZmMxNDM2ZGUxYzI4NDVkZDk0MDljZDVhYmE2MDI5Mjg3ZDAyOTE5MTMyYmJjOTFkZGVlMTRhMGU4ZjFhMGZjZDZiYjU4M2Q5EK3O3YTfMw; ttcsid=1777857313424::9Ln0obYWz-bzMbP9PKBU.1.1777858188346.0::1.873786.0::874868.11.836.30::0.0.0; ttcsid_CR1QQGRC77U1RMG5DD20=1777857313423::hz86Xt5G7_LpWdHL64FW.1.1777858188346.1; _ga_Q6Q3RQPY0N=GS2.1.s1777857312$o1$g1$t1777858188$j60$l0$h0; _ga_Z14LK6XFVL=GS2.1.s1777857313$o1$g1$t1777858188$j60$l0$h0"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.4,
+        "position": [
+          432,
+          160
+        ],
+        "id": "2e378136-a3b0-4dd0-9f0f-16b51ad9e949",
+        "name": "HTTP Request3"
+      },
+      {
+        "parameters": {
+          "url": "https://www.nellisauction.com/search?query=battery&_p3=s%3A120%2Cn%3A1&_data=routes%2Fsearch",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              },
+              {
+                "name": "Referer",
+                "value": "https://www.nellisauction.com/search?location+Name=Mesa"
+              },
+              {
+                "name": "x-remix-service",
+                "value": "1"
+              },
+              {
+                "name": "Cookie",
+                "value": "GCLB=CInapJKjzYPzWhAD; __kla_id=eyJjaWQiOiJNMkprTTJNM1pHRXRZemhrWkMwMFlqTXlMV0l3TVdNdE5UQTVZbUl4WVdReE1HSXoifQ==; _ALGOLIA=anonymous-f11443c7-fe93-4c8e-9106-002f5d93d4aa; _gcl_au=1.1.826653640.1777857312; _vb=f20c6dba-e374-4f93-8c1e-d17223f0ee4c; _tt_enable_cookie=1; _ttp=01KQR8VEM74H06YYXXKARSSXQM_.tt.1; _fbp=fb.1.1777857313674.506029877470457349; _ga=GA1.2.1440229340.1777857313; _gid=GA1.2.976880496.1777857317; clientside-cookie=b31a97237ea6762aef38bf4ed5acebb552a8219eb64f59f45f8afa6ceb4d3f6a5b12cdd1596e37f6c8bfa9e4e70153f617871c2e61387ed7b7c96948dc4d7d5cb00c99c90a866274ffc61b05af17faacda4b0aa28082a05836a22f827233671623f442d04952762653dd154b63f527c856fcb55752c35f19829fd57868222a470be6ed3933665de78ebd345490c6857c1ee15a3d00a6c21e71b7; __shopping-location=eyJzaG9wcGluZ0xvY2F0aW9uIjp7ImlkIjoyLCJuYW1lIjoiUGhvZW5peCwgQVoiLCJsb2NhdGlvblBob3RvIjpbeyJpZCI6NjQsImxvY2F0aW9uSWQiOm51bGwsInBob3RvSWQiOjY0LCJzaG9wcGluZ0xvY2F0aW9uSWQiOjIsInZlcnNpb24iOiJhIiwicGhvdG8iOnsiaWQiOjY0LCJmb3JtYXQiOiJqcGciLCJuYW1lIjoiYXJpem9uYV85MDAiLCJwcm9wZXJ0aWVzIjp7fSwidXJsIjoiaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL25hLWxvY2F0aW9uLWltYWdlcy1wcmQvYXJpem9uYV85MDAuanBnIn19XX19.11A2VLnA4tZfsRJbeW6igI%2FRKIarFI7G9VvM5OhxarU; __public=eyJjbGllbnRJZCI6IllsMjgtSmtnLW8tMVI5QmpFVGtpNSIsImNsaWVudFNlc3Npb25JZCI6Ik1iSl9LbGxWQS1jN1V5MXJSWHBsNCIsImNsaWVudFNlc3Npb25JZEV4cGlyZXMiOiIyMDI2LTA1LTA0VDAxOjU1OjIxLjc3NSswMDowMCIsImZlYXR1cmVHcm91cCI6ImIifQ%3D%3D.baSyxFzIECqg7w6H5HQDMEsPjOGNJOgTn59vUbICNhw; GAESA=CpwBMDAwN2I3MzRkOTFlNzRiZjFhYjEyOTA1NzIwYjAwYzk1Y2U1YTExMTc0MWYzYWE0MzJjNmU0ZmFlMWFkZDExMjk3MTBhOGE5ZjE4MmU5OWNlNjdmZmMxNDM2ZGUxYzI4NDVkZDk0MDljZDVhYmE2MDI5Mjg3ZDAyOTE5MTMyYmJjOTFkZGVlMTRhMGU4ZjFhMGZjZDZiYjU4M2Q5EK3O3YTfMw; ttcsid=1777857313424::9Ln0obYWz-bzMbP9PKBU.1.1777858188346.0::1.873786.0::874868.11.836.30::0.0.0; ttcsid_CR1QQGRC77U1RMG5DD20=1777857313423::hz86Xt5G7_LpWdHL64FW.1.1777858188346.1; _ga_Q6Q3RQPY0N=GS2.1.s1777857312$o1$g1$t1777858188$j60$l0$h0; _ga_Z14LK6XFVL=GS2.1.s1777857313$o1$g1$t1777858188$j60$l0$h0"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.4,
+        "position": [
+          432,
+          336
+        ],
+        "id": "75a5abe8-eb32-4aac-9855-f9f4fbcec96f",
+        "name": "HTTP Request4"
+      },
+      {
+        "parameters": {
+          "rule": {
+            "interval": [
+              {
+                "triggerAtHour": 19
+              }
+            ]
+          }
+        },
+        "id": "5999023e-00c8-4a2e-ab29-729b1db81292",
+        "name": "Daily Price Check Trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -192,
+          0
+        ],
+        "typeVersion": 1.2
+      },
+      {
+        "parameters": {
+          "numberInputs": 3
+        },
+        "type": "n8n-nodes-base.merge",
+        "typeVersion": 3.2,
+        "position": [
+          768,
+          -48
+        ],
+        "id": "a8eb5875-3f1a-4b93-a6e1-38b2392088ce",
+        "name": "Merge"
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 3
+            },
+            "conditions": [
+              {
+                "id": "ca31fe78-9975-4377-8566-88f5c6eb8c32",
+                "leftValue": "={{ $json.TimeLeftMinutes }}",
+                "rightValue": 30,
+                "operator": {
+                  "type": "number",
+                  "operation": "lt"
+                }
+              }
+            ],
+            "combinator": "and"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.3,
+        "position": [
+          1072,
+          -32
+        ],
+        "id": "74855ccc-4dd5-4c03-8564-96ef035fa9b0",
+        "name": "If"
+      },
+      {
+        "parameters": {
+          "modelName": "models/gemini-3-flash-preview",
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "typeVersion": 1,
+        "position": [
+          1376,
+          112
+        ],
+        "id": "92e6268d-6867-4e3d-86d2-60a0ef99821f",
+        "name": "Google Gemini Chat Model",
+        "credentials": {
+          "googlePalmApi": {
+            "id": "teS4CFeJzwufVFZQ",
+            "name": "Google Gemini(PaLM) Api account 2"
+          }
+        }
+      }
+    ],
+    "connections": {
+      "HTTP Request": {
+        "main": [
+          [
+            {
+              "node": "Merge",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Code in JavaScript": {
+        "main": [
+          [
+            {
+              "node": "If",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Wait": {
+        "main": [
+          [
+            {
+              "node": "HTTP Request3",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Wait1": {
+        "main": [
+          [
+            {
+              "node": "HTTP Request4",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Daily Price Check Trigger": {
+        "main": [
+          [
+            {
+              "node": "HTTP Request",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "Wait",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "Wait1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "HTTP Request3": {
+        "main": [
+          [
+            {
+              "node": "Merge",
+              "type": "main",
+              "index": 1
+            }
+          ]
+        ]
+      },
+      "HTTP Request4": {
+        "main": [
+          [
+            {
+              "node": "Merge",
+              "type": "main",
+              "index": 2
+            }
+          ]
+        ]
+      },
+      "Merge": {
+        "main": [
+          [
+            {
+              "node": "Code in JavaScript",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "If": {
+        "main": [
+          [
+            {
+              "node": "AI Agent",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Google Gemini Chat Model": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "AI Agent",
+              "type": "ai_languageModel",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "authors": "Blake Frasure",
+    "name": "Version 11ee5c41",
+    "description": "",
+    "autosaved": true
+  },
+  "activeVersionId": "11ee5c41-2b43-4cee-9b62-4beec2dfefe8",
+  "connections": {
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Daily Price Check Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request3": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "HTTP Request4": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait2": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait3": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait4": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait5": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request5": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "HTTP Request6": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "HTTP Request7": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 5
+          }
+        ]
+      ]
+    },
+    "HTTP Request8": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 6
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Get a draft",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2026-05-04T01:18:00.163Z",
+  "id": "JyTJJ5CHAgVdvD9x",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "My workflow 14",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://www.nellisauction.com/search?query=battery&_p1=s%3A120%2Cn%3A1&_data=routes%2Fsearch",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            },
+            {
+              "name": "Referer",
+              "value": "https://www.nellisauction.com/search?location+Name=Mesa"
+            },
+            {
+              "name": "x-remix-service",
+              "value": "1"
+            },
+            {
+              "name": "Cookie",
+              "value": "GCLB=CInapJKjzYPzWhAD; __kla_id=eyJjaWQiOiJNMkprTTJNM1pHRXRZemhrWkMwMFlqTXlMV0l3TVdNdE5UQTVZbUl4WVdReE1HSXoifQ==; _ALGOLIA=anonymous-f11443c7-fe93-4c8e-9106-002f5d93d4aa; _gcl_au=1.1.826653640.1777857312; _vb=f20c6dba-e374-4f93-8c1e-d17223f0ee4c; _tt_enable_cookie=1; _ttp=01KQR8VEM74H06YYXXKARSSXQM_.tt.1; _fbp=fb.1.1777857313674.506029877470457349; _ga=GA1.2.1440229340.1777857313; _gid=GA1.2.976880496.1777857317; clientside-cookie=b31a97237ea6762aef38bf4ed5acebb552a8219eb64f59f45f8afa6ceb4d3f6a5b12cdd1596e37f6c8bfa9e4e70153f617871c2e61387ed7b7c96948dc4d7d5cb00c99c90a866274ffc61b05af17faacda4b0aa28082a05836a22f827233671623f442d04952762653dd154b63f527c856fcb55752c35f19829fd57868222a470be6ed3933665de78ebd345490c6857c1ee15a3d00a6c21e71b7; __shopping-location=eyJzaG9wcGluZ0xvY2F0aW9uIjp7ImlkIjoyLCJuYW1lIjoiUGhvZW5peCwgQVoiLCJsb2NhdGlvblBob3RvIjpbeyJpZCI6NjQsImxvY2F0aW9uSWQiOm51bGwsInBob3RvSWQiOjY0LCJzaG9wcGluZ0xvY2F0aW9uSWQiOjIsInZlcnNpb24iOiJhIiwicGhvdG8iOnsiaWQiOjY0LCJmb3JtYXQiOiJqcGciLCJuYW1lIjoiYXJpem9uYV85MDAiLCJwcm9wZXJ0aWVzIjp7fSwidXJsIjoiaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL25hLWxvY2F0aW9uLWltYWdlcy1wcmQvYXJpem9uYV85MDAuanBnIn19XX19.11A2VLnA4tZfsRJbeW6igI%2FRKIarFI7G9VvM5OhxarU; __public=eyJjbGllbnRJZCI6IllsMjgtSmtnLW8tMVI5QmpFVGtpNSIsImNsaWVudFNlc3Npb25JZCI6Ik1iSl9LbGxWQS1jN1V5MXJSWHBsNCIsImNsaWVudFNlc3Npb25JZEV4cGlyZXMiOiIyMDI2LTA1LTA0VDAxOjU1OjIxLjc3NSswMDowMCIsImZlYXR1cmVHcm91cCI6ImIifQ%3D%3D.baSyxFzIECqg7w6H5HQDMEsPjOGNJOgTn59vUbICNhw; GAESA=CpwBMDAwN2I3MzRkOTFlNzRiZjFhYjEyOTA1NzIwYjAwYzk1Y2U1YTExMTc0MWYzYWE0MzJjNmU0ZmFlMWFkZDExMjk3MTBhOGE5ZjE4MmU5OWNlNjdmZmMxNDM2ZGUxYzI4NDVkZDk0MDljZDVhYmE2MDI5Mjg3ZDAyOTE5MTMyYmJjOTFkZGVlMTRhMGU4ZjFhMGZjZDZiYjU4M2Q5EK3O3YTfMw; ttcsid=1777857313424::9Ln0obYWz-bzMbP9PKBU.1.1777858188346.0::1.873786.0::874868.11.836.30::0.0.0; ttcsid_CR1QQGRC77U1RMG5DD20=1777857313423::hz86Xt5G7_LpWdHL64FW.1.1777858188346.1; _ga_Q6Q3RQPY0N=GS2.1.s1777857312$o1$g1$t1777858188$j60$l0$h0; _ga_Z14LK6XFVL=GS2.1.s1777857313$o1$g1$t1777858188$j60$l0$h0"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        272,
+        -48
+      ],
+      "id": "bbc71b20-918c-4c65-a104-84e39d23c1d3",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "url": "https://www.nellisauction.com/search?location+Name=Mesa&_data=routes%2Fsearch",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User_Agent",
+              "value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Mobile Safari/537.36"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        976,
+        336
+      ],
+      "id": "7529430e-618f-4e0b-adc3-dc7609cb4fbc",
+      "name": "HTTP Request1"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Grab all incoming items from the HTTP Request node\nconst items = $input.all();\n\n// The actual payload is inside the 'json' property of the first item\nconst data = items[0].json;\nconst products = data.products;\n\n// Helper function to calculate time remaining in total minutes\nconst getMinutesRemaining = (closeTimeIso) => {\n  const closeTime = new Date(closeTimeIso);\n  const now = new Date(); \n  const diffMs = closeTime - now;\n\n  // If the auction is already closed, return 0\n  if (diffMs <= 0) return 0;\n\n  // Convert milliseconds to total minutes\n  return Math.floor(diffMs / (1000 * 60));\n};\n\n// Map over the products to pull out the stats\nconst stats = products.map(product => {\n  return {\n    Item: product.title,\n    Location: product.location.name,\n    Bids: product.bidCount,\n    CurrentPrice: `$${product.currentPrice}`,\n    RetailPrice: `$${product.retailPrice}`,\n    TimeLeftMinutes: getMinutesRemaining(product.closeTime.value), // Now outputs a pure number\n    Condition: product.grade.conditionType.description\n  };\n});\n\n// Sort by highest current price\nstats.sort((a, b) => \n  parseFloat(b.CurrentPrice.slice(1)) - parseFloat(a.CurrentPrice.slice(1))\n);\n\n// Return the array directly.\nreturn stats;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        928,
+        -48
+      ],
+      "id": "afe4dee9-28df-4952-96e0-8550fd3c3dd7",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are an expert auction analyst and deal sniper. Evaluate the following item to determine if it is a highly profitable target.\n\n**Item Details:**\n- Item Name: {{ $json.Item }}\n- Current Bid: {{ $json.CurrentPrice }}\n- Retail Price: {{ $json.RetailPrice }}\n- Active Bids: {{ $json.Bids }}\n- Condition: {{ $json.Condition }}\n\n**Evaluation Rules:**\n1. **Margin:** Calculate the potential profit. The current bid must be a massive discount (at least 70% off the retail price) to be considered.\n2. **Competition:** High bids mean a bidding war. If there are 4 or more bids, heavily scrutinize the deal. Discard it unless the margin is astronomically high.\n3. **Categorization (Target):**\n   - \"Repair\": The item is an electronic device, gaming console, or tech hardware listed as Used, broken, or \"for parts.\"\n   - \"Retail\": The item is New, Open Box, or highly desirable consumer goods with a massive profit margin for a quick flip.\n   - \"None\": The deal doesn't meet the criteria, the margin is too tight, or the item has low resale demand.\n\n**Output Requirement:**\nYou must respond ONLY with a valid JSON object. Do not include markdown formatting like ```json or any conversational text. Use this exact structure:\n{\n  \"Verdict\": \"SNIPE\" or \"SKIP\",\n  \"Target\": \"Repair\", \"Retail\", or \"None\",\n  \"Reason\": \"One punchy sentence explaining the margin, competition, and your decision.\"\n}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        1488,
+        -48
+      ],
+      "id": "057e35f4-48e2-4c15-a9d2-e2921c2f6759",
+      "name": "AI Agent",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "alwaysOutputData": true,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        272,
+        160
+      ],
+      "id": "86318ddc-de69-4742-b040-346ea073f30a",
+      "name": "Wait",
+      "webhookId": "e109e49e-74c2-44be-b2da-5349d16b2f6b"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        272,
+        336
+      ],
+      "id": "57dcffa8-1453-4975-8b40-26974cb53bdb",
+      "name": "Wait1",
+      "webhookId": "67d6b18b-7141-432e-8cbb-59b0424f7799"
+    },
+    {
+      "parameters": {
+        "url": "https://www.nellisauction.com/search?query=nintendo&_p=1s%3A120%2Cn%3A1&_data=routes%2Fsearch",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            },
+            {
+              "name": "Referer",
+              "value": "https://www.nellisauction.com/search?location+Name=Mesa"
+            },
+            {
+              "name": "x-remix-service",
+              "value": "1"
+            },
+            {
+              "name": "Cookie",
+              "value": "GCLB=CInapJKjzYPzWhAD; __kla_id=eyJjaWQiOiJNMkprTTJNM1pHRXRZemhrWkMwMFlqTXlMV0l3TVdNdE5UQTVZbUl4WVdReE1HSXoifQ==; _ALGOLIA=anonymous-f11443c7-fe93-4c8e-9106-002f5d93d4aa; _gcl_au=1.1.826653640.1777857312; _vb=f20c6dba-e374-4f93-8c1e-d17223f0ee4c; _tt_enable_cookie=1; _ttp=01KQR8VEM74H06YYXXKARSSXQM_.tt.1; _fbp=fb.1.1777857313674.506029877470457349; _ga=GA1.2.1440229340.1777857313; _gid=GA1.2.976880496.1777857317; clientside-cookie=b31a97237ea6762aef38bf4ed5acebb552a8219eb64f59f45f8afa6ceb4d3f6a5b12cdd1596e37f6c8bfa9e4e70153f617871c2e61387ed7b7c96948dc4d7d5cb00c99c90a866274ffc61b05af17faacda4b0aa28082a05836a22f827233671623f442d04952762653dd154b63f527c856fcb55752c35f19829fd57868222a470be6ed3933665de78ebd345490c6857c1ee15a3d00a6c21e71b7; __shopping-location=eyJzaG9wcGluZ0xvY2F0aW9uIjp7ImlkIjoyLCJuYW1lIjoiUGhvZW5peCwgQVoiLCJsb2NhdGlvblBob3RvIjpbeyJpZCI6NjQsImxvY2F0aW9uSWQiOm51bGwsInBob3RvSWQiOjY0LCJzaG9wcGluZ0xvY2F0aW9uSWQiOjIsInZlcnNpb24iOiJhIiwicGhvdG8iOnsiaWQiOjY0LCJmb3JtYXQiOiJqcGciLCJuYW1lIjoiYXJpem9uYV85MDAiLCJwcm9wZXJ0aWVzIjp7fSwidXJsIjoiaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL25hLWxvY2F0aW9uLWltYWdlcy1wcmQvYXJpem9uYV85MDAuanBnIn19XX19.11A2VLnA4tZfsRJbeW6igI%2FRKIarFI7G9VvM5OhxarU; __public=eyJjbGllbnRJZCI6IllsMjgtSmtnLW8tMVI5QmpFVGtpNSIsImNsaWVudFNlc3Npb25JZCI6Ik1iSl9LbGxWQS1jN1V5MXJSWHBsNCIsImNsaWVudFNlc3Npb25JZEV4cGlyZXMiOiIyMDI2LTA1LTA0VDAxOjU1OjIxLjc3NSswMDowMCIsImZlYXR1cmVHcm91cCI6ImIifQ%3D%3D.baSyxFzIECqg7w6H5HQDMEsPjOGNJOgTn59vUbICNhw; GAESA=CpwBMDAwN2I3MzRkOTFlNzRiZjFhYjEyOTA1NzIwYjAwYzk1Y2U1YTExMTc0MWYzYWE0MzJjNmU0ZmFlMWFkZDExMjk3MTBhOGE5ZjE4MmU5OWNlNjdmZmMxNDM2ZGUxYzI4NDVkZDk0MDljZDVhYmE2MDI5Mjg3ZDAyOTE5MTMyYmJjOTFkZGVlMTRhMGU4ZjFhMGZjZDZiYjU4M2Q5EK3O3YTfMw; ttcsid=1777857313424::9Ln0obYWz-bzMbP9PKBU.1.1777858188346.0::1.873786.0::874868.11.836.30::0.0.0; ttcsid_CR1QQGRC77U1RMG5DD20=1777857313423::hz86Xt5G7_LpWdHL64FW.1.1777858188346.1; _ga_Q6Q3RQPY0N=GS2.1.s1777857312$o1$g1$t1777858188$j60$l0$h0; _ga_Z14LK6XFVL=GS2.1.s1777857313$o1$g1$t1777858188$j60$l0$h0"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        432,
+        160
+      ],
+      "id": "2e378136-a3b0-4dd0-9f0f-16b51ad9e949",
+      "name": "HTTP Request3"
+    },
+    {
+      "parameters": {
+        "url": "https://www.nellisauction.com/search?query=battery&_p3=s%3A120%2Cn%3A1&_data=routes%2Fsearch",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            },
+            {
+              "name": "Referer",
+              "value": "https://www.nellisauction.com/search?location+Name=Mesa"
+            },
+            {
+              "name": "x-remix-service",
+              "value": "1"
+            },
+            {
+              "name": "Cookie",
+              "value": "GCLB=CInapJKjzYPzWhAD; __kla_id=eyJjaWQiOiJNMkprTTJNM1pHRXRZemhrWkMwMFlqTXlMV0l3TVdNdE5UQTVZbUl4WVdReE1HSXoifQ==; _ALGOLIA=anonymous-f11443c7-fe93-4c8e-9106-002f5d93d4aa; _gcl_au=1.1.826653640.1777857312; _vb=f20c6dba-e374-4f93-8c1e-d17223f0ee4c; _tt_enable_cookie=1; _ttp=01KQR8VEM74H06YYXXKARSSXQM_.tt.1; _fbp=fb.1.1777857313674.506029877470457349; _ga=GA1.2.1440229340.1777857313; _gid=GA1.2.976880496.1777857317; clientside-cookie=b31a97237ea6762aef38bf4ed5acebb552a8219eb64f59f45f8afa6ceb4d3f6a5b12cdd1596e37f6c8bfa9e4e70153f617871c2e61387ed7b7c96948dc4d7d5cb00c99c90a866274ffc61b05af17faacda4b0aa28082a05836a22f827233671623f442d04952762653dd154b63f527c856fcb55752c35f19829fd57868222a470be6ed3933665de78ebd345490c6857c1ee15a3d00a6c21e71b7; __shopping-location=eyJzaG9wcGluZ0xvY2F0aW9uIjp7ImlkIjoyLCJuYW1lIjoiUGhvZW5peCwgQVoiLCJsb2NhdGlvblBob3RvIjpbeyJpZCI6NjQsImxvY2F0aW9uSWQiOm51bGwsInBob3RvSWQiOjY0LCJzaG9wcGluZ0xvY2F0aW9uSWQiOjIsInZlcnNpb24iOiJhIiwicGhvdG8iOnsiaWQiOjY0LCJmb3JtYXQiOiJqcGciLCJuYW1lIjoiYXJpem9uYV85MDAiLCJwcm9wZXJ0aWVzIjp7fSwidXJsIjoiaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL25hLWxvY2F0aW9uLWltYWdlcy1wcmQvYXJpem9uYV85MDAuanBnIn19XX19.11A2VLnA4tZfsRJbeW6igI%2FRKIarFI7G9VvM5OhxarU; __public=eyJjbGllbnRJZCI6IllsMjgtSmtnLW8tMVI5QmpFVGtpNSIsImNsaWVudFNlc3Npb25JZCI6Ik1iSl9LbGxWQS1jN1V5MXJSWHBsNCIsImNsaWVudFNlc3Npb25JZEV4cGlyZXMiOiIyMDI2LTA1LTA0VDAxOjU1OjIxLjc3NSswMDowMCIsImZlYXR1cmVHcm91cCI6ImIifQ%3D%3D.baSyxFzIECqg7w6H5HQDMEsPjOGNJOgTn59vUbICNhw; GAESA=CpwBMDAwN2I3MzRkOTFlNzRiZjFhYjEyOTA1NzIwYjAwYzk1Y2U1YTExMTc0MWYzYWE0MzJjNmU0ZmFlMWFkZDExMjk3MTBhOGE5ZjE4MmU5OWNlNjdmZmMxNDM2ZGUxYzI4NDVkZDk0MDljZDVhYmE2MDI5Mjg3ZDAyOTE5MTMyYmJjOTFkZGVlMTRhMGU4ZjFhMGZjZDZiYjU4M2Q5EK3O3YTfMw; ttcsid=1777857313424::9Ln0obYWz-bzMbP9PKBU.1.1777858188346.0::1.873786.0::874868.11.836.30::0.0.0; ttcsid_CR1QQGRC77U1RMG5DD20=1777857313423::hz86Xt5G7_LpWdHL64FW.1.1777858188346.1; _ga_Q6Q3RQPY0N=GS2.1.s1777857312$o1$g1$t1777858188$j60$l0$h0; _ga_Z14LK6XFVL=GS2.1.s1777857313$o1$g1$t1777858188$j60$l0$h0"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        432,
+        336
+      ],
+      "id": "75a5abe8-eb32-4aac-9855-f9f4fbcec96f",
+      "name": "HTTP Request4"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 19
+            }
+          ]
+        }
+      },
+      "id": "5999023e-00c8-4a2e-ab29-729b1db81292",
+      "name": "Daily Price Check Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [
+        -192,
+        0
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "numberInputs": 7
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        768,
+        -48
+      ],
+      "id": "a8eb5875-3f1a-4b93-a6e1-38b2392088ce",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "ca31fe78-9975-4377-8566-88f5c6eb8c32",
+              "leftValue": "={{ $json.TimeLeftMinutes }}",
+              "rightValue": 30,
+              "operator": {
+                "type": "number",
+                "operation": "lt"
+              }
+            },
+            {
+              "id": "8ec1bf58-5822-410d-843c-0027c399c63d",
+              "leftValue": "={{ parseFloat($json.CurrentPrice.replace('$', '')) }}",
+              "rightValue": "={{ parseFloat($json.RetailPrice.replace('$', '')) * 0.15 }}",
+              "operator": {
+                "type": "number",
+                "operation": "lt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        1104,
+        -48
+      ],
+      "id": "74855ccc-4dd5-4c03-8564-96ef035fa9b0",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-3-flash-preview",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        144
+      ],
+      "id": "92e6268d-6867-4e3d-86d2-60a0ef99821f",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "swFyc6Uff0xsd4oG",
+          "name": "Google Gemini(PaLM) Api account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 10
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        272,
+        528
+      ],
+      "id": "1636125e-5a52-4fce-b5a5-d4d838b2bc93",
+      "name": "Wait2",
+      "webhookId": "e109e49e-74c2-44be-b2da-5349d16b2f6b"
+    },
+    {
+      "parameters": {
+        "amount": 10
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        272,
+        704
+      ],
+      "id": "b2e42621-a0b2-4a80-89f3-14f86d79bcaf",
+      "name": "Wait3",
+      "webhookId": "67d6b18b-7141-432e-8cbb-59b0424f7799"
+    },
+    {
+      "parameters": {
+        "url": "https://www.nellisauction.com/search?query=apple&_p=1s%3A120%2Cn%3A1&_data=routes%2Fsearch",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            },
+            {
+              "name": "Referer",
+              "value": "https://www.nellisauction.com/search?location+Name=Mesa"
+            },
+            {
+              "name": "x-remix-service",
+              "value": "1"
+            },
+            {
+              "name": "Cookie",
+              "value": "GCLB=CInapJKjzYPzWhAD; __kla_id=eyJjaWQiOiJNMkprTTJNM1pHRXRZemhrWkMwMFlqTXlMV0l3TVdNdE5UQTVZbUl4WVdReE1HSXoifQ==; _ALGOLIA=anonymous-f11443c7-fe93-4c8e-9106-002f5d93d4aa; _gcl_au=1.1.826653640.1777857312; _vb=f20c6dba-e374-4f93-8c1e-d17223f0ee4c; _tt_enable_cookie=1; _ttp=01KQR8VEM74H06YYXXKARSSXQM_.tt.1; _fbp=fb.1.1777857313674.506029877470457349; _ga=GA1.2.1440229340.1777857313; _gid=GA1.2.976880496.1777857317; clientside-cookie=b31a97237ea6762aef38bf4ed5acebb552a8219eb64f59f45f8afa6ceb4d3f6a5b12cdd1596e37f6c8bfa9e4e70153f617871c2e61387ed7b7c96948dc4d7d5cb00c99c90a866274ffc61b05af17faacda4b0aa28082a05836a22f827233671623f442d04952762653dd154b63f527c856fcb55752c35f19829fd57868222a470be6ed3933665de78ebd345490c6857c1ee15a3d00a6c21e71b7; __shopping-location=eyJzaG9wcGluZ0xvY2F0aW9uIjp7ImlkIjoyLCJuYW1lIjoiUGhvZW5peCwgQVoiLCJsb2NhdGlvblBob3RvIjpbeyJpZCI6NjQsImxvY2F0aW9uSWQiOm51bGwsInBob3RvSWQiOjY0LCJzaG9wcGluZ0xvY2F0aW9uSWQiOjIsInZlcnNpb24iOiJhIiwicGhvdG8iOnsiaWQiOjY0LCJmb3JtYXQiOiJqcGciLCJuYW1lIjoiYXJpem9uYV85MDAiLCJwcm9wZXJ0aWVzIjp7fSwidXJsIjoiaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL25hLWxvY2F0aW9uLWltYWdlcy1wcmQvYXJpem9uYV85MDAuanBnIn19XX19.11A2VLnA4tZfsRJbeW6igI%2FRKIarFI7G9VvM5OhxarU; __public=eyJjbGllbnRJZCI6IllsMjgtSmtnLW8tMVI5QmpFVGtpNSIsImNsaWVudFNlc3Npb25JZCI6Ik1iSl9LbGxWQS1jN1V5MXJSWHBsNCIsImNsaWVudFNlc3Npb25JZEV4cGlyZXMiOiIyMDI2LTA1LTA0VDAxOjU1OjIxLjc3NSswMDowMCIsImZlYXR1cmVHcm91cCI6ImIifQ%3D%3D.baSyxFzIECqg7w6H5HQDMEsPjOGNJOgTn59vUbICNhw; GAESA=CpwBMDAwN2I3MzRkOTFlNzRiZjFhYjEyOTA1NzIwYjAwYzk1Y2U1YTExMTc0MWYzYWE0MzJjNmU0ZmFlMWFkZDExMjk3MTBhOGE5ZjE4MmU5OWNlNjdmZmMxNDM2ZGUxYzI4NDVkZDk0MDljZDVhYmE2MDI5Mjg3ZDAyOTE5MTMyYmJjOTFkZGVlMTRhMGU4ZjFhMGZjZDZiYjU4M2Q5EK3O3YTfMw; ttcsid=1777857313424::9Ln0obYWz-bzMbP9PKBU.1.1777858188346.0::1.873786.0::874868.11.836.30::0.0.0; ttcsid_CR1QQGRC77U1RMG5DD20=1777857313423::hz86Xt5G7_LpWdHL64FW.1.1777858188346.1; _ga_Q6Q3RQPY0N=GS2.1.s1777857312$o1$g1$t1777858188$j60$l0$h0; _ga_Z14LK6XFVL=GS2.1.s1777857313$o1$g1$t1777858188$j60$l0$h0"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        432,
+        528
+      ],
+      "id": "d2e7ad18-d23b-4137-ac40-9afc11b47568",
+      "name": "HTTP Request5"
+    },
+    {
+      "parameters": {
+        "url": "https://www.nellisauction.com/search?query=apple&_p=2s%3A120%2Cn%3A1&_data=routes%2Fsearch",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            },
+            {
+              "name": "Referer",
+              "value": "https://www.nellisauction.com/search?location+Name=Mesa"
+            },
+            {
+              "name": "x-remix-service",
+              "value": "1"
+            },
+            {
+              "name": "Cookie",
+              "value": "GCLB=CInapJKjzYPzWhAD; __kla_id=eyJjaWQiOiJNMkprTTJNM1pHRXRZemhrWkMwMFlqTXlMV0l3TVdNdE5UQTVZbUl4WVdReE1HSXoifQ==; _ALGOLIA=anonymous-f11443c7-fe93-4c8e-9106-002f5d93d4aa; _gcl_au=1.1.826653640.1777857312; _vb=f20c6dba-e374-4f93-8c1e-d17223f0ee4c; _tt_enable_cookie=1; _ttp=01KQR8VEM74H06YYXXKARSSXQM_.tt.1; _fbp=fb.1.1777857313674.506029877470457349; _ga=GA1.2.1440229340.1777857313; _gid=GA1.2.976880496.1777857317; clientside-cookie=b31a97237ea6762aef38bf4ed5acebb552a8219eb64f59f45f8afa6ceb4d3f6a5b12cdd1596e37f6c8bfa9e4e70153f617871c2e61387ed7b7c96948dc4d7d5cb00c99c90a866274ffc61b05af17faacda4b0aa28082a05836a22f827233671623f442d04952762653dd154b63f527c856fcb55752c35f19829fd57868222a470be6ed3933665de78ebd345490c6857c1ee15a3d00a6c21e71b7; __shopping-location=eyJzaG9wcGluZ0xvY2F0aW9uIjp7ImlkIjoyLCJuYW1lIjoiUGhvZW5peCwgQVoiLCJsb2NhdGlvblBob3RvIjpbeyJpZCI6NjQsImxvY2F0aW9uSWQiOm51bGwsInBob3RvSWQiOjY0LCJzaG9wcGluZ0xvY2F0aW9uSWQiOjIsInZlcnNpb24iOiJhIiwicGhvdG8iOnsiaWQiOjY0LCJmb3JtYXQiOiJqcGciLCJuYW1lIjoiYXJpem9uYV85MDAiLCJwcm9wZXJ0aWVzIjp7fSwidXJsIjoiaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL25hLWxvY2F0aW9uLWltYWdlcy1wcmQvYXJpem9uYV85MDAuanBnIn19XX19.11A2VLnA4tZfsRJbeW6igI%2FRKIarFI7G9VvM5OhxarU; __public=eyJjbGllbnRJZCI6IllsMjgtSmtnLW8tMVI5QmpFVGtpNSIsImNsaWVudFNlc3Npb25JZCI6Ik1iSl9LbGxWQS1jN1V5MXJSWHBsNCIsImNsaWVudFNlc3Npb25JZEV4cGlyZXMiOiIyMDI2LTA1LTA0VDAxOjU1OjIxLjc3NSswMDowMCIsImZlYXR1cmVHcm91cCI6ImIifQ%3D%3D.baSyxFzIECqg7w6H5HQDMEsPjOGNJOgTn59vUbICNhw; GAESA=CpwBMDAwN2I3MzRkOTFlNzRiZjFhYjEyOTA1NzIwYjAwYzk1Y2U1YTExMTc0MWYzYWE0MzJjNmU0ZmFlMWFkZDExMjk3MTBhOGE5ZjE4MmU5OWNlNjdmZmMxNDM2ZGUxYzI4NDVkZDk0MDljZDVhYmE2MDI5Mjg3ZDAyOTE5MTMyYmJjOTFkZGVlMTRhMGU4ZjFhMGZjZDZiYjU4M2Q5EK3O3YTfMw; ttcsid=1777857313424::9Ln0obYWz-bzMbP9PKBU.1.1777858188346.0::1.873786.0::874868.11.836.30::0.0.0; ttcsid_CR1QQGRC77U1RMG5DD20=1777857313423::hz86Xt5G7_LpWdHL64FW.1.1777858188346.1; _ga_Q6Q3RQPY0N=GS2.1.s1777857312$o1$g1$t1777858188$j60$l0$h0; _ga_Z14LK6XFVL=GS2.1.s1777857313$o1$g1$t1777858188$j60$l0$h0"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        432,
+        704
+      ],
+      "id": "c809442b-2fe8-44d1-96de-8774b59c9efe",
+      "name": "HTTP Request6"
+    },
+    {
+      "parameters": {
+        "amount": 10
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        272,
+        896
+      ],
+      "id": "4ec771ee-b069-4f7c-928d-497ad4ff0703",
+      "name": "Wait4",
+      "webhookId": "e109e49e-74c2-44be-b2da-5349d16b2f6b"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        272,
+        1072
+      ],
+      "id": "e9a632f5-1469-42dc-92dc-67577e0d5556",
+      "name": "Wait5",
+      "webhookId": "67d6b18b-7141-432e-8cbb-59b0424f7799"
+    },
+    {
+      "parameters": {
+        "url": "https://www.nellisauction.com/search?query=drone&_p=1s%3A120%2Cn%3A1&_data=routes%2Fsearch",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            },
+            {
+              "name": "Referer",
+              "value": "https://www.nellisauction.com/search?location+Name=Mesa"
+            },
+            {
+              "name": "x-remix-service",
+              "value": "1"
+            },
+            {
+              "name": "Cookie",
+              "value": "GCLB=CInapJKjzYPzWhAD; __kla_id=eyJjaWQiOiJNMkprTTJNM1pHRXRZemhrWkMwMFlqTXlMV0l3TVdNdE5UQTVZbUl4WVdReE1HSXoifQ==; _ALGOLIA=anonymous-f11443c7-fe93-4c8e-9106-002f5d93d4aa; _gcl_au=1.1.826653640.1777857312; _vb=f20c6dba-e374-4f93-8c1e-d17223f0ee4c; _tt_enable_cookie=1; _ttp=01KQR8VEM74H06YYXXKARSSXQM_.tt.1; _fbp=fb.1.1777857313674.506029877470457349; _ga=GA1.2.1440229340.1777857313; _gid=GA1.2.976880496.1777857317; clientside-cookie=b31a97237ea6762aef38bf4ed5acebb552a8219eb64f59f45f8afa6ceb4d3f6a5b12cdd1596e37f6c8bfa9e4e70153f617871c2e61387ed7b7c96948dc4d7d5cb00c99c90a866274ffc61b05af17faacda4b0aa28082a05836a22f827233671623f442d04952762653dd154b63f527c856fcb55752c35f19829fd57868222a470be6ed3933665de78ebd345490c6857c1ee15a3d00a6c21e71b7; __shopping-location=eyJzaG9wcGluZ0xvY2F0aW9uIjp7ImlkIjoyLCJuYW1lIjoiUGhvZW5peCwgQVoiLCJsb2NhdGlvblBob3RvIjpbeyJpZCI6NjQsImxvY2F0aW9uSWQiOm51bGwsInBob3RvSWQiOjY0LCJzaG9wcGluZ0xvY2F0aW9uSWQiOjIsInZlcnNpb24iOiJhIiwicGhvdG8iOnsiaWQiOjY0LCJmb3JtYXQiOiJqcGciLCJuYW1lIjoiYXJpem9uYV85MDAiLCJwcm9wZXJ0aWVzIjp7fSwidXJsIjoiaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL25hLWxvY2F0aW9uLWltYWdlcy1wcmQvYXJpem9uYV85MDAuanBnIn19XX19.11A2VLnA4tZfsRJbeW6igI%2FRKIarFI7G9VvM5OhxarU; __public=eyJjbGllbnRJZCI6IllsMjgtSmtnLW8tMVI5QmpFVGtpNSIsImNsaWVudFNlc3Npb25JZCI6Ik1iSl9LbGxWQS1jN1V5MXJSWHBsNCIsImNsaWVudFNlc3Npb25JZEV4cGlyZXMiOiIyMDI2LTA1LTA0VDAxOjU1OjIxLjc3NSswMDowMCIsImZlYXR1cmVHcm91cCI6ImIifQ%3D%3D.baSyxFzIECqg7w6H5HQDMEsPjOGNJOgTn59vUbICNhw; GAESA=CpwBMDAwN2I3MzRkOTFlNzRiZjFhYjEyOTA1NzIwYjAwYzk1Y2U1YTExMTc0MWYzYWE0MzJjNmU0ZmFlMWFkZDExMjk3MTBhOGE5ZjE4MmU5OWNlNjdmZmMxNDM2ZGUxYzI4NDVkZDk0MDljZDVhYmE2MDI5Mjg3ZDAyOTE5MTMyYmJjOTFkZGVlMTRhMGU4ZjFhMGZjZDZiYjU4M2Q5EK3O3YTfMw; ttcsid=1777857313424::9Ln0obYWz-bzMbP9PKBU.1.1777858188346.0::1.873786.0::874868.11.836.30::0.0.0; ttcsid_CR1QQGRC77U1RMG5DD20=1777857313423::hz86Xt5G7_LpWdHL64FW.1.1777858188346.1; _ga_Q6Q3RQPY0N=GS2.1.s1777857312$o1$g1$t1777858188$j60$l0$h0; _ga_Z14LK6XFVL=GS2.1.s1777857313$o1$g1$t1777858188$j60$l0$h0"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        432,
+        896
+      ],
+      "id": "9debb8c8-eb54-48aa-9c56-a80c33fa4367",
+      "name": "HTTP Request7"
+    },
+    {
+      "parameters": {
+        "url": "https://www.nellisauction.com/search?query=drone&_p3=s%3A120%2Cn%3A1&_data=routes%2Fsearch",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            },
+            {
+              "name": "Referer",
+              "value": "https://www.nellisauction.com/search?location+Name=Mesa"
+            },
+            {
+              "name": "x-remix-service",
+              "value": "1"
+            },
+            {
+              "name": "Cookie",
+              "value": "GCLB=CInapJKjzYPzWhAD; __kla_id=eyJjaWQiOiJNMkprTTJNM1pHRXRZemhrWkMwMFlqTXlMV0l3TVdNdE5UQTVZbUl4WVdReE1HSXoifQ==; _ALGOLIA=anonymous-f11443c7-fe93-4c8e-9106-002f5d93d4aa; _gcl_au=1.1.826653640.1777857312; _vb=f20c6dba-e374-4f93-8c1e-d17223f0ee4c; _tt_enable_cookie=1; _ttp=01KQR8VEM74H06YYXXKARSSXQM_.tt.1; _fbp=fb.1.1777857313674.506029877470457349; _ga=GA1.2.1440229340.1777857313; _gid=GA1.2.976880496.1777857317; clientside-cookie=b31a97237ea6762aef38bf4ed5acebb552a8219eb64f59f45f8afa6ceb4d3f6a5b12cdd1596e37f6c8bfa9e4e70153f617871c2e61387ed7b7c96948dc4d7d5cb00c99c90a866274ffc61b05af17faacda4b0aa28082a05836a22f827233671623f442d04952762653dd154b63f527c856fcb55752c35f19829fd57868222a470be6ed3933665de78ebd345490c6857c1ee15a3d00a6c21e71b7; __shopping-location=eyJzaG9wcGluZ0xvY2F0aW9uIjp7ImlkIjoyLCJuYW1lIjoiUGhvZW5peCwgQVoiLCJsb2NhdGlvblBob3RvIjpbeyJpZCI6NjQsImxvY2F0aW9uSWQiOm51bGwsInBob3RvSWQiOjY0LCJzaG9wcGluZ0xvY2F0aW9uSWQiOjIsInZlcnNpb24iOiJhIiwicGhvdG8iOnsiaWQiOjY0LCJmb3JtYXQiOiJqcGciLCJuYW1lIjoiYXJpem9uYV85MDAiLCJwcm9wZXJ0aWVzIjp7fSwidXJsIjoiaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL25hLWxvY2F0aW9uLWltYWdlcy1wcmQvYXJpem9uYV85MDAuanBnIn19XX19.11A2VLnA4tZfsRJbeW6igI%2FRKIarFI7G9VvM5OhxarU; __public=eyJjbGllbnRJZCI6IllsMjgtSmtnLW8tMVI5QmpFVGtpNSIsImNsaWVudFNlc3Npb25JZCI6Ik1iSl9LbGxWQS1jN1V5MXJSWHBsNCIsImNsaWVudFNlc3Npb25JZEV4cGlyZXMiOiIyMDI2LTA1LTA0VDAxOjU1OjIxLjc3NSswMDowMCIsImZlYXR1cmVHcm91cCI6ImIifQ%3D%3D.baSyxFzIECqg7w6H5HQDMEsPjOGNJOgTn59vUbICNhw; GAESA=CpwBMDAwN2I3MzRkOTFlNzRiZjFhYjEyOTA1NzIwYjAwYzk1Y2U1YTExMTc0MWYzYWE0MzJjNmU0ZmFlMWFkZDExMjk3MTBhOGE5ZjE4MmU5OWNlNjdmZmMxNDM2ZGUxYzI4NDVkZDk0MDljZDVhYmE2MDI5Mjg3ZDAyOTE5MTMyYmJjOTFkZGVlMTRhMGU4ZjFhMGZjZDZiYjU4M2Q5EK3O3YTfMw; ttcsid=1777857313424::9Ln0obYWz-bzMbP9PKBU.1.1777858188346.0::1.873786.0::874868.11.836.30::0.0.0; ttcsid_CR1QQGRC77U1RMG5DD20=1777857313423::hz86Xt5G7_LpWdHL64FW.1.1777858188346.1; _ga_Q6Q3RQPY0N=GS2.1.s1777857312$o1$g1$t1777858188$j60$l0$h0; _ga_Z14LK6XFVL=GS2.1.s1777857313$o1$g1$t1777858188$j60$l0$h0"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        432,
+        1072
+      ],
+      "id": "916e9362-db22-4ad7-8f96-c25cfce65dfa",
+      "name": "HTTP Request8"
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "operation": "get",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1600,
+        480
+      ],
+      "id": "20840473-aa38-4976-bd86-2aede3212c11",
+      "name": "Get a draft",
+      "webhookId": "5547257c-cd16-4c17-ae97-57cb16201d6d"
+    }
+  ],
+  "pinData": {},
+  "repo_name": "N8N-Backup",
+  "repo_owner": "blakefrasure",
+  "repo_path": "",
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "shared": [
+    {
+      "updatedAt": "2026-05-04T01:18:00.166Z",
+      "createdAt": "2026-05-04T01:18:00.166Z",
+      "role": "workflow:owner",
+      "workflowId": "JyTJJ5CHAgVdvD9x",
+      "projectId": "o0dLpT0DC7ihHtEO"
+    }
+  ],
+  "staticData": {
+    "node:Daily Price Check Trigger": {
+      "recurrenceRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2026-05-05T01:17:11.671Z",
+  "versionId": "246ac0fe-03a8-4e82-9ad2-a1a42f7add0f"
+}
